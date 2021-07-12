@@ -1,5 +1,5 @@
 {
-	"name": "sveltetip-boilerplate",
+	"name": "v3-sveltetip",
 	"version": "0.9.1",
 	"scripts": {
 		"dev": "svelte-kit dev --port 3030 --open",
