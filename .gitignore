@@ -4,6 +4,7 @@ node_modules
 .svelte-kit
 .vscode
 
-
+.pnpm-lock.yaml
+package-lock.json
 
 

@@ -41,7 +41,12 @@ $font-system: 'Segoe UI Light', 'Segoe', Tahoma, Helvetica, Arial, sans-serif;
 	-webkit-font-smoothing: antialiased;
 }
 
-:global(h1, h2, h3, h4, h5, h6) {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	font-family: $font-one;
 	// font-weight: 400;
 	margin: 0;
@@ -82,14 +87,24 @@ $font-system: 'Segoe UI Light', 'Segoe', Tahoma, Helvetica, Arial, sans-serif;
 	font-family: $font-one;
 }
 
-:global(input, textarea) {
+:global(textarea) {
 	font-family: $font-two;
 	color: inherit;
 	border: inherit;
 	text-rendering: optimizeLegibility;
 }
 
-:global(body, p, span) {
+:global(body) {
+	font-family: $font-two;
+	text-rendering: optimizeLegibility;
+}
+
+:global(p) {
+	font-family: $font-two;
+	text-rendering: optimizeLegibility;
+}
+
+:global(span) {
 	font-family: $font-two;
 	text-rendering: optimizeLegibility;
 }
@@ -111,6 +126,10 @@ $font-system: 'Segoe UI Light', 'Segoe', Tahoma, Helvetica, Arial, sans-serif;
 
 :global(input) {
 	font-size: 12px;
+	font-family: $font-two;
+	color: inherit;
+	border: inherit;
+	text-rendering: optimizeLegibility;
 	/*** iPhone and iOS Form Input Zoom Fixes ***/
 	/* Fix Input Zoom on devices older than iPhone 5: */
 	@media screen and (device-aspect-ratio: 2/3) {
