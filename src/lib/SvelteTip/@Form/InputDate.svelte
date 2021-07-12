@@ -1,8 +1,7 @@
 <script lang="ts">
 	//--------------------------- IMPORTS
 	import { onMount, getContext } from 'svelte';
-	import { validateDate } from '@js';
-	import * as dayjs from 'dayjs';
+	import { validateDate } from '@js';	
 
 	import TwoSlot from '@base/TwoSlot.svelte';
 	import Button from '@button/Button.svelte';
@@ -58,7 +57,7 @@
 		id: key
 	};
 
-	$: value = !!value; //? dayjs.default(value).format('YYYY-MM-DD') : value;
+	$: value = !!value; 
 
 	$: {
 		value && onKeypressHandler();

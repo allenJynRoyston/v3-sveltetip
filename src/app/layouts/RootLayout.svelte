@@ -20,7 +20,7 @@
 	//--------------------------- HEADER
 	let headerprops = {
 		title: 'SvelteTip',
-		version: '0.8.0',
+		version: '0.9.1',
 		noanimation: true,
 		bgSrc: `../../images/bg/header-${theme}-bg.jpg`,
 		logoSrc: '../../images/logo/logo.png',
