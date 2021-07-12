@@ -3,7 +3,7 @@
 	import { page } from '$app/stores';
 	import { browser } from '$app/env';
 	import { SiteStore } from '@stores/index';
-  
+
 	import SvelteTip from '@required/SvelteTipApp.svelte';
 
 	import Search from '@base/Search.svelte';
@@ -62,7 +62,7 @@
 	};
 
 	$: notchEle = () => {
-		if ($page?.path.includes('/components')) {
+		if (!!page && $page?.path.includes('/components')) {
 			return {
 				component: Search,
 				props: {
