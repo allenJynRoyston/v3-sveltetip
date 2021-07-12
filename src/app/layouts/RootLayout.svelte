@@ -28,7 +28,6 @@
 		navEle: {
 			component: NavBar,
 			props: {
-				watchProp: 'page',
 				links: [
 					{ title: 'Home', icon: 'home', href: '/', hrefIncludes: '/home' },
 					{ title: 'Components', icon: 'list', href: '/components', hrefIncludes: '/components' },
