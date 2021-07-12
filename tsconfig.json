@@ -1,0 +1,53 @@
+{
+	"compilerOptions": {
+		"moduleResolution": "node",
+		"module": "es2020",
+		"lib": ["es2021"],
+		"target": "es2019",
+		/**
+			svelte-preprocess cannot figure out whether you have a value or a type, so tell TypeScript
+			to enforce using \`import type\` instead of \`import\` for Types.
+			*/
+		"importsNotUsedAsValues": "error",
+		"isolatedModules": true,
+		"resolveJsonModule": true,
+		/**
+			To have warnings/errors of the Svelte compiler at the correct position,
+			enable source maps by default.
+			*/
+		"sourceMap": true,
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"forceConsistentCasingInFileNames": true,
+		"baseUrl": ".",
+		"allowJs": true,
+		"checkJs": true,
+		"paths": {
+			"@root/*": ["/*"],
+			"@app/*": ["src/app/*"],
+			"@lib/*": ["src/lib/*"],
+			"@js/*": ["src/js/*"],
+			"@scss/*": ["src/scss/*"],
+			"@stores/*": ["src/stores/*"],
+			"@routes/*": ["src/routes/*"],
+			"@component/*": ["src/lib/AppComponents/*"],
+			"@support/*": ["src/lib/SvelteTip/@Support/*"],
+			"@required/*": ["src/lib/SvelteTip/@Required/*"],
+			"@base/*": ["src/lib/SvelteTip/@Base/*"],
+			"@core/*": ["src/lib/SvelteTip/@Core/*"],
+			"@panel/*": ["src/lib/SvelteTip/@Panels/*"],
+			"@button/*": ["src/lib/SvelteTip/@Buttons/*"],
+			"@layout/*": ["src/lib/SvelteTip/@Layout/*"],
+			"@external/*": ["src/lib/SvelteTip/@External/*"],
+			"@link/*": ["src/lib/SvelteTip/@Links/*"],
+			"@examples/*": ["src/lib/SvelteTip/@Examples/*"],
+			"@shopping/*": ["src/lib/SvelteTip/@Shopping/*"],
+			"@cards/*": ["src/lib/SvelteTip/@Cards/*"],
+			"@images/*": ["src/lib/SvelteTip/@Images/*"],
+			"@form/*": ["src/lib/SvelteTip/@Form/*"],
+			"@utility/*": ["src/lib/SvelteTip/@Utility/*"],
+			"@unsorted/*": ["src/app/SvelteTip/@Unsorted/*"]
+		}
+	},
+	"include": ["src/**/*.d.ts", "src/**/*.js", "src/**/*.ts", "src/**/*.svelte"]
+}

@@ -1,0 +1,280 @@
+<script lang="ts">
+	import { getContext } from 'svelte';
+	import { browser } from '$app/env';
+
+	import Button from '@button/Button.svelte';
+	import SVG from '@base/SVG.svelte';
+	import Link from '@link/Link.svelte';
+
+	export let style = null;
+	export let text = null;
+	export let href = null;
+	export let dataTestid = null;
+
+	export let role = 'button';
+	export let type = 'button';
+	export let applyTheme = 'default';
+	export let size = 'medium';
+	export let rel = 'external';
+
+	export let useGradiant = false;
+	export let rounded = false;
+	export let hollow = false;
+	export let disabled = false;
+	export let nomargin = false;
+	export let exactfit = false;
+	export let fullOnMobile = false;
+	export let icon = null;
+	export let iconLocation = 'right';
+
+	export let target = null;
+	export let prefetch = null;
+	export let onClick = null;
+
+	const theme: string = getContext('theme');
+	const colors = getContext('colors');
+
+	$: props = {
+		applyTheme,
+		useGradiant,
+		disabled,
+		rounded,
+		hollow,
+		target,
+		exactfit,
+		fullOnMobile,
+		nomargin,
+		style
+	};
+
+	$: iconSize = () => {
+		switch (size) {
+			case 'tiny':
+				return 12;
+			case 'small':
+				return 14;
+			case 'medium':
+				return 16;
+			case 'large':
+				return 18;
+		}
+	};
+
+	$: useType = applyTheme === 'default' ? (theme === 'dark' ? 'black' : 'white') : applyTheme;
+	$: fill = !!useType ? colors[useType][0].textFriendlyColor : theme === 'dark' ? 'black' : 'white';
+</script>
+
+{#if !!href}
+	<Link inherit {prefetch} {href} {target}>
+		<Button {...props}>
+			{#if iconLocation === 'left'}
+				<SVG {icon} {fill} size={iconSize()} />
+			{/if}
+			<slot>{text || 'Button'}</slot>
+			{#if iconLocation === 'right'}
+				<SVG {icon} {fill} size={iconSize()} />
+			{/if}
+		</Button>
+	</Link>
+{:else}
+	<Button {...props}>
+		{#if iconLocation === 'left'}
+			<SVG {icon} {fill} size={iconSize()} />
+		{/if}
+		<slot>{text || 'Button'}</slot>
+		{#if iconLocation === 'right'}
+			<SVG {icon} {fill} size={iconSize()} />
+		{/if}
+	</Button>
+{/if}
+
+<style lang="scss" scoped>
+	@import '../style/_media-queries.scss';
+
+	button {
+		outline: none;
+		border: none;
+		width: 100%;
+		cursor: pointer;
+		font-weight: 600;
+		padding: 0px 10px 2px 10px;
+		margin: 2px;
+		white-space: nowrap;
+
+		.inner {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 10px;
+			transform: translateY(1px);
+		}
+
+		&.nobg {
+			background: none !important;
+			outline: none !important;
+			border: none !important;
+		}
+
+		&.nomargin {
+			margin: 0;
+		}
+
+		&.exactfit {
+			width: auto !important;
+		}
+
+		&.fullOnMobile {
+			@include mobile-only {
+				width: 100% !important;
+			}
+		}
+
+		&.disabled {
+			opacity: 0.5;
+			cursor: not-allowed;
+		}
+
+		&.tiny {
+			font-size: 9px;
+			height: 25px;
+		}
+
+		&.small {
+			font-size: 10px;
+			height: 30px;
+		}
+
+		&.medium {
+			font-size: 12px;
+			height: 35px;
+		}
+
+		&.large {
+			font-size: 14px;
+			height: 40px;
+		}
+
+		&.rounded {
+			border-radius: 50px;
+		}
+
+		&.hollow {
+			background: none !important;
+			color: var(--black-1);
+		}
+
+		&:active {
+			background: var(--black-3);
+		}
+
+		&.none {
+			border: 3px solid transparent !important;
+			background: none !important;
+			color: inherit !important;
+		}
+
+		&.white {
+			border: 3px solid var(--white-6);
+			background: var(--white-6);
+			color: var(--white-6-text);
+
+			&-gradiant {
+				color: var(--white-3-text);
+				background: linear-gradient(var(--white-1), var(--white-6));
+			}
+
+			&.hollow {
+				background: none !important;
+				color: var(--black-1);
+				&:active {
+					color: var(--white-4);
+					border: 3px solid var(--white-4);
+				}
+			}
+
+			&:active {
+				color: var(--white-4);
+				border: 3px solid var(--white-4);
+			}
+
+			&.dark-theme {
+				border: 3px solid var(--white-3);
+				background: var(--white-3);
+				color: var(--white-3-text);
+
+				&.hollow {
+					color: var(--white-1);
+				}
+
+				&:active {
+					background: var(--white-6);
+				}
+			}
+		}
+
+		&.black {
+			border: 3px solid var(--black-1);
+			background: var(--black-1);
+			color: var(--black-1-text);
+
+			&-gradiant {
+				color: var(--black-3-text);
+				background: linear-gradient(var(--black-1), var(--black-0));
+			}
+
+			&.hollow {
+				border: 3px solid var(--black-0);
+				background: none !important;
+				color: var(--black-1);
+				&:active {
+					color: var(--black-4);
+					border: 3px solid var(--black-4);
+				}
+			}
+
+			&:active {
+				color: var(--black-4);
+				border: 3px solid var(--black-4);
+			}
+
+			&.dark-theme {
+				border: 3px solid var(--black-2);
+				background: var(--black-2);
+				color: var(--black-2-text);
+
+				&:active {
+					background: var(--black-6);
+				}
+			}
+		}
+
+		$themes: 'primary', 'secondary', 'magic', 'success', 'warning', 'danger';
+		@each $theme in $themes {
+			&.#{$theme} {
+				border: 3px solid var(--#{$theme}-1);
+				background: var(--#{$theme}-1);
+				color: var(--#{$theme}-1-text);
+
+				&-gradiant {
+					background: linear-gradient(var(--#{$theme}-1), var(--#{$theme}-3));
+					color: var(--#{$theme}-3-text);
+				}
+
+				&.hollow {
+					background: none !important;
+					color: var(--#{$theme}-1) !important;
+					border: 3px solid var(--#{$theme}-1) !important;
+					&:active {
+						color: var(--#{$theme}-4) !important;
+						border: 3px solid var(--#{$theme}-4) !important;
+					}
+				}
+
+				&:active {
+					color: var(--#{$theme}-4);
+					border: 3px solid var(--#{$theme}-4);
+				}
+			}
+		}
+	}
+</style>

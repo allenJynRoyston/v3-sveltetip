@@ -1,0 +1,100 @@
+<script lang="ts">
+	import LibrarySnippet from '@support/LibrarySnippet.svelte';
+
+	import Select from '@form/Select.svelte';
+
+	let propstr = '';
+	let selectstr = '';
+	let inputstr = '';
+	let props;
+	let selectprops;
+	let inputprops;
+
+	let eventLog = [];
+	const events = {
+		onChange: (val) => {
+			snippet.inputs[0].value = val;
+			eventLog = [...eventLog, { action: 'onChange', val }];
+		},
+		onKeypress: (val) => {
+			eventLog = [...eventLog, { action: 'onKeypress', val }];
+		},
+		updateForm: (val) => {
+			eventLog = [...eventLog, { action: 'updateForm', val }];
+		}
+	};
+
+	const snippet = {
+		name: 'Select',
+		importName: '@form/Select.svelte',
+		props: {
+			exactfit: false,
+			required: false
+		},
+		inputs: [
+			{ forprop: 'value', renderAs: 'input', componentprop: { type: 'number' }, value: 1 },
+			{
+				forprop: 'defaultOption',
+				renderAs: 'input',
+				componentprop: { type: 'text' },
+				value: 'Select an option'
+			},
+			{ forprop: 'key', renderAs: 'input', componentprop: { type: 'text' }, value: null },
+			{ forprop: 'label', renderAs: 'input', componentprop: { type: 'text' }, value: 'label' }
+		],
+		notes: [
+			'key: prop is equivilent to element id.  Only need to alter if you have more then one Input on the same form.',
+			'required: only triggers if wrapped in a Form component.  See Form component for more details.'
+		]
+	};
+
+	$: livecode = `    
+    const props = {
+      options: [
+        {id: 1, title: 'option 1'},
+        {id: 2, title: 'option 2'},
+        {id: 3, title: 'option 3'},
+        {id: 4, title: 'option 4'}
+      ],
+      onInitFilter: (val, options) => {   
+        return options.find(x => x.id === val)
+      },
+      onChangeFilter: (val) => {
+        return val && val.id
+      },
+    }
+      
+    <Select {...props} ${propstr}${selectstr}${inputstr}/> 
+     `;
+	const staticprops = {
+		options: [
+			{ id: 1, title: 'option 1' },
+			{ id: 2, title: 'option 2' },
+			{ id: 3, title: 'option 3' },
+			{ id: 4, title: 'option 4' }
+		],
+		onInitFilter: (val, options) => {
+			return options.find((x) => x.id === val);
+		},
+		onChangeFilter: (val) => {
+			return val && val.id;
+		}
+	};
+</script>
+
+<LibrarySnippet
+	{...snippet}
+	{livecode}
+	bind:propstr
+	bind:selectstr
+	bind:inputstr
+	bind:props
+	bind:selectprops
+	bind:inputprops
+	{events}
+	{eventLog}
+>
+	<div slot="liveexample">
+		<Select {...staticprops} {...props} {...selectprops} {...inputprops} {...events} />
+	</div>
+</LibrarySnippet>
