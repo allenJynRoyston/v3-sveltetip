@@ -41,14 +41,8 @@ $font-system: 'Segoe UI Light', 'Segoe', Tahoma, Helvetica, Arial, sans-serif;
 	-webkit-font-smoothing: antialiased;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	font-family: $font-one;
-	// font-weight: 400;
+:global(h1) {
+	font-size: 2em;
 	margin: 0;
 	padding: 0;
 	letter-spacing: 1px;
@@ -59,28 +53,64 @@ h6 {
 	}
 }
 
-:global(h1) {
-	font-size: 2em;
-}
-
 :global(h2) {
 	font-size: 1.8em;
+	margin: 0;
+	padding: 0;
+	letter-spacing: 1px;
+	// text-shadow : 3px 3px 3px rgba(0, 0, 0, 0.3);
+	text-rendering: optimizeLegibility;
+	@supports (-webkit-touch-callout: none) {
+		-webkit-text-stroke: 0.5px;
+	}
 }
 
 :global(h3) {
 	font-size: 1.6em;
+	margin: 0;
+	padding: 0;
+	letter-spacing: 1px;
+	// text-shadow : 3px 3px 3px rgba(0, 0, 0, 0.3);
+	text-rendering: optimizeLegibility;
+	@supports (-webkit-touch-callout: none) {
+		-webkit-text-stroke: 0.5px;
+	}
 }
 
 :global(h3) {
 	font-size: 1.4em;
+	margin: 0;
+	padding: 0;
+	letter-spacing: 1px;
+	// text-shadow : 3px 3px 3px rgba(0, 0, 0, 0.3);
+	text-rendering: optimizeLegibility;
+	@supports (-webkit-touch-callout: none) {
+		-webkit-text-stroke: 0.5px;
+	}
 }
 
 :global(h4) {
 	font-size: 1.2em;
+	margin: 0;
+	padding: 0;
+	letter-spacing: 1px;
+	// text-shadow : 3px 3px 3px rgba(0, 0, 0, 0.3);
+	text-rendering: optimizeLegibility;
+	@supports (-webkit-touch-callout: none) {
+		-webkit-text-stroke: 0.5px;
+	}
 }
 
 :global(h5) {
 	font-size: 1em;
+	margin: 0;
+	padding: 0;
+	letter-spacing: 1px;
+	// text-shadow : 3px 3px 3px rgba(0, 0, 0, 0.3);
+	text-rendering: optimizeLegibility;
+	@supports (-webkit-touch-callout: none) {
+		-webkit-text-stroke: 0.5px;
+	}
 }
 
 :global(button) {
