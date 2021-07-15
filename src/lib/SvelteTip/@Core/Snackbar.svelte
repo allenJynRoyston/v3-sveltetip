@@ -30,9 +30,10 @@
 
 	//--------------------------- EVENT HANDLERS
 	const processSnack = () => {
+    console.log('process snack...')
 		snacks = snacks.map((s, i) => {
 			if (!s.processed) {
-				if (s?.duration && s.duration > 1000) {
+				if (s?.duration && s.duration >= 1) {
 					const timer = setTimeout(() => {
 						s.animateIn && animateOutSnack(s);
 					}, s.duration);
@@ -84,7 +85,6 @@
 		const id = Math.random().toString(36).substring(7);
 
 		const progress = 50;
-
 		snack = { ...snack, processed: false, animateIn: true, progress, id };
 		currentSnack = snack;
 		snacks = [...snacks, snack];

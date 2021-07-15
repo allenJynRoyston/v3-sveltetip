@@ -51,7 +51,14 @@
 		_list[key] = links.filter((x) => x.section === key);
 	}
 
-	let linkList = _list;
+  var sortKeysFor = function(obj) {
+    return Object.keys(obj).sort().reduce(function(map, key) {
+      map[key] = obj[key] 
+      return map
+    }, {})
+  }  
+
+	let linkList = sortKeysFor(_list);
 </script>
 
 <div class={`column-layout ${theme}-theme`}>

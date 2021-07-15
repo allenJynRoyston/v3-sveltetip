@@ -48,10 +48,12 @@
 	const addSnack: any = getContext('addSnack');
 
 	const snacktime = () => {
+    console.log(props)
 		addSnack({
 			message: 'I am a snackbar!',
 			...props,
-			...selectprops
+			...selectprops,
+      ...inputprops
 		});
 	};
 
@@ -65,7 +67,8 @@
 				active: true
 			},
 			...props,
-			...selectprops
+			...selectprops,
+      ...inputprops
 		});
 	};
 
@@ -81,7 +84,8 @@
 				}
 			},
 			...props,
-			...selectprops
+			...selectprops,
+      ...inputprops
 		});
 	};
 
