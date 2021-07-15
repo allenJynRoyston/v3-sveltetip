@@ -137,6 +137,7 @@
 		.header {
 			z-index: 2;
 			padding: 5px 10px;
+      background: rgba(0, 0, 0, .25);
 			&.clickable {
 				cursor: pointer;
 			}
