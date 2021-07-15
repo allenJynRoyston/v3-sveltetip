@@ -1,4 +1,4 @@
-import chroma from 'chroma-js';
+// import chroma from 'chroma-js';
 
 type ChannelDataType = {
 	content?: any;
@@ -98,59 +98,69 @@ export const capitalizeStr = (string: string) => {
 	return string.charAt(0).toUpperCase() + string.slice(1);
 };
 
-export const createColorPallete = ({ colorSet, range = 10, theme = 'light' }) => {
-	let colors = {};
-	let scales = {};
+// const colorSet = {
+//   black:
+//     theme === 'light' ? { start: '#10131b', end: '#eee' } : { start: '#10131b', end: '#eee' },
+//   white:
+//     theme === 'light' ? { start: 'white', end: '#bdc3c7' } : { start: 'white', end: '#bdc3c7' },
+//   primary:
+//     theme === 'light' ? { start: '#0fbcf9', end: 'black' } : { start: '#4bcffa', end: 'black' },
+//   secondary:
+//     theme === 'light' ? { start: '#3c40c6', end: 'black' } : { start: '#FD7272', end: 'black' },
+//   magic:
+//     theme === 'light' ? { start: '#9b59b6', end: 'black' } : { start: '#9b59b6', end: 'black' },
+//   success:
+//     theme === 'light' ? { start: '#4cd137', end: 'black' } : { start: '#4cd137', end: 'black' },
+//   warning:
+//     theme === 'light' ? { start: '#e67e22', end: 'black' } : { start: '#e67e22', end: 'black' },
+//   danger:
+//     theme === 'light' ? { start: '#ff073a', end: 'black' } : { start: '#d63031', end: 'black' }
+// };
 
-	for (const key in colorSet) {
-		colors[key] = [];
-		scales[key] = chroma.scale([colorSet[key].start, colorSet[key].end]).mode('lch').colors(range);
-	}
+// export const createColorPallete = ({ colorSet, range = 10, theme = 'light' }) => {
+// 	let colors = {};
+// 	let scales = {};
 
-	// COLORS
-	for (const [key] of Object.entries(scales)) {
-		scales[key].forEach((color, index) => {
-			let colorName = `--${key}-${index}`;
-			let textName = `--${key}-${index}-text`;
+// 	for (const key in colorSet) {
+// 		colors[key] = [];
+// 		scales[key] = chroma.scale([colorSet[key].start, colorSet[key].end]).mode('lch').colors(range);
+// 	}
 
-			const whiteContrast = chroma.contrast(color, '#eee');
-			const blackContrast = chroma.contrast(color, '#333');
-			const textFriendlyColor = whiteContrast > blackContrast ? '#eee' : '#333';
+// 	// COLORS
+// 	for (const [key] of Object.entries(scales)) {
+// 		scales[key].forEach((color, index) => {
+// 			let colorName = `--${key}-${index}`;
+// 			let textName = `--${key}-${index}-text`;
 
-			document.documentElement.style.setProperty(colorName, color);
-			document.documentElement.style.setProperty(textName, textFriendlyColor);
+// 			const whiteContrast = chroma.contrast(color, '#eee');
+// 			const blackContrast = chroma.contrast(color, '#333');
+// 			const textFriendlyColor = whiteContrast > blackContrast ? '#eee' : '#333';
 
-			colors[key].push({ name: colorName, textColor: textName, color, textFriendlyColor });
-		});
-	}
+// 			document.documentElement.style.setProperty(colorName, color);
+// 			document.documentElement.style.setProperty(textName, textFriendlyColor);
 
-	// HR
-	document.documentElement.style.setProperty(
-		'--hr',
-		scales[theme === 'light' ? 'black' : 'black'][theme === 'light' ? 2 : 5]
-	);
+// 			colors[key].push({ name: colorName, textColor: textName, color, textFriendlyColor });
+// 		});
+// 	}
 
-	return colors;
-};
+// 	// HR
+// 	document.documentElement.style.setProperty(
+// 		'--hr',
+// 		scales[theme === 'light' ? 'black' : 'black'][theme === 'light' ? 2 : 5]
+// 	);
+
+// 	return colors;
+// };
 
 export const assignColorsVars = (colors, theme = 'light') => {
 	// COLORS
 	for (const [key] of Object.entries(colors)) {
 		colors[key].forEach((colorData, index) => {
-			const colorName = `--${key}-${index}`;
-			const textName = `--${key}-${index}-text`;
-
-			const { color } = colorData;
-
-			const whiteContrast = chroma.contrast(color, '#eee');
-			const blackContrast = chroma.contrast(color, '#333');
-			const textFriendlyColor = whiteContrast > blackContrast ? '#eee' : '#333';
-
+			const { colorName, textName, color, textFriendlyColor } = colorData;
 			document.documentElement.style.setProperty(colorName, color);
 			document.documentElement.style.setProperty(textName, textFriendlyColor);
 		});
 	}
-
 	// HR
 	document.documentElement.style.setProperty(
 		'--hr',

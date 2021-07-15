@@ -141,7 +141,7 @@ $font-system: 'Segoe UI Light', 'Segoe', Tahoma, Helvetica, Arial, sans-serif;
 }
 
 :global(span) {
-	font-family: $font-two;
+	font-family: inherit;
 	text-rendering: optimizeLegibility;
 }
 

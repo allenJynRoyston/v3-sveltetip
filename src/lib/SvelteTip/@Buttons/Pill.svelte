@@ -1,6 +1,4 @@
 <script lang="ts">
-	import { getContext } from 'svelte';
-
 	export let inactiveTheme = 'light';
 	export let activeTheme = 'default';
 	export let tiny = false;
@@ -9,10 +7,7 @@
 	export let active = false;
 	export let exactfit = false;
 	export let size = 'normal';
-
 	export let onClick = null;
-
-	// $: useType = activeTheme === 'default' ? (theme === 'dark' ? 'black' : 'white') : activeTheme;
 </script>
 
 <button
@@ -26,7 +21,9 @@
 		onClick && onClick();
 	}}
 >
-	<slot />
+  <span>
+	  <slot />
+  </span>
 </button>
 
 <style lang="scss">
@@ -45,6 +42,7 @@
 		gap: 5px;
 		max-width: 50%;
 		margin: 2px;
+    font-weight: 600;
 
 		&:active {
 			background: var(--white-4);

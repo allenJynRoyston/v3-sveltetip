@@ -50,7 +50,9 @@
 	</div>
 	<div class="content" type="button">
 		<slot>
-			{content || 'Button'}
+      <span>
+			  {content || 'Button'}
+      </span>
 		</slot>
 	</div>
 	<div class="icon">
@@ -69,6 +71,7 @@
 		outline: none;
 		margin: 2px;
 		border: none;
+    font-weight: 600;
 
 		&.tiny {
 			font-size: 9px;

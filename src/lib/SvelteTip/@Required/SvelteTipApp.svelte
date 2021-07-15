@@ -4,9 +4,10 @@
 	import { browser, dev } from '$app/env';
 	import { navigating } from '$app/stores';
   
-	import { createColorPallete, assignFonts } from '@js/index';
+	import { assignFonts, assignColorsVars } from '@js/index';
 	import { DeviceStore, SiteStore } from '@stores/index';
 
+  import {colorScheme} from '../config/colorscheme'
   import styles from '@scss/src/font.scss';
 
 	import HashWatch from '@core/HashWatch.svelte';
@@ -38,27 +39,11 @@
 	//---------------------------
 
 	//--------------------------- COLORS
-	const colorSet = {
-		black:
-			theme === 'light' ? { start: '#10131b', end: '#eee' } : { start: '#10131b', end: '#eee' },
-		white:
-			theme === 'light' ? { start: 'white', end: '#bdc3c7' } : { start: 'white', end: '#bdc3c7' },
-		primary:
-			theme === 'light' ? { start: '#0fbcf9', end: 'black' } : { start: '#4bcffa', end: 'black' },
-		secondary:
-			theme === 'light' ? { start: '#3c40c6', end: 'black' } : { start: '#FD7272', end: 'black' },
-		magic:
-			theme === 'light' ? { start: '#9b59b6', end: 'black' } : { start: '#9b59b6', end: 'black' },
-		success:
-			theme === 'light' ? { start: '#4cd137', end: 'black' } : { start: '#4cd137', end: 'black' },
-		warning:
-			theme === 'light' ? { start: '#e67e22', end: 'black' } : { start: '#e67e22', end: 'black' },
-		danger:
-			theme === 'light' ? { start: '#ff073a', end: 'black' } : { start: '#d63031', end: 'black' }
-	};
-
+  let ready = false;
 	if (browser) {
-		setContext('colors', createColorPallete({ colorSet, range: 10, theme }));
+    assignColorsVars(colorScheme, theme)    
+		setContext('colors', colorScheme);
+    ready = true
 	}
 	//---------------------------
 
@@ -121,7 +106,7 @@
 <Modal show={modalOpen} />
 <HashWatch onChange={hashChange} />
 
-<div id="svelte-tip-app" bind:clientWidth={$appWidth} bind:clientHeight={$appHeight}>
+<div id="svelte-tip-app" class:ready bind:clientWidth={$appWidth} bind:clientHeight={$appHeight}>
 	<slot />
 </div>
 
@@ -130,6 +115,13 @@
 </div>
 
 <style lang="scss">
+  #svelte-tip-app{
+    opacity: 0;
+    &.ready{
+      opacity: 1;
+    }
+  }
+
 	#app-loader {
 		position: absolute;
 		top: 0;

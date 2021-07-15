@@ -88,6 +88,8 @@
 		{ title: 'droppable', section: 'Utility', href: `${root}/droppable` },
 		{ title: 'codeBlock', section: 'Utility', href: `${root}/codeBlock` },
 		{ title: 'loremBlock', section: 'Utility', href: `${root}/loremBlock` },
+		{ title: 'fadeIn', section: 'Utility', href: `${root}/fadein` },
+		{ title: 'inViewport', section: 'Utility', href: `${root}/inViewport` },
 
 		// EXTERNAL
 		{ title: 'pixijs', section: 'External', href: `${root}/pixijs` },

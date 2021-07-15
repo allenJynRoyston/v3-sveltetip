@@ -17,12 +17,18 @@
 	const events = {
 		onClick: (val) => {
 			eventLog = [...eventLog, { action: 'onClick', val }];
-		}
+		},
+    onClose: (val) => {
+      eventLog = [...eventLog, { action: 'onClose', val }];
+    }
 	};
 
 	const snippet = {
 		name: 'Tabs',
 		importName: '@supports/Tabs/Tabs.svelte',
+		props: {
+			closable: false
+		},
 		dropdowns: [
 			{
 				label: 'applyTheme',
@@ -37,7 +43,7 @@
 					'warning',
 					'danger'
 				],
-				value: 0
+				value: 3
 			}
 		],
 		inputs: [
@@ -53,26 +59,27 @@
 
 	$: livecode = `    
     const props = {
-		tabs: [
-			{
-				title: 'Example Block',
-				id: 'example-block',
-				component: ExampleBlock
-			},
-			{
-				title: 'Hello World',
-				id: 'hello-world',
-				component: LoremBlock,
-				props: {
-					content: 'Hello World!'
-				}
-			},
-			{
-				title: 'Form Example',
-				id: 'form-example',
-				component: FormExample
-			}
-		]
+      tabs: [
+        {
+          title: 'Example Block',
+          id: 'example-block',
+          component: ExampleBlock
+        },
+        {
+          title: 'Hello World',
+          id: 'hello-world',
+          component: LoremBlock,
+          props: {
+            content: 'Hello World!'
+          }
+        },
+        {
+          title: 'Form Example',
+          id: 'form-example',
+          component: FormExample
+        }
+      ]
+    }
 
     <Tabs {props} ${propstr}${selectstr}${inputstr} />  
      `;
