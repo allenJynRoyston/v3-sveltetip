@@ -1,11 +1,14 @@
 <script lang="ts">
 	import { getContext } from 'svelte';
+	import { DeviceStore } from '@stores/index';
+
 	import ColorBlock from '@base/ColorBlock.svelte';
 	import GridLayout from '@layout/GridLayout.svelte';
 	import Section from '@layout/Section.svelte';
 	import Panel from '@panel/Panel.svelte';
 
 	const colors = getContext('colors');
+	const { isTabletAndBelow } = DeviceStore;
 
 	let colorBlocks: any = {};
 
@@ -24,7 +27,7 @@
 </script>
 
 <Section>
-	<section>
+	<section class:tabletAndBelow={isTabletAndBelow} >
 		{#each Object.entries(colorBlocks) as [key]}
 			<Panel open rounded shadowOnHover>
 				<h3 slot="title" class="color-title">{key}</h3>
@@ -40,8 +43,6 @@
 </Section>
 
 <style lang="scss">
-	@import '../../../scss/src/_media-queries.scss';
-
 	.color-title {
 		text-transform: capitalize;
 	}
@@ -51,7 +52,7 @@
 		max-width: 900px;
 		margin: auto;
 
-		@include tablet-landscape-and-below {
+		&.tabletAndBelow{
 			padding: 20px 0;
 		}
 	}

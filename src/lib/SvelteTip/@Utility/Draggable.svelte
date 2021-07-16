@@ -122,6 +122,7 @@
 	class="draggable"
 	class:dragging
 	bind:this={ele}
+  on:touchmove={(e) => {e.preventDefault()}}
 	on:mousedown={dragStart}
 	{style}
 	{id}

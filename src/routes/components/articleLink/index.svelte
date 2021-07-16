@@ -74,14 +74,22 @@
 
     <ArticleLink${propstr}${selectstr}${inputstr}>
       <h1 slot="title">Article title</h1>
-      <img src="https://picsum.photos/200/300" alt="alt" slot="image" />
-      <LoremBlock ignoreTheme nopadding slot="content" />
+      <div slot="image">
+			  <img src="https://picsum.photos/200/300" alt="alt"  />
+      </div>
+      <div slot="content">
+			  <LoremBlock ignoreTheme nopadding  />
+      </div>
     </ArticleLink>
     
     <ArticleLink${propstr}${selectstr}${inputstr}>
       <h2 slot="title">Article title</h2>
-      <SVG icon="home" size={30} slot="image" />
-      <LoremBlock ignoreTheme nopadding slot="content" />
+      <div slot="image">
+			  <SVG icon="home" size={30}  />
+      </div>
+      <div slot="content">
+			  <LoremBlock ignoreTheme nopadding />
+      </div>
     </ArticleLink>     
      `;
 </script>
@@ -101,13 +109,21 @@
 	<div slot="liveexample">
 		<ArticleLink {...props} {...selectprops} {...inputprops} {...events}>
 			<h1 slot="title">Article title</h1>
-			<img src="https://picsum.photos/200/300" alt="alt" slot="image" />
-			<LoremBlock ignoreTheme nopadding slot="content" />
+      <div slot="image">
+			  <img src="https://picsum.photos/200/300" alt="alt"  />
+      </div>
+      <div slot="content">
+			  <LoremBlock ignoreTheme nopadding  />
+      </div>
 		</ArticleLink>
 		<ArticleLink {...props} {...selectprops} {...inputprops} {...events}>
 			<h2 slot="title">Article title</h2>
-			<SVG icon="home" size={30} slot="image" />
-			<LoremBlock ignoreTheme nopadding slot="content" />
+      <div slot="image">
+			  <SVG icon="home" size={30}  />
+      </div>
+      <div slot="content">
+			  <LoremBlock ignoreTheme nopadding />
+      </div>
 		</ArticleLink>
 	</div>
 </LibrarySnippet>

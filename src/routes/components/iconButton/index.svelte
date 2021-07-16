@@ -28,8 +28,6 @@
 			nomargin: false,
 			exactfit: true,
 			fullOnMobile: false,
-			useToggle: false,
-			toggled: false
 		},
 		dropdowns: [
 			{

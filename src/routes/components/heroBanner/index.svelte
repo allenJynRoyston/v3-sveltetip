@@ -7,8 +7,8 @@
 
 	let eventLog = [];
 	const events = {
-		onClick: (val) => {
-			eventLog = [...eventLog, { action: 'onClick', val }];
+		onTitleClick: (val) => {
+			eventLog = [...eventLog, { action: 'onTitleClick', val }];
 		}
 	};
 

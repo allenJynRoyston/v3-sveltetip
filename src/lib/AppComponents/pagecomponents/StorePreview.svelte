@@ -169,15 +169,10 @@
 </Section>
 
 <style lang="scss">
-	@import '../../../scss/src/_media-queries.scss';
 
 	section {
 		padding: 50px 0;
 		max-width: 900px;
 		margin: auto;
-
-		@include tablet-landscape-and-below {
-			padding: 20px 0;
-		}
 	}
 </style>

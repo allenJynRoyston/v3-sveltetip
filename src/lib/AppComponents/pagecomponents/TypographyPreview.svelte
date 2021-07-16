@@ -182,7 +182,6 @@
 </Section>
 
 <style lang="scss">
-	@import '../../../scss/src/_media-queries.scss';
 
 	.title {
 		font-weight: 700;

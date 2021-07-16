@@ -9,13 +9,15 @@
 	export let buttonOne = null;
 	export let buttonTwo = null;
 
-	const { isTabletAndBelow } = DeviceStore;
+  export let onTitleClick = null;
+
+	const { isTabletAndBelow, isDesktop } = DeviceStore;
 
 	const theme: string = getContext('theme');
 </script>
 
-<div class={`hero-banner ${theme}-theme`}>
-	<h5 class="title">
+<div class={`hero-banner ${theme}-theme`} class:desktop={$isDesktop}>
+	<h5 class="title" class:desktop={$isDesktop} class:pointer={!!onTitleClick} on:click={() => {onTitleClick && onTitleClick()}}>
 		{title}
 	</h5>
 	<div class="buttons">
@@ -29,8 +31,6 @@
 </div>
 
 <style lang="scss">
-  @import '../style/_media-queries.scss';
-
 	.hero-banner {
 		width: 100%;
 		padding: 10px 0;
@@ -41,7 +41,7 @@
 		background: transparent;
 		color: var(--white-0-text);
 
-		@include desktop-and-up {
+		&.desktop{
 			padding: 50px 0;
 		}
 
@@ -56,7 +56,10 @@
 		.title {
 			font-size: 32px;
 			margin-bottom: 5px;
-			@include desktop-and-up {
+      &.pointer{
+        cursor: pointer;
+      }
+			&.desktop{
 				font-size: 72px;
 			}
 			// &.lowHeight {

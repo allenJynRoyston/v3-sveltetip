@@ -16,8 +16,6 @@
 </div>
 
 <style lang="scss">
-	@import '../style/_media-queries.scss';
-
 	.color-block {
 		width: 100%;
 		height: 100%;

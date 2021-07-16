@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { getContext } from 'svelte';
 	import { page } from '$app/stores';
+	import { DeviceStore } from '@stores/index';
 
 	import Link from '@link/Link.svelte';
 	import SVG from '@base/SVG.svelte';
@@ -9,6 +10,7 @@
 	export let exactfit = false;
 	export let prefetch = false;
 
+	const { isTabletAndAbove } = DeviceStore;
 	const theme: string = getContext('theme');
 
 	$: checkActive = ({ href, hrefIncludes, queryIncludes }) => {
@@ -21,7 +23,7 @@
 	};
 </script>
 
-<div class={`nav-bar ${theme}-theme`}>
+<div class={`nav-bar ${theme}-theme`} class:tabletAndAbove={$isTabletAndAbove}>
 	<div class="links">
 		{#each links as {title, href = '/', hrefIncludes = null, queryIncludes = {id: null, queryId: null}}}
 			<Link
@@ -52,8 +54,6 @@
 </div>
 
 <style lang="scss">
-  @import '../style/_media-queries.scss';
-
 	.nav-bar {
 		.links {
 			display: none;
@@ -64,7 +64,7 @@
 			transform: translateY(5px);
 		}
 
-		@include tablet-portrait-and-up {
+		&.tabletAndAbove{
 			.links {
 				display: flex;
 				gap: 10px;

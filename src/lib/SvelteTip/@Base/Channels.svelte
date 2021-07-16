@@ -33,7 +33,6 @@
 	export let startChannelTransistion = null;
 	export let endChannelTransisition = null;
 
-	export let testprops;
 	export let afterUpdate = null;
 	export let channelReady = null;
 	export let onChannelClick = null;

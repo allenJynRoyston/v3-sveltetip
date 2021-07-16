@@ -20,11 +20,11 @@
 	};
 
 	const links = [
-		{ title: 'About', href: '/home/about', applyTheme: 'primary' },
-		{ title: 'Colors', href: '/home/colors', applyTheme: 'secondary' },
-		{ title: 'Typography', href: '/home/typography', applyTheme: 'success' },
-		{ title: 'Utilities', href: '/home/utilities', applyTheme: 'warning' },
-		{ title: 'Stores', href: '/home/stores', applyTheme: 'magic' }
+		{ title: 'About', href: '/home/about', applyTheme: 'magic' },
+		// { title: 'Colors', href: '/home/colors', applyTheme: 'secondary' },
+		// { title: 'Typography', href: '/home/typography', applyTheme: 'success' },
+		// { title: 'Utilities', href: '/home/utilities', applyTheme: 'warning' },
+		// { title: 'Stores', href: '/home/stores', applyTheme: 'magic' }
 	];
 </script>
 

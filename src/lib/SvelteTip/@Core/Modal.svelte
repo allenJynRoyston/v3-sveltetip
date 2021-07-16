@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { browser } from '$app/env';
 	import { getContext } from 'svelte';
-	import { ModalStore } from '@stores/index';
+	import { ModalStore, DeviceStore } from '@stores/index';
 
 	import TwoSlot from '@base/TwoSlot.svelte';
 	import SVG from '@base/SVG.svelte';
@@ -15,6 +15,7 @@
 	export let onStartModal = null;
 	export let onEndModal = null;
 
+	const { isDesktop } = DeviceStore;
 	const theme: string = getContext('theme');
 	const colors: any = getContext('colors');
 
@@ -107,6 +108,7 @@
 				class:freezeAnimation
 				class:shadow={$modalProps?.shadow}
 				class:rounded={$modalProps?.rounded}
+        class:desktop={$isDesktop}
 				class:animateIn={show}
 				class:animateOut={!show}
 				class:full
@@ -131,6 +133,7 @@
 				<div
 					class={`container-inner  ${browser ? defaultType : 'primary'}`}
 					class:nopadding={$modalProps?.nopadding}
+          class:desktop={$isDesktop}          
 					class:full
 					class:hasFooter={$modalProps?.onConfirm || $modalProps?.onCancel}
 					class:busy={$modalIsBusy}
@@ -148,7 +151,7 @@
 				{#if $modalProps?.onConfirm || $modalProps?.onCancel}
 					<div class="footer">
 						<slot name="footer">
-							<div class="default-footer" class:full={fullcorner || full}>
+							<div class="default-footer" class:full={fullcorner || full} class:desktop={$isDesktop}>
 								{#if $modalProps?.onCancel}
 									<Button
 										disabled={$modalIsBusy}
@@ -194,7 +197,7 @@
 				/>
 			</div>
 
-			<div class={`naked-container ${browser ? defaultBackdrop : 'primary'}`}>
+			<div class={`naked-container ${browser ? defaultBackdrop : 'primary'}`} class:desktop={$isDesktop} >
 				<ScrollWrapper centered skinnybar>
 					<svelte:component this={$modalProps?.content.component} {...$modalProps?.content.props} />
 				</ScrollWrapper>
@@ -203,9 +206,7 @@
 	</div>
 </div>
 
-<style lang="scss" scoped>
-	@import '../style/_media-queries.scss';
-
+<style lang="scss" scoped>	
 	$modalZindex: 50;
 	$modalBGZIndex: 1;
 	$modalContentZIndex: 2;
@@ -277,7 +278,7 @@
 			transition: 0.3s;
 			cursor: pointer;
 
-			@include desktop-and-up {
+			&.desktop{
 				width: calc(100% - 20px);
 				height: calc(100% - 20px);
 				padding: 10px;
@@ -321,7 +322,7 @@
 
 			&.shadow {
 				box-shadow: none;
-				@include desktop-and-up {
+				&.desktop{
 					&.center {
 						box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
 					}
@@ -345,7 +346,7 @@
 			}
 
 			&.rounded {
-				@include desktop-and-up {
+				&.desktop{
 					&.center {
 						border-radius: 10px;
 					}
@@ -401,7 +402,7 @@
 				}
 			}
 
-			@include desktop-and-up {
+			&.desktop{
 				width: calc(50% - 20px);
 				max-height: 600px;
 				&.full {
@@ -437,7 +438,7 @@
 				gap: 10px;
 				padding: 10px;
 
-				@include desktop-and-up {
+				&.desktop{
 					width: auto;
 					&.full {
 						width: 100%;
@@ -486,7 +487,7 @@
 					overflow-y: hidden;
 				}
 
-				@include desktop-and-up {
+				&.desktop{
 					height: auto;
 					max-height: calc(600px - 100px);
 					&.hasFooter {

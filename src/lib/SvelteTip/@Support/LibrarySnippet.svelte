@@ -244,7 +244,7 @@
 					<div slot="content">
 						{#if !!props || listofdropdowns().length > 0 || listofinputs().length > 0}
 							<div class="props-container">
-								{#if !!props}
+								{#if !!props && Object.entries(props).length > 0}
 									<div class="buttons">
 										{#each Object.entries(props) as [key, pair]}
 											<Pill
@@ -263,7 +263,7 @@
 										{/each}
 									</div>
 								{/if}
-
+                
 								{#if listofdropdowns().length > 0}
 									<hr />
 									<div class="dropdowns">

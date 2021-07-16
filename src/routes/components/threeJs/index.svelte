@@ -1,7 +1,7 @@
 <script lang="ts">
 	import LibrarySnippet from '@support/LibrarySnippet.svelte';
 
-	import PixiJs from '@external/PixiJs.svelte';
+	import ThreeJs from '@external/ThreeJs.svelte';
 
 	let propstr = '';
 	let selectstr = '';
@@ -14,34 +14,34 @@
 	const events = {};
 
 	const snippet = {
-		name: 'PixiJs',
-		importName: '@external/PixiJs.svelte',
+		name: 'ThreeJs',
+		importName: '@external/ThreeJs.svelte',
 		props: {},
 		dropdowns: [],
 		inputs: [
 			{
-				forprop: 'pixifile',
+				forprop: 'threeFile',
 				renderAs: 'input',
-				componentprop: { type: 'text', placeholder: '/pixi/folder/filename.js' },
-				value: '/pixi/starfield/starfield.js'
+				componentprop: { type: 'text', placeholder: '/three/folder/filename.js' },
+				value: '/three/demo1/demo1.js'
 			},
 			{
 				forprop: 'resourceFolder',
 				renderAs: 'input',
-				componentprop: { type: 'text', placeholder: '/pixi/folder' },
-				value: '/pixi/starfield'
+				componentprop: { type: 'text', placeholder: '/three/folder' },
+				value: '/three/demo1'
 			},
 			{
 				forprop: 'id',
 				renderAs: 'input',
-				componentprop: { type: 'text', placeholder: 'instance1, canvas1, pixi1, etc' },
+				componentprop: { type: 'text', placeholder: 'instance1, canvas1, threecanvas, etc' },
 				value: 'instance1'
 			}
 		]
 	};
 
 	$: livecode = `    
-    <PixiJs${propstr}${selectstr}${inputstr} />
+    <ThreeJs${propstr}${selectstr}${inputstr} />
      `;
 </script>
 
@@ -58,6 +58,6 @@
 	{events}
 >
 	<div slot="liveexample">
-		<PixiJs {...props} {...selectprops} {...inputprops} {...events} />
+		<ThreeJs {...props} {...selectprops} {...inputprops} {...events} />
 	</div>
 </LibrarySnippet>

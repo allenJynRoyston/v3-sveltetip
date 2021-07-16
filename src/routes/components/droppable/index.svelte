@@ -69,6 +69,8 @@
 	bind:props
 	bind:selectprops
 	bind:inputprops
+  {...eventLog}
+  {...events}
 >
 	<div slot="liveexample">
 		<Draggable {...events} id="button1">

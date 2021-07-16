@@ -27,7 +27,6 @@
 		inputs: [
 			{ forprop: 'size', renderAs: 'input', componentprop: { type: 'number' }, value: 150 },
 			{ forprop: 'gap', renderAs: 'input', componentprop: { type: 'number' }, value: 10 },
-			{ forprop: 'height', renderAs: 'input', componentprop: { type: 'number' }, value: 10 }
 		]
 	};
 

@@ -14,10 +14,6 @@
 	const snippet = {
 		name: 'ColumnLayout',
 		importName: '@supports/ColumnLayout/ColumnLayout.svelte',
-		props: {
-			disableSearch: false,
-			ignoreForExample: true
-		},
 		dropdowns: [
 			{
 				label: 'activeTheme',
@@ -83,7 +79,7 @@
 	bind:inputprops
 >
 	<div slot="liveexample">
-		<ColumnLayout {links} {...props} {...selectprops} {...inputprops} ignoreForExample>
+		<ColumnLayout {links} {...props} {...selectprops} {...inputprops} >
 			<div style="padding: 0 10px">
 				<LoremBlock />
 			</div>

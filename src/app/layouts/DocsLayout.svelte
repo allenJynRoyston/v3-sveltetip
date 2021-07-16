@@ -10,7 +10,7 @@
 </script>
 
 <Container>
-	<ColumnLayout {links} watchParam="section">
+	<ColumnLayout {links} >
 		<div style="padding: 20px;">
 			<main>
 				<slot />

@@ -1,6 +1,8 @@
 <script lang="ts">
 	//--------------------------- IMPORTS
 	import { getContext, onDestroy } from 'svelte';
+  import { DeviceStore } from '@stores/index';
+
 	import SVG from '@base/SVG.svelte';
 	import ProgressBar from '@base/ProgressBar.svelte';
 
@@ -8,6 +10,7 @@
 	export let onComplete = () => {};
 	export let onClick = () => {};
 
+	const { isDesktop } = DeviceStore;
 	const colors: any = getContext('colors');
 	const theme: string = getContext('theme');
 
@@ -30,7 +33,6 @@
 
 	//--------------------------- EVENT HANDLERS
 	const processSnack = () => {
-    console.log('process snack...')
 		snacks = snacks.map((s, i) => {
 			if (!s.processed) {
 				if (s?.duration && s.duration >= 1) {
@@ -125,12 +127,13 @@
 	//---------------------------
 </script>
 
-<div class={`snackbar`}>
+<div class='snackbar' class:desktop={$isDesktop} >
 	{#each snacks as snack (snack.id)}
 		<div
 			class={`snack ${!!theme ? `${theme}-theme` : ''} ${snack?.applyTheme || ''} ${
 				snack?.closeOnClick ? 'clickable' : ''
 			}`}
+      class:desktop={$isDesktop}
 			class:animateIn={snack.animateIn}
 			class:animateOut={!snack.animateIn}
 			class:btmpadding={snack?.duration}
@@ -147,7 +150,7 @@
 				<SVG icon={returnIcon(snack.applyTheme)} fill={returnIconColor(snack.applyTheme)} />
 			</div>
 
-			<div class="content" class:content-padding={snack?.component}>
+			<div class="content" class:content-padding={snack?.component} class:desktop={$isDesktop}>
 				{#if snack?.message}
 					{snack.message}
 				{/if}
@@ -179,8 +182,6 @@
 </div>
 
 <style lang="scss">
-	@import '../style/_media-queries.scss';
-
 	.snackbar {
 		position: fixed;
 
@@ -193,12 +194,12 @@
 		right: 0;
 		bottom: 0;
 
-		@include desktop-and-up {
-			padding: 0;
-			bottom: 10px;
-			right: 10px;
-			width: auto;
-		}
+    &.desktop{  
+      padding: 0;
+      bottom: 10px;
+      right: 10px;
+      width: auto;      
+    }
 	}
 
 	.snack {
@@ -212,7 +213,7 @@
 		overflow: hidden;
 		background: var(--black-1);
 
-		@include desktop-and-up {
+		&.desktop{  
 			width: auto;
 		}
 
@@ -307,7 +308,7 @@
 			padding: 15px 0;
 			// color: white !important;
 
-			@include desktop-and-up {
+			&.desktop{  
 				text-align: left;
 			}
 

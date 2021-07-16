@@ -93,6 +93,7 @@
 
 		// EXTERNAL
 		{ title: 'pixijs', section: 'External', href: `${root}/pixijs` },
+		{ title: 'threeJs', section: 'External', href: `${root}/threeJs` },
 		{ title: 'quill', section: 'External', href: `${root}/quill` }
 	];
 
@@ -100,7 +101,7 @@
 </script>
 
 <Container>
-	<ColumnLayout {links} watchParam="section">
+	<ColumnLayout {links} >
 		<div style="padding: 20px;">
 			<main>
 				<slot />

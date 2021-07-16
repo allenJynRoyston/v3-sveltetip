@@ -33,7 +33,7 @@
 	export let toggled = false;
 
 	const { openSidebar, openNotch, innerContainerAdditionalHeight, shrinkHeader } = SiteStore;
-	const { appWidth } = DeviceStore;
+	const { isTabletAndAbove, isDesktop } = DeviceStore;
 
 	const theme: string = getContext('theme');
 
@@ -85,8 +85,8 @@
 								<img class="logo" src={logoSrc} alt="logo" />
 							{/if}
 
-							{#if !hideTitle && title && $appWidth > 600}
-								<div class={`brand ${theme}`}>
+							{#if !hideTitle && title && $isTabletAndAbove}
+								<div class={`brand ${theme}`} class:desktop={$isDesktop}>
 									<slot>
 										<h1>{title}</h1>
 										<span>v{version}</span>
@@ -152,8 +152,6 @@
 </nav>
 
 <style lang="scss" scoped>
-  @import '../style/_media-queries.scss';
-
 	nav {
 		position: relative;
 		width: 100%;
@@ -185,7 +183,7 @@
 				color: var(--white-0);
 			}
 
-			@include desktop-and-up {
+			&.desktop{
 				font-size: 12px;
 			}
 		}

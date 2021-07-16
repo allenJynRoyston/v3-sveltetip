@@ -1,15 +1,17 @@
 <script lang="ts">
 	import ThemeSwitch from '@unsorted/ThemeSwitch.svelte';
+	import { DeviceStore } from '@stores/index';
+	const { isTabletAndBelow } = DeviceStore;
+
 </script>
 
-<div class="search-notch">
-	<div class="theme-notch">
+<div class="search-notch" class:tabletAndBelow={$isTabletAndBelow}>
+	<div class="theme-notch"  class:tabletAndBelow={$isTabletAndBelow}>
 		<ThemeSwitch />
 	</div>
 </div>
 
 <style lang="scss">
-	@import '../../scss/src/_media-queries.scss';
 
 	.search-notch {
 		width: 100%;
@@ -17,7 +19,7 @@
 		justify-content: center;
 		align-items: center;
 
-		@include mobile-landscape-and-below {
+		&.tabletAndBelow{
 			flex-wrap: wrap;
 		}
 	}
@@ -31,7 +33,7 @@
 		margin-bottom: 5px;
 		margin-right: 10px;
 
-		@include mobile-landscape-and-below {
+		&.tabletAndBelow{
 			width: 100%;
 		}
 	}

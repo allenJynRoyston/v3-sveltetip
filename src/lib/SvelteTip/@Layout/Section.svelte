@@ -1,14 +1,20 @@
 <script>
+	import { DeviceStore } from '@stores/index';
+
 	export let className = null;
 	export let style = null;
 
 	export let nomargin = false;
 	export let nopadding = false;
 	export let outline = false;
+
+	const { isDesktop } = DeviceStore;
+
 </script>
 
 <div
 	class={`section ${!!className ? className : ''}`}
+  class:desktop={$isDesktop}
 	class:nopadding
 	class:nomargin
 	class:outline
@@ -18,8 +24,6 @@
 </div>
 
 <style lang="scss">
-  @import '../style/_media-queries.scss';
-
 	.section {
 		width: calc(100% - 20px);
 		padding: 0 10px;
@@ -38,7 +42,7 @@
 			border: 3px dotted var(--black-1);
 		}
 
-		@include desktop-and-up {
+		&.desktop{
 			width: calc(100% - 40px);
 			height: calc(100% - 40px);
 			padding: 20px;

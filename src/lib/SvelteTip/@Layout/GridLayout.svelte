@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { getContext } from 'svelte';
+	import { DeviceStore } from '@stores/index';
 
 	export let size: number = 150;
 	export let gap: number = 10;
@@ -9,6 +10,7 @@
 	export let items: any = [];
 	export let onClick = null;
 
+	const { isDesktop } = DeviceStore;
 	const theme: string = getContext('theme');
 
 	$: style = () => {
@@ -19,6 +21,7 @@
 <ul class="grid-layout" style={style()}>
 	{#each items as { component, row, column, props }, index}
 		<li
+      class:desktop={$isDesktop}
 			class={`grid-item ${theme}-theme`}
 			class:clickable={!!onClick}
 			class:exactfit
@@ -37,8 +40,6 @@
 </ul>
 
 <style lang="scss">
-  @import '../style/_media-queries.scss';
-
 	.grid-layout {
 		padding: 0;
 		margin: 0;
@@ -83,7 +84,7 @@
 			width: initial;
 			min-width: initial;
 
-			@include desktop-and-up {
+			&.desktop{
 				&.column-two {
 					grid-column: span 2;
 				}

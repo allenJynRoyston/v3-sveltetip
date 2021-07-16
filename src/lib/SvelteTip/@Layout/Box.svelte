@@ -10,6 +10,8 @@
 	export let maxHeight = 'auto';
 	export let useGradiant = false;
 
+  export let onClick = null;
+
 	const theme: string = getContext('theme');
 
 	let cWidth = null;
@@ -23,6 +25,7 @@
 	class:rounded
 	class:shadow
 	class:shadowOnHover
+  on:click={() => {onClick && onClick()}}
 	bind:clientWidth={cWidth}
 	style={!exactfit
 		? !!cWidth

@@ -55,7 +55,7 @@
 		worker.addEventListener(
 			'message',
 			(e) => {
-				console.log('Worker said: ', e.data);
+				// console.log('Worker loaded');
 			},
 			false
 		);
@@ -69,8 +69,7 @@
 	});
 	//---------------------------
 
-	//--------------------------- HASHCHANGE
-	let view = null;
+	//--------------------------- HASHCHANGE	
 	let showLoader = false;
 	let timer = null;
 	let modalOpen: boolean = false;

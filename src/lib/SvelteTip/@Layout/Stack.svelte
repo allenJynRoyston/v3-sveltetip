@@ -33,8 +33,6 @@
 </div>
 
 <style lang="scss">
-  @import '../style/_media-queries.scss';
-
 	.stacks {
 		width: 100%;
 		height: 100%;

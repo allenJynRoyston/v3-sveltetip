@@ -18,6 +18,9 @@ function deviceStoreInit() {
 		isTabletAndBelow: derived(appWidth, ($appWidth) => {
 			return $appWidth < 1024;
 		}),
+		isTabletAndAbove: derived(appWidth, ($appWidth) => {
+			return $appWidth > 768;
+		}),
 		isDesktop: derived(appWidth, ($appWidth) => {
 			return $appWidth >= 1024;
 		}),

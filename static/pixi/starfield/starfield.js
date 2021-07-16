@@ -13,11 +13,11 @@ function pixiInit(props){
 
   const starTexture = PIXI.Texture.from(`${resourceFolder}/star.png`);
 
-  const starAmount = 500;
+  const starAmount = 5000;
   const fov = 20;
-  const baseSpeed = 0.25;
-  const starStretch = 5;
-  const starBaseSize = 0.5;
+  const baseSpeed = 0.55;
+  const starStretch = 15;
+  const starBaseSize = 0.25;
 
   let cameraZ = 0;      
   let speed = 0;

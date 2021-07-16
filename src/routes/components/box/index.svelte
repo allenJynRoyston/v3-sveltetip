@@ -12,8 +12,8 @@
 
 	let eventLog = [];
 	const events = {
-		onHeaderClick: (val) => {
-			eventLog = [...eventLog, { action: 'onHeaderClick', val }];
+		onClick: (val) => {
+			eventLog = [...eventLog, { action: 'onClick', val }];
 		}
 	};
 

@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { getContext } from 'svelte';
 	import { browser } from '$app/env';
+	import { DeviceStore } from '@stores/index';
 
 	import Link from '@link/Link.svelte';
 	import SVG from '@base/SVG.svelte';
@@ -32,6 +33,7 @@
 	export let onClick = null;
 	export let prefetch = null;
 
+	const { isMobile } = DeviceStore;
 	const theme: string = getContext('theme');
 	const colors = getContext('colors');
 
@@ -56,7 +58,7 @@
 		<button
 			class={`button ${useType}${useGradiant ? '-gradiant' : ''} ${size} ${theme}-theme`}
 			class:nobg
-			class:fullOnMobile
+			class:fullOnMobile={fullOnMobile && $isMobile}
 			class:nomargin
 			class:exactfit
 			class:disabled
@@ -86,7 +88,7 @@
 	<button
 		class={`button ${useType}${useGradiant ? '-gradiant' : ''} ${size} ${theme}-theme`}
 		class:nobg
-		class:fullOnMobile
+		class:fullOnMobile={fullOnMobile && $isMobile}
 		class:nomargin
 		class:exactfit
 		class:disabled
@@ -113,8 +115,6 @@
 {/if}
 
 <style lang="scss" scoped>
-	@import '../style/_media-queries.scss';
-
 	button {
 		outline: none;
 		border: none;
@@ -148,9 +148,7 @@
 		}
 
 		&.fullOnMobile {
-			@include mobile-only {
-				width: 100% !important;
-			}
+			width: 100% !important;
 		}
 
 		&.disabled {

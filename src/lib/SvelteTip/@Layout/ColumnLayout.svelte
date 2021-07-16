@@ -8,17 +8,14 @@
 	import ScrollWrapper from '@layout/ScrollWrapper.svelte';
 	import Container from '@layout/Container.svelte';
 
-	export let links = [];
-	export let watchParam = null;
-	export let ignoreForExample = false;
-
+	export let links = [];	
 	export let activeTheme = 'primary';
 	export let side = 'left';
 
 	const theme: string = getContext('theme');
 
 	const { openSidebar, searchValue } = SiteStore;
-	const { isTabletAndBelow } = DeviceStore;
+	const { isTabletAndBelow, isDesktop } = DeviceStore;
 
 	let removeWidth = false;
 	SiteStore.openSidebar.subscribe(async (value) => {
@@ -63,7 +60,7 @@
 
 <div class={`column-layout ${theme}-theme`}>
 	<div class="layout-inner">
-		<div class={`directory ${side}`} class:collapse={!$openSidebar} class:removeWidth>
+		<div class={`directory ${side}`} class:collapse={!$openSidebar} class:removeWidth class:desktop={$isDesktop}>
 			<Container>
 				<div class="directory-inner">
 					<ScrollWrapper accountForTopPos height={'100%'}>
@@ -74,7 +71,7 @@
 									applyTheme="default"
 									headerTag="h4"
 								>
-									<ul class="directory-links">
+									<ul class="directory-links" class:desktop={$isDesktop}>
 										{#each pairs as { href, title }, index}
 											<Link
 												type={activeTheme}
@@ -101,7 +98,7 @@
 			</Container>
 		</div>
 
-		<div class={`content ${side}`}>
+		<div class={`content ${side}`} class:desktop={$isDesktop}>
 			<ScrollWrapper accountForTopPos height={'100%'}>
 				{#if $isTabletAndBelow && $openSidebar}
 					<div
@@ -121,8 +118,6 @@
 </div>
 
 <style lang="scss">
-	@import '../style/_media-queries.scss';
-
 	.column-layout {
 		width: 100%;
 		display: block;
@@ -160,7 +155,7 @@
 				transform: translateX(-100%);
 			}
 
-			@include desktop-and-up {
+			&.desktop{
 				position: relative;
 				top: 0;
 				left: 0;
@@ -191,7 +186,7 @@
 			font-size: 18px;
 			margin: 5px 0;
 
-			@include desktop-and-up {
+			&.desktop{
 				font-size: 14px;
 			}
 		}
@@ -218,7 +213,7 @@
 				order: 0;
 			}
 
-			@include desktop-and-up {
+			&.desktop{
 				width: 100% !important;
 			}
 		}

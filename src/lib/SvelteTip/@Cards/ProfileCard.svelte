@@ -160,8 +160,6 @@
 </div>
 
 <style lang="scss">
-	@import '../style/_media-queries.scss';
-
 	.profile-card {
 		width: 100%;
 		height: auto;

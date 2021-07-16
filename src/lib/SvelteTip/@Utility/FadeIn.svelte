@@ -6,6 +6,7 @@
   export let condition: 'use-prop' | 'when-mounted' | 'when-inviewport' = 'when-mounted';
   export let fadeDirection: 'none' | 'up' | 'down' | 'left' | 'right' = 'none'
   export let duration = 300
+  export let delay = 100
 
   let mountReady = false;
   let fadeIn = false;
@@ -25,7 +26,7 @@
     }    
   }
 
-  $:style = `transition: ${duration}ms;`
+  $:style = `transition: ${duration}ms; transition-delay: ${delay}ms`
 
   $: {
     condition && reset()
@@ -53,19 +54,19 @@
     }
 
     &.left{
-      transform: translateX(-10px)
+      transform: translateX(-20px)
     }    
 
     &.right{
-      transform: translateX(10px)
+      transform: translateX(20px)
     }        
 
     &.up{
-      transform: translateY(-10px)
+      transform: translateY(-20px)
     }    
 
     &.down{
-      transform: translateY(10px)
+      transform: translateY(20px)
     }        
 
     &.mountFadeIn, &.propFadeIn, &.fadeIn{

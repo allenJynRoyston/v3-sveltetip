@@ -4,7 +4,6 @@
 	import ColorText from '@base/ColorText.svelte';
 	import Button from '@button/Button.svelte';
 	import Rating from '@form/Rating.svelte';
-	// import ImageGallery from '@images/ImageGallery.svelte';
 
 	export let shadow = false;
 	export let innerShadow = false;
@@ -101,7 +100,7 @@
 		<section style="width: 200px; height: auto">
 			<div class="image">
 				<!-- <ImageGallery showArrows /> -->
-				<FullImage src="https://picsum.photos/200/300" />
+				<FullImage src={imageSrc} />
 			</div>
 		</section>
 
@@ -172,8 +171,6 @@
 </div>
 
 <style lang="scss">
-	@import '../style/_media-queries.scss';
-
 	.product-card {
 		width: 100%;
 		height: auto;

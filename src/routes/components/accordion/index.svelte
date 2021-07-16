@@ -29,7 +29,6 @@
 			shadowOnHover: false,
 			skinnybar: false,
 			onlyOneOpened: false,
-			defaultOpen: false
 		},
 		dropdowns: [
 			{
@@ -121,7 +120,6 @@
 		<br />
 		<Accordion
 			dataset={[{ title: 'Slot only' }]}
-			notitle
 			{...props}
 			{...selectprops}
 			{...inputprops}
