@@ -193,8 +193,8 @@
 		max-width: 900px;
 		margin: auto;
 
-		@include tablet-landscape-and-below {
+		// @include tablet-landscape-and-below {
 			padding: 20px 0;
-		}
+		// }
 	}
 </style>
