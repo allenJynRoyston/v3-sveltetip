@@ -31,7 +31,7 @@
 			"@stores/*": ["src/stores/*"],
 			"@routes/*": ["src/routes/*"],
 			"@component/*": ["src/lib/AppComponents/*"],
-			"@support/*": ["src/lib/SvelteTip/@Support/*"],
+			"@chart/*": ["src/lib/SvelteTip/@Charts/*"],
 			"@required/*": ["src/lib/SvelteTip/@Required/*"],
 			"@base/*": ["src/lib/SvelteTip/@Base/*"],
 			"@core/*": ["src/lib/SvelteTip/@Core/*"],

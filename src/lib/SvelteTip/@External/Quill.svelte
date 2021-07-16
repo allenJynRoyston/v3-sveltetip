@@ -23,8 +23,8 @@
 	export let onChange = null;
 
 	const theme: any = getContext('theme');
-	const quillJsSrc = 'https://cdn.quilljs.com/1.3.6/quill.js';
-	const quillStyleSrc = 'https://cdn.quilljs.com/1.3.6/quill.snow.css';
+	const defaultSrc = 'https://cdn.quilljs.com/1.3.6/quill.js';
+	const defaultLink = 'https://cdn.quilljs.com/1.3.6/quill.snow.css';
 
 	let quillEle = null;
 	let hasError = false;
@@ -117,8 +117,8 @@
 </script>
 
 <svelte:head>
-	<link href={quillStyleSrc} rel="stylesheet" />
-	<script src={quillJsSrc} on:load={onScriptLoad}></script>
+	<link href={defaultLink} rel="stylesheet" />
+	<script src={defaultSrc} on:load={onScriptLoad} />
 </svelte:head>
 
 <div class={`quill-wrapper ${theme}-theme`} bind:this={quillEle}>

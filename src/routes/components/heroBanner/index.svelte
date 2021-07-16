@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { getContext } from 'svelte';
-	import LibrarySnippet from '@support/LibrarySnippet.svelte';
+	import LibrarySnippet from '@component/base/LibrarySnippet.svelte';
 
 	import HeroBanner from '@layout/HeroBanner.svelte';
 	const theme: string = getContext('theme');

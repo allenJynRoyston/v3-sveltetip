@@ -1,7 +1,7 @@
 <script lang="ts">
-	import LibrarySnippet from '@support/LibrarySnippet.svelte';
-
-  import ExampleBlock from '@support/ExampleBlock.svelte';
+	import LibrarySnippet from '@component/base/LibrarySnippet.svelte';
+  import ExampleBlock from '@component/base/ExampleBlock.svelte';
+  
 	import ThemeWrapper from '@layout/ThemeWrapper.svelte';
 
 	let propstr = '';

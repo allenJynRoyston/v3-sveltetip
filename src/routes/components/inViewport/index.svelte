@@ -1,5 +1,5 @@
 <script lang="ts">
-	import LibrarySnippet from '@support/LibrarySnippet.svelte';
+	import LibrarySnippet from '@component/base/LibrarySnippet.svelte';
 
 	import InViewport from '@utility/InViewport.svelte';
   import LoremBlock from '@utility/LoremBlock.svelte';

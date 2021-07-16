@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { getContext } from 'svelte';
-	import LibrarySnippet from '@support/LibrarySnippet.svelte';
+	import LibrarySnippet from '@component/base/LibrarySnippet.svelte';
 
 	import GlassPanel from '@panel/GlassPanel.svelte';
 	import LoremBlock from '@utility/LoremBlock.svelte';

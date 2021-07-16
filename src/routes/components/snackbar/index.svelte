@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { getContext } from 'svelte';
-	import LibrarySnippet from '@support/LibrarySnippet.svelte';
+	import LibrarySnippet from '@component/base/LibrarySnippet.svelte';
 
 	import Button from '@button/Button.svelte';
 	import Link from '@link/Link.svelte';

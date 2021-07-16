@@ -5,7 +5,7 @@
 	import ExampleBlock from '@support/ExampleBlock.svelte';
 	import LoremBlock from '@utility/LoremBlock.svelte';
 
-	import LibrarySnippet from '@support/LibrarySnippet.svelte';
+	import LibrarySnippet from '@component/base/LibrarySnippet.svelte';
 	const { setModalState, modalIsBusy, modalProps } = ModalStore;
 
 	let propstr = '';

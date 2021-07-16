@@ -47,9 +47,9 @@
 		{ title: 'threeSlot', section: 'Base', href: `${root}/threeSlot` },
 
 		// EXAMPLES
-		{ title: 'formExample', section: 'Examples', href: `${root}/formExample` },
-		{ title: 'pixiExample', section: 'Examples', href: `${root}/pixiExample` },
-		{ title: 'draggableExample', section: 'Examples', href: `${root}/draggableExample` },
+		// { title: 'formExample', section: 'Examples', href: `${root}/formExample` },
+		// { title: 'pixiExample', section: 'Examples', href: `${root}/pixiExample` },
+		// { title: 'draggableExample', section: 'Examples', href: `${root}/draggableExample` },
 
 		// LAYOUT
 		{ title: 'header', section: 'Layout', href: `${root}/header` },
@@ -91,9 +91,16 @@
 		{ title: 'fadeIn', section: 'Utility', href: `${root}/fadein` },
 		{ title: 'inViewport', section: 'Utility', href: `${root}/inViewport` },
 
+    // CHARTS
+    { title: 'linechart', section: 'Charts', href: `${root}/linechart` },
+    { title: 'barchart', section: 'Charts', href: `${root}/barchart` },
+    // { title: 'radarchart', section: 'Charts', href: `${root}/radarchart` },
+
+
 		// EXTERNAL
 		{ title: 'pixijs', section: 'External', href: `${root}/pixijs` },
 		{ title: 'threeJs', section: 'External', href: `${root}/threeJs` },
+		// { title: 'chartjs', section: 'External', href: `${root}/chartjs` },
 		{ title: 'quill', section: 'External', href: `${root}/quill` }
 	];
 

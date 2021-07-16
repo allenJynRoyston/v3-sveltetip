@@ -1,5 +1,5 @@
 <script lant="ts">
-	import LibrarySnippet from '@support/LibrarySnippet.svelte';
+	import LibrarySnippet from '@component/base/LibrarySnippet.svelte';
 
 	import LoremBlock from '@utility/LoremBlock.svelte';
 	import ScrollWrapper from '@layout/ScrollWrapper.svelte';

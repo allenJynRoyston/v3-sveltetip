@@ -1,5 +1,5 @@
 <script lang="ts">
-	import LibrarySnippet from '@support/LibrarySnippet.svelte';
+	import LibrarySnippet from '@component/base/LibrarySnippet.svelte';
 	import SmartImage from '@images/SmartImage.svelte';
 
 	import Stack from '@layout/Stack.svelte';

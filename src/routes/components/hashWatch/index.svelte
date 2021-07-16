@@ -1,5 +1,5 @@
 <script lang="ts">
-	import LibrarySnippet from '@support/LibrarySnippet.svelte';
+	import LibrarySnippet from '@component/base/LibrarySnippet.svelte';
 
 	import Link from '@link/Link.svelte';
 	import HashWatch from '@core/HashWatch.svelte';

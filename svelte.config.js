@@ -25,7 +25,7 @@ const config = {
 					'@lib': path.resolve('./src/lib'),
 					// SVELTETIP ALIASES
 					'@component': path.resolve('./src/lib/AppComponents'),
-					'@support': path.resolve('./src/lib/SvelteTip/@Support'),
+					'@chart': path.resolve('./src/lib/SvelteTip/@Charts'),
 					'@required': path.resolve('./src/lib/SvelteTip/@Required'),
 					'@base': path.resolve('./src/lib/SvelteTip/@Base'),
 					'@core': path.resolve('./src/lib/SvelteTip/@Core'),

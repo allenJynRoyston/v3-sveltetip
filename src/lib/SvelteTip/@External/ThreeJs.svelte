@@ -1,4 +1,5 @@
 <script lang="ts">
+  import {tick} from 'svelte';
 	import Spinner from '@base/Spinner.svelte';
 	export let threeFile = null;
 	export let resourceFolder = null;
@@ -25,16 +26,15 @@
 		try {
 			await loadFile(file);
 			isLoading = false;
-			setTimeout(() => {
-				/* @ts-ignore */
-				threeInit({
-					canvasele,
-					resourceFolder,
-					fullscreen: true,
-					width: window.innerWidth,
-					height: 400
-				});
-			});
+			await tick()
+      /* @ts-ignore */
+      threeInit({
+        canvasele,
+        resourceFolder,
+        fullscreen: true,
+        width: window.innerWidth,
+        height: 400
+      });
 		} catch (_err) {
 			hasError = true;
 			isLoading = false;

@@ -1,6 +1,6 @@
 <script lang="ts">
-	import LibrarySnippet from '@support/LibrarySnippet.svelte';
-  import SVGPreview from '@support/SVGPreview.svelte';
+	import LibrarySnippet from '@component/base/LibrarySnippet.svelte';
+  import SVGPreview from '@component/base/SVGPreview.svelte';
 	
   import { svgslist } from '@base/SVG.svelte';
 	import SVG from '@base/SVG.svelte';

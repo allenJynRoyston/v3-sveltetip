@@ -1,10 +1,11 @@
 <script lang="ts">
+  import {tick} from 'svelte'
 	import Spinner from '@base/Spinner.svelte';
 	export let pixifile = null;
 	export let resourceFolder = null;
 	export let id = 'instance1';
 
-	const pixiSrcDefault = 'https://cdnjs.cloudflare.com/ajax/libs/pixi.js/5.1.3/pixi.min.js';
+	const defaultSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pixi.js/5.1.3/pixi.min.js';
 
 	let hasError = false;
 	let isLoading = true;
@@ -25,16 +26,15 @@
 		try {
 			await loadFile(file);
 			isLoading = false;
-			setTimeout(() => {
-				/* @ts-ignore */
-				pixiInit({
-					canvasele,
-					resourceFolder,
-					fullscreen: true,
-					width: window.innerWidth,
-					height: 300
-				});
-			});
+			await tick();
+      /* @ts-ignore */
+      pixiInit({
+        canvasele,
+        resourceFolder,
+        fullscreen: true,
+        width: window.innerWidth,
+        height: 300
+      });
 		} catch (_err) {
 			hasError = true;
 			isLoading = false;
@@ -68,8 +68,7 @@
 </script>
 
 <svelte:head>
-	<script src={pixiSrcDefault} on:load={onScriptLoad}>
-	</script>
+	<script src={defaultSrc} on:load={onScriptLoad} />
 </svelte:head>
 
 <div class="pixijs-container">

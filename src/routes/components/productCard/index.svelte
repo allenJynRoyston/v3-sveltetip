@@ -1,5 +1,5 @@
 <script lang="ts">
-	import LibrarySnippet from '@support/LibrarySnippet.svelte';
+	import LibrarySnippet from '@component/base/LibrarySnippet.svelte';
 	import ProductCard from '@cards/ProductCard.svelte';
 	import { DeviceStore } from '@stores/index';
 

@@ -1,5 +1,5 @@
 <script lant="ts">
-	import LibrarySnippet from '@support/LibrarySnippet.svelte';
+	import LibrarySnippet from '@component/base/LibrarySnippet.svelte';
 
 	import Footer from '@layout/Footer.svelte';
 

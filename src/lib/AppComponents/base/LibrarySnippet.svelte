@@ -417,7 +417,7 @@
 </div>
 
 <style lang="scss">
-	@import '../../../scss/src/_media-queries';
+	// @import '../../../scss/src/_media-queries';
 
 	.library-snippet {
 		max-width: 1000px;
@@ -443,9 +443,9 @@
 
 		&.opencontent {
 			min-height: auto;
-			@include desktop-and-up {
+			// @include desktop-and-up {
 				min-height: 400px;
-			}
+			// }
 		}
 	}
 

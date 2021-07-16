@@ -1,5 +1,5 @@
 <script lang="ts">
-	import LibrarySnippet from '@support/LibrarySnippet.svelte';
+	import LibrarySnippet from '@component/base/LibrarySnippet.svelte';
 	import IconButton from '@button/IconButton.svelte';
 	import { svgslist } from '@base/SVG.svelte';
 
