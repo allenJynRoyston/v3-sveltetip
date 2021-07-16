@@ -1,26 +1,10 @@
 <script lang="ts">
-	import { onMount, onDestroy, getContext } from 'svelte';
+	import { onDestroy, getContext } from 'svelte';
 	import { browser } from '$app/env';
-
-  import {
-    Chart,
-    LineElement,
-    PointElement,
-    LineController,
-    CategoryScale,
-    LinearScale,
-  } from 'chart.js';
-
-  Chart.register(
-    LineElement,
-    PointElement,
-    LineController,
-    CategoryScale,
-    LinearScale,
-  );
 
   export let title = '';
   export let legend = '';
+  export let datasetLabel = ''
   
   export let gridColor = 'black';
   export let gridColorHue = 0
@@ -34,14 +18,35 @@
   let canvasEle;
   let chart; 
 
+  const defaultSrc = 'https://cdn.jsdelivr.net/npm/chart.js';
+
   const colors:any = getContext('colors');
   const theme:string = getContext('theme');
+
+	const onScriptLoad = () => {
+		/* @ts-ignore */
+		if (typeof Chart !== 'undefined') {
+      const config = {
+        type: 'line',
+        data: buildData(),
+        options: buildOptions()
+      };   
+
+		  /* @ts-ignore */
+      chart = new Chart(
+        canvasEle,
+        /* @ts-ignore */
+        {...config}
+      );  
+		}
+	};
 
 
   const buildData = () => {
     return {
       labels,
       datasets: [{
+        label: datasetLabel,
         backgroundColor: browser ? colors[lineColor][lineColorHue].color : 'black',
         borderColor: browser ? colors[lineColor][lineColorHue].color : 'black',
         data,
@@ -50,7 +55,7 @@
   }
 
   const buildOptions = () => {
-    return {
+    return {     
         scales: {        
           x: {                   
             grid: {              
@@ -72,20 +77,6 @@
       } 
   }
 
-  onMount(() => {
-    const config = {
-      type: 'line',
-      data: buildData(),
-      options: buildOptions()
-    };   
-
-    chart = new Chart(
-      canvasEle,
-      /* @ts-ignore */
-      {...config}
-    );    
-  })
-
   onDestroy(() => {
     chart.destroy()
   })
@@ -103,6 +94,11 @@
   }
 
 </script>
+
+<svelte:head>
+	<script src={defaultSrc} on:load={onScriptLoad} />
+</svelte:head>
+
 
 <div class='linechart'>
   <div class='title'>

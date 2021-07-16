@@ -64,7 +64,7 @@
 		inputs: [
 			{ forprop: 'title', renderAs: 'input', componentprop: { type: 'text' }, value: 'Barchart Title' },
 			{ forprop: 'legend', renderAs: 'input', componentprop: { type: 'text' }, value: 'Time x months' },
-
+			{ forprop: 'datasetLabel', renderAs: 'input', componentprop: { type: 'text' }, value: 'Intensity' },
 		]
 	};
 

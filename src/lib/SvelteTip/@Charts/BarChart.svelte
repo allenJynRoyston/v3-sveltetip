@@ -1,25 +1,13 @@
 <script lang="ts">
-	import { onMount, onDestroy, getContext } from 'svelte';
+	import { onDestroy, getContext } from 'svelte';
 	import { browser } from '$app/env';
 
-  import {
-    Chart,
-    BarElement,
-    BarController,
-    CategoryScale,
-    LinearScale,
-  } from 'chart.js';
-
-  Chart.register(
-    BarElement,
-    BarController,
-    CategoryScale,
-    LinearScale,
-  );
+  const defaultSrc = 'https://cdn.jsdelivr.net/npm/chart.js';
 
   export let title = '';
   export let legend = '';
-  
+  export let datasetLabel = ''
+
   export let gridColor = 'black';
   export let gridColorHue = 0
   
@@ -35,11 +23,30 @@
   const colors:any = getContext('colors');
   const theme:string = getContext('theme');
 
+	const onScriptLoad = () => {
+		/* @ts-ignore */
+		if (typeof Chart !== 'undefined') {
+      const config = {
+        type: 'bar',
+        data: buildData(),
+        options: buildOptions()
+      };   
+
+		  /* @ts-ignore */
+      chart = new Chart(
+        canvasEle,
+        /* @ts-ignore */
+        {...config}
+      );  
+		}
+	};
+
 
   const buildData = () => {
     return {
       labels,
       datasets: [{
+        label: datasetLabel,
         backgroundColor: browser ? colors[lineColor][lineColorHue].color : 'black',
         borderColor: browser ? colors[lineColor][lineColorHue].color : 'black',
         data,
@@ -70,20 +77,6 @@
       } 
   }
 
-  onMount(() => {
-    const config = {
-      type: 'bar',
-      data: buildData(),
-      options: buildOptions()
-    };   
-
-    chart = new Chart(
-      canvasEle,
-      /* @ts-ignore */
-      {...config}
-    );    
-  })
-
   onDestroy(() => {
     chart.destroy()
   })
@@ -101,6 +94,10 @@
   }
 
 </script>
+
+<svelte:head>
+	<script src={defaultSrc} on:load={onScriptLoad} />
+</svelte:head>
 
 <div class='linechart'>
   <div class='title'>

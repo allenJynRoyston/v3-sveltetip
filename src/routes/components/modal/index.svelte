@@ -1,11 +1,11 @@
 <script lang="ts">
 	import { ModalStore } from '@stores/index';
 	import Button from '@button/Button.svelte';
+  import LoremBlock from '@utility/LoremBlock.svelte';
 
-	import ExampleBlock from '@support/ExampleBlock.svelte';
-	import LoremBlock from '@utility/LoremBlock.svelte';
-
-	import LibrarySnippet from '@component/base/LibrarySnippet.svelte';
+  import LibrarySnippet from '@component/base/LibrarySnippet.svelte';
+	import ExampleBlock from '@component/base/ExampleBlock.svelte';
+	
 	const { setModalState, modalIsBusy, modalProps } = ModalStore;
 
 	let propstr = '';

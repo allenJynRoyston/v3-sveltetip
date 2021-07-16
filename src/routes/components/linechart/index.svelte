@@ -63,8 +63,8 @@
     ],
 		inputs: [
 			{ forprop: 'title', renderAs: 'input', componentprop: { type: 'text' }, value: 'Linechart Title' },
-			{ forprop: 'legend', renderAs: 'input', componentprop: { type: 'text' }, value: 'Time x months' },
-
+      { forprop: 'datasetLabel', renderAs: 'input', componentprop: { type: 'text' }, value: 'Intensity' },      
+			{ forprop: 'legend', renderAs: 'input', componentprop: { type: 'text' }, value: 'Time x months' },      
 		]
 	};
 

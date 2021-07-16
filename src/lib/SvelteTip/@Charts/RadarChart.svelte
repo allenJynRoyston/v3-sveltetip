@@ -1,4 +1,4 @@
-<script lang="ts">
+<!-- <script lang="ts">
 	import { onMount, onDestroy, getContext } from 'svelte';
 	import { browser } from '$app/env';
 
@@ -148,4 +148,4 @@
   .legend{
     margin-top: 10px;
   }
-</style>
+</style> -->

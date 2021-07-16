@@ -1,6 +1,6 @@
 <script lang="ts">
 	import LibrarySnippet from '@component/base/LibrarySnippet.svelte';
-	import ExampleBlock from '@support/ExampleBlock.svelte';
+	import ExampleBlock from '@component/base/ExampleBlock.svelte';
 
 	import Channels from '@base/Channels.svelte';
 	import Container from '@layout/Container.svelte';

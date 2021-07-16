@@ -1,11 +1,11 @@
 <script lang="ts">
 	import LibrarySnippet from '@component/base/LibrarySnippet.svelte';
+  import ExampleBlock from '@component/base/ExampleBlock.svelte';
 
 	import Tabs from '@layout/Tabs.svelte';
 	import LoremBlock from '@utility/LoremBlock.svelte';
 	import FormExample from '@examples/FormExample.svelte';
-	import ExampleBlock from '@support/ExampleBlock.svelte';
-
+	
 	let propstr = '';
 	let selectstr = '';
 	let inputstr = '';
