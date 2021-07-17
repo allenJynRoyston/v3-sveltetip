@@ -8,7 +8,6 @@
 	export let style = null;
 	export let text = null;
 	export let href = null;
-	export let dataTestid = null;
 
 	export let role = 'button';
 	export let type = 'button';
@@ -29,11 +28,14 @@
 	export let target = null;
 	export let prefetch = null;
 	export let onClick = null;
-  	
+
 	const theme: string = getContext('theme');
 	const colors = getContext('colors');
 
 	$: props = {
+		role,
+		type,
+		rel,
 		applyTheme,
 		useGradiant,
 		disabled,
@@ -43,7 +45,8 @@
 		exactfit,
 		fullOnMobile,
 		nomargin,
-		style
+		style,
+		onClick
 	};
 
 	$: iconSize = () => {
@@ -86,4 +89,3 @@
 		{/if}
 	</Button>
 {/if}
-

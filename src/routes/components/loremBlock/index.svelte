@@ -25,7 +25,6 @@
 				componentprop: { type: 'text', placeholder: 'outline: 1px solid white' },
 				value: null
 			},
-			{ forprop: 'index', renderAs: 'input', componentprop: { type: 'number' }, value: null },
 			{
 				forprop: 'content',
 				renderAs: 'input',

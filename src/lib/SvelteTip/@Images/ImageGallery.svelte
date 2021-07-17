@@ -6,7 +6,6 @@
 	import { createChannel } from '@st-js/index';
 	import SVG from '@base/SVG.svelte';
 
-	export let images = [];
 	export let easing = 'cubicOut';
 	export let duration = 300;
 
@@ -104,7 +103,6 @@
 	<div class="gallery">
 		{#if render}
 			<Channels
-				showInactive
 				animate={!touchActive}
 				showChannelNumber
 				nopadding

@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { getContext } from 'svelte';
 	export let style = null;
-	export let index = null;
 	export let ignoreTheme = false;
 	export let nopadding = false;
 

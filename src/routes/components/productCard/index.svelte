@@ -56,11 +56,6 @@
 				value: 0
 			},
 			{
-				label: 'carouselType',
-				options: ['standard'],
-				value: 0
-			},
-			{
 				label: 'ribbonPlacement',
 				options: ['left', 'right'],
 				value: 0
@@ -111,15 +106,6 @@
 	$: livecode = `    
     <ProductCard${propstr}${selectstr}${inputstr}/>
      `;
-
-	const staticprops = {
-		links: [
-			{ icon: 'facebook', href: '/facebook' },
-			{ icon: 'instagram', href: '/instagram' },
-			{ icon: 'email', href: '/email' },
-			{ icon: 'whatsapp', href: '/whatsapp' }
-		]
-	};
 </script>
 
 <LibrarySnippet
@@ -135,11 +121,11 @@
 	{eventLog}
 >
 	<div slot="liveexample">
-		<ProductCard {...staticprops} {...props} {...selectprops} {...inputprops} {...events} />
+		<ProductCard {...props} {...selectprops} {...inputprops} {...events} />
 		{#if !$isMobile}
 			<div style="display: flex; gap: 10px; margin-top: 20px;">
-				<ProductCard {...staticprops} {...props} {...selectprops} {...inputprops} {...events} />
-				<ProductCard {...staticprops} {...props} {...selectprops} {...inputprops} {...events} />
+				<ProductCard {...props} {...selectprops} {...inputprops} {...events} />
+				<ProductCard {...props} {...selectprops} {...inputprops} {...events} />
 			</div>
 		{/if}
 	</div>

@@ -1,7 +1,7 @@
 <script lang="ts">
 	//--------------------------- IMPORTS
 	import { onMount, getContext } from 'svelte';
-	import { validateTime } from '@st-js';
+	import { validateTime } from '@st-js/index';
 
 	import TwoSlot from '@base/TwoSlot.svelte';
 	import Button from '@button/Button.svelte';
@@ -10,8 +10,6 @@
 	export let onChange = null;
 	export let onKeypress = null;
 	export let updateForm = null;
-
-	export let placeholder = null;
 	export let value = '';
 	export let key = null;
 	export let label = null;

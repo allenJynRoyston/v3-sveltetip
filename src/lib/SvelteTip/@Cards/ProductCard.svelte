@@ -14,23 +14,18 @@
 	export let noEdges = false;
 	export let showAddToCart = false;
 	export let showMoreInfo = false;
-
 	export let orientation = 'horizontal';
 	export let type = 'black';
-	export let carouselType = 'standard';
 	export let applyTheme = 'primary';
 	export let currencyType = '$';
 	export let rating = 0;
 	export let maxRating = 5;
-
 	export let name = '';
 	export let description = '';
 	export let price = '';
 	export let ribbonText = '';
 	export let ribbonPlacement = 'left';
 	export let imageSrc = null;
-	export let bgSrc = null;
-	export let links = [];
 
 	export let onNameClick = null;
 	export let onShoppingCartClick = null;

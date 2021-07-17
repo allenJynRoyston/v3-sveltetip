@@ -35,7 +35,7 @@
 
 	const { isMobile } = DeviceStore;
 	const theme: string = getContext('theme');
-	const colors = getContext('colors');
+	const colors: any = getContext('colors');
 
 	$: iconSize = () => {
 		switch (size) {

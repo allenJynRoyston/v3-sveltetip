@@ -4,7 +4,6 @@
 	export let indexdb: any;
 	export let data: any = [];
 	export let tables: string[] = [];
-	export let createIfEmpty: boolean = false;
 	export let clearOnRefresh: boolean = false;
 	export let queryBy: string[] | string = '_id';
 

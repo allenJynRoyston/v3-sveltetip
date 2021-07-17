@@ -1,7 +1,7 @@
 <script lang="ts">
 	//--------------------------- IMPORTS
 	import { onMount, getContext } from 'svelte';
-	import { validate } from '@st-js';
+	import { validate } from '@st-js/index';
 	import TwoSlot from '@base/TwoSlot.svelte';
 	import Button from '@button/Button.svelte';
 

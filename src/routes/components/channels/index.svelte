@@ -39,7 +39,6 @@
 			outline: false,
 			showChannelNumber: true,
 			embedded: true,
-			showInactive: false,
 			lazyLoad: true
 		},
 		dropdowns: [

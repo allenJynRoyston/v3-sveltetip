@@ -13,11 +13,7 @@
 	let inputprops;
 
 	let eventLog = [];
-	const events = {
-		onClick: (val) => {
-			eventLog = [...eventLog, { action: 'onClick', val }];
-		}
-	};
+	const events = {};
 
 	const snippet = {
 		name: 'Stack',

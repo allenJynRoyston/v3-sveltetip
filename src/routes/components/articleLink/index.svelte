@@ -32,21 +32,6 @@
 		},
 		dropdowns: [
 			{
-				label: 'type',
-				options: [
-					'auto',
-					'primary',
-					'secondary',
-					'magic',
-					'success',
-					'warning',
-					'danger',
-					'black',
-					'white'
-				],
-				value: 0
-			},
-			{
 				label: 'target',
 				options: [null, '_blank', '_self', '_parent', '_top'],
 				value: 0
@@ -109,21 +94,21 @@
 	<div slot="liveexample">
 		<ArticleLink {...props} {...selectprops} {...inputprops} {...events}>
 			<h1 slot="title">Article title</h1>
-      <div slot="image">
-			  <img src="https://picsum.photos/200/300" alt="alt"  />
-      </div>
-      <div slot="content">
-			  <LoremBlock ignoreTheme nopadding  />
-      </div>
+			<div slot="image">
+				<img src="https://picsum.photos/200/300" alt="alt" />
+			</div>
+			<div slot="content">
+				<LoremBlock ignoreTheme nopadding />
+			</div>
 		</ArticleLink>
 		<ArticleLink {...props} {...selectprops} {...inputprops} {...events}>
 			<h2 slot="title">Article title</h2>
-      <div slot="image">
-			  <SVG icon="home" size={30}  />
-      </div>
-      <div slot="content">
-			  <LoremBlock ignoreTheme nopadding />
-      </div>
+			<div slot="image">
+				<SVG icon="home" size={30} />
+			</div>
+			<div slot="content">
+				<LoremBlock ignoreTheme nopadding />
+			</div>
 		</ArticleLink>
 	</div>
 </LibrarySnippet>

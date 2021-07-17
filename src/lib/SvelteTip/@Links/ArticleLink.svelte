@@ -5,15 +5,11 @@
 	import ScrollWrapper from '@layout/ScrollWrapper.svelte';
 
 	export let onClick = null;
-	export let type = 'default';
 	export let target = null;
-
 	export let href: string | null = null;
 	export let classes = '';
 	export let style = '';
-	export let text = null;
 	export let rel = null;
-
 	export let nomargin = false;
 	export let rounded = false;
 	export let shadow = false;

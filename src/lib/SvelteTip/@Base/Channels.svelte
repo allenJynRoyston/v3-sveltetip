@@ -23,7 +23,6 @@
 	export let outline = false;
 	export let disableAnimationOnMobile = false;
 	export let showChannelNumber = false;
-	export let showInactive = false;
 	export let lazyLoad = false;
 	export let autoResize = false;
 	export let dragEnabled = false;
@@ -128,9 +127,13 @@
 		}
 	};
 
-	const resizeEvent = debounce(() => {
-		topPos = ele?.getBoundingClientRect().top || 0;
-	}, 400);
+	const resizeEvent = debounce(
+		() => {
+			topPos = ele?.getBoundingClientRect().top || 0;
+		},
+		400,
+		null
+	);
 
 	onMount(() => {
 		init();

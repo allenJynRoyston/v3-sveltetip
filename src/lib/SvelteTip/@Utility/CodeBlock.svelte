@@ -14,8 +14,6 @@
      const bar = 'bar'
   `;
 
-	export let lang: 'typescript' | 'css' = 'typescript';
-
 	const theme: string = getContext('theme');
 	const addSnack: any = getContext('addSnack');
 

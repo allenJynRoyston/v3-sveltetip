@@ -9,9 +9,6 @@
 	import ScrollWrapper from '@layout/ScrollWrapper.svelte';
 
 	export let show = false;
-	export let closeOnBackdrop = false;
-	export let naked = false;
-
 	export let onStartModal = null;
 	export let onEndModal = null;
 

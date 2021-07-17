@@ -8,7 +8,6 @@
 
 	export let applyTheme = 'default';
 	export let nomargin = false;
-	export let contentHeight = 'auto';
 
 	export let rounded = false;
 	export let shadow = false;

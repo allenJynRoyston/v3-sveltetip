@@ -1,7 +1,7 @@
 <script lang="ts">
 	//--------------------------- IMPORTS
 	import { getContext, onMount } from 'svelte';
-	import { validateRating } from '@st-js';
+	import { validateRating } from '@st-js/index';
 	import SVG from '@base/SVG.svelte';
 
 	//--------------------------- COMPONENT PROPS

@@ -7,9 +7,7 @@
 	import SVG from '@base/SVG.svelte';
 
 	export let links = [];
-	export let exactfit = false;
 	export let prefetch = false;
-
 	const { isTabletAndAbove } = DeviceStore;
 	const theme: string = getContext('theme');
 
@@ -27,7 +25,7 @@
 	<div class="links">
 		{#each links as {title, href = '/', hrefIncludes = null, queryIncludes = {id: null, queryId: null}}}
 			<Link
-				prefetch
+				{prefetch}
 				{href}
 				active={checkActive({ href, hrefIncludes, queryIncludes })}
 				inherit
@@ -41,7 +39,7 @@
 	<div class="icons">
 		{#each links as {icon = 'home',  href = '/', hrefIncludes, queryIncludes}}
 			<Link
-				prefetch
+				{prefetch}
 				{href}
 				active={checkActive({ href, hrefIncludes, queryIncludes })}
 				inherit

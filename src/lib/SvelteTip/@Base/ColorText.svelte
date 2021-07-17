@@ -10,18 +10,18 @@
 	<slot />
 </span>
 
-<style lang="scss" scoped>
+<style lang="scss">
 	$themes: 'primary', 'secondary', 'magic', 'success', 'warning', 'danger';
 	@each $theme in $themes {
-    .color-text{
-      &.#{$theme} {
-        color: var(--#{$theme}-0);
-      }
-      .dark-theme {
-        &.#{$theme} {
-          color: var(--#{$theme}-1);
-        }
-      }
-    }
+		.color-text {
+			&.#{$theme} {
+				color: var(--#{$theme}-0);
+			}
+			.dark-theme {
+				&.#{$theme} {
+					color: var(--#{$theme}-1);
+				}
+			}
+		}
 	}
 </style>

@@ -34,7 +34,7 @@
 				onClick && onClick(index);
 			}}
 		>
-			<svelte:component this={component} {...props} {index} />
+			<svelte:component this={component} {...props} />
 		</li>
 	{/each}
 </ul>

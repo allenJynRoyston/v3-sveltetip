@@ -1,6 +1,4 @@
 <script lang="ts" context="module">
-	import { browser } from '$app/env';
-
 	export const svgslist = [
 		'dots',
 		'home',
@@ -160,6 +158,7 @@
 
 <script lang="ts">
 	import { getContext } from 'svelte';
+	import { browser } from '$app/env';
 
 	export let size: number = 14;
 	export let applyTheme: string = null;

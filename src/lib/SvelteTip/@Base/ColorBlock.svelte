@@ -1,10 +1,7 @@
 <script lang="ts">
 	export let name = '';
-	export let image = null;
 	export let bgColor = null;
 	export let textColor = null;
-	export let props = null;
-	export let index = null;
 
 	$: style = !!bgColor ? `background: ${bgColor}; color: var(${textColor})` : null;
 </script>

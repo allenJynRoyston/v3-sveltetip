@@ -18,9 +18,13 @@
 	const theme: string = getContext('theme');
 	const { innerContainerAdditionalHeight } = SiteStore;
 
-	const resizeEvent = debounce(() => {
-		topPos = ele?.getBoundingClientRect().top || 0;
-	}, 100);
+	const resizeEvent = debounce(
+		() => {
+			topPos = ele?.getBoundingClientRect().top || 0;
+		},
+		100,
+		null
+	);
 
 	// watches for changes in offsetHeight
 	SiteStore.openNotch.subscribe(async () => {
