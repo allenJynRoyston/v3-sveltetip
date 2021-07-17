@@ -29,6 +29,8 @@
 			"@scss/*": ["src/scss/*"],
 			"@routes/*": ["src/routes/*"],
 			"@component/*": ["src/lib/AppComponents/*"],
+			"@store/*": ["src/stores/*"],
+			"@js/*": ["src/js/*"],
 			"@chart/*": ["src/lib/SvelteTip/@Charts/*"],
 			"@required/*": ["src/lib/SvelteTip/@Required/*"],
 			"@base/*": ["src/lib/SvelteTip/@Base/*"],
@@ -45,8 +47,8 @@
 			"@form/*": ["src/lib/SvelteTip/@Form/*"],
 			"@utility/*": ["src/lib/SvelteTip/@Utility/*"],
 			"@unsorted/*": ["src/app/SvelteTip/@Unsorted/*"],
-			"@stores/*": ["src/lib/SvelteTip/stores/*"],
-			"@js/*": ["src/lib/SvelteTip/js/*"]
+			"@st-stores/*": ["src/lib/SvelteTip/stores/*"],
+			"@st-js/*": ["src/lib/SvelteTip/js/*"]
 		}
 	},
 	"include": ["src/**/*.d.ts", "src/**/*.js", "src/**/*.ts", "src/**/*.svelte"]

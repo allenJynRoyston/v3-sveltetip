@@ -1,7 +1,7 @@
 <script lang="ts">
 	//--------------------------- IMPORTS
 	import { onMount, onDestroy, getContext } from 'svelte';
-	import { DeviceStore } from '@stores/index';
+	import { DeviceStore } from '@st-stores/index';
 
 	import Button from '@button/Button.svelte';
 	import SVG from '@base/SVG.svelte';

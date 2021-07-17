@@ -1,7 +1,7 @@
 <script lang="ts">
 	import LibrarySnippet from '@component/base/LibrarySnippet.svelte';
 	import ProfileCard from '@cards/ProfileCard.svelte';
-	import { DeviceStore } from '@stores/index';
+	import { DeviceStore } from '@st-stores/index';
 
 	const { isMobile } = DeviceStore;
 

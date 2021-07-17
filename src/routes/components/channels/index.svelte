@@ -4,7 +4,7 @@
 
 	import Channels from '@base/Channels.svelte';
 	import Container from '@layout/Container.svelte';
-	import { createChannel } from '@js/index';
+	import { createChannel } from '@st-js/index';
 
 	let propstr = '';
 	let selectstr = '';
@@ -86,7 +86,7 @@
 	};
 
 	$: livecode = `  
-      import {createChannel} from '@js/utility'
+      import {createChannel} from '@st-js/utility'
 
       const channels = createChannel({
         current: 0,

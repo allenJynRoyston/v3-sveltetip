@@ -1,7 +1,7 @@
 <script lang="ts">
 	//--------------------------- IMPORTS
 	import { onMount, getContext } from 'svelte';
-	import { validateCheckbox } from '@js';
+	import { validateCheckbox } from '@st-js';
 
 	//--------------------------- COMPONENT PROPS
 	export let checked = false;

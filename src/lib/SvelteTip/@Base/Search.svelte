@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { debounce } from '@js/index';
+	import { debounce } from '@st-js/index';
 	import { onMount, getContext, tick } from 'svelte';
-	import { DeviceStore } from '@stores/index';
+	import { DeviceStore } from '@st-stores/index';
 	import { browser } from '$app/env';
 
 	import SVG from '@base/SVG.svelte';

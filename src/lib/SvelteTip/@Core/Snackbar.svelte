@@ -1,7 +1,7 @@
 <script lang="ts">
 	//--------------------------- IMPORTS
 	import { getContext, onDestroy } from 'svelte';
-  import { DeviceStore } from '@stores/index';
+	import { DeviceStore } from '@st-stores/index';
 
 	import SVG from '@base/SVG.svelte';
 	import ProgressBar from '@base/ProgressBar.svelte';
@@ -127,13 +127,13 @@
 	//---------------------------
 </script>
 
-<div class='snackbar' class:desktop={$isDesktop} >
+<div class="snackbar" class:desktop={$isDesktop}>
 	{#each snacks as snack (snack.id)}
 		<div
 			class={`snack ${!!theme ? `${theme}-theme` : ''} ${snack?.applyTheme || ''} ${
 				snack?.closeOnClick ? 'clickable' : ''
 			}`}
-      class:desktop={$isDesktop}
+			class:desktop={$isDesktop}
 			class:animateIn={snack.animateIn}
 			class:animateOut={!snack.animateIn}
 			class:btmpadding={snack?.duration}
@@ -194,12 +194,12 @@
 		right: 0;
 		bottom: 0;
 
-    &.desktop{  
-      padding: 0;
-      bottom: 10px;
-      right: 10px;
-      width: auto;      
-    }
+		&.desktop {
+			padding: 0;
+			bottom: 10px;
+			right: 10px;
+			width: auto;
+		}
 	}
 
 	.snack {
@@ -213,7 +213,7 @@
 		overflow: hidden;
 		background: var(--black-1);
 
-		&.desktop{  
+		&.desktop {
 			width: auto;
 		}
 
@@ -308,7 +308,7 @@
 			padding: 15px 0;
 			// color: white !important;
 
-			&.desktop{  
+			&.desktop {
 				text-align: left;
 			}
 

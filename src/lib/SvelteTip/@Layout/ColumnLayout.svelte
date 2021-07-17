@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { getContext } from 'svelte';
-	import { SiteStore, DeviceStore } from '@stores/index';
+	import { SiteStore, DeviceStore } from '@st-stores/index';
 	import { page } from '$app/stores';
 
 	import Accordion from '@base/Accordion.svelte';
@@ -8,7 +8,7 @@
 	import ScrollWrapper from '@layout/ScrollWrapper.svelte';
 	import Container from '@layout/Container.svelte';
 
-	export let links = [];	
+	export let links = [];
 	export let activeTheme = 'primary';
 	export let side = 'left';
 
@@ -48,19 +48,26 @@
 		_list[key] = links.filter((x) => x.section === key);
 	}
 
-  var sortKeysFor = function(obj) {
-    return Object.keys(obj).sort().reduce(function(map, key) {
-      map[key] = obj[key] 
-      return map
-    }, {})
-  }  
+	var sortKeysFor = function (obj) {
+		return Object.keys(obj)
+			.sort()
+			.reduce(function (map, key) {
+				map[key] = obj[key];
+				return map;
+			}, {});
+	};
 
 	let linkList = sortKeysFor(_list);
 </script>
 
 <div class={`column-layout ${theme}-theme`}>
 	<div class="layout-inner">
-		<div class={`directory ${side}`} class:collapse={!$openSidebar} class:removeWidth class:desktop={$isDesktop}>
+		<div
+			class={`directory ${side}`}
+			class:collapse={!$openSidebar}
+			class:removeWidth
+			class:desktop={$isDesktop}
+		>
 			<Container>
 				<div class="directory-inner">
 					<ScrollWrapper accountForTopPos height={'100%'}>
@@ -155,7 +162,7 @@
 				transform: translateX(-100%);
 			}
 
-			&.desktop{
+			&.desktop {
 				position: relative;
 				top: 0;
 				left: 0;
@@ -186,7 +193,7 @@
 			font-size: 18px;
 			margin: 5px 0;
 
-			&.desktop{
+			&.desktop {
 				font-size: 14px;
 			}
 		}
@@ -213,7 +220,7 @@
 				order: 0;
 			}
 
-			&.desktop{
+			&.desktop {
 				width: 100% !important;
 			}
 		}

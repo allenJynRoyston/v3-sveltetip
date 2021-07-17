@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { DeviceStore, SiteStore, ModalStore } from '@stores/index';
+	import { DeviceStore, SiteStore, ModalStore } from '@st-stores/index';
 
 	import Section from '@layout/Section.svelte';
 	import CodeBlock from '@utility/CodeBlock.svelte';
@@ -45,10 +45,10 @@
 				</p>
 
 				<CodeBlock
-          hidetitle
+					hidetitle
 					show
 					snippet={`
-            import {DeviceStore} from '@stores/store'
+            import {DeviceStore} from '@st-stores/store'
             const {appWidth, isMobile, isTabletAndBelow, isTablet, isDesktop} = DeviceStore;
   
             <p>
@@ -97,10 +97,10 @@
 				</p>
 
 				<CodeBlock
-          hidetitle
+					hidetitle
 					show
 					snippet={`
-          import {SiteStore} from '@stores/store'
+          import {SiteStore} from '@st-stores/store'
           const {urlHash, urlParams, openSidebar, openNotch, searchValue} = DeviceStore;
 
           <p>
@@ -126,11 +126,11 @@
 		<Panel open skinnybar rounded shadowOnHover>
 			<h3 slot="title">Modalstore</h3>
 			<div slot="content">
-				<CodeBlock					
+				<CodeBlock
 					show
-          hidetitle
+					hidetitle
 					snippet={`
-          import {ModalStore} from '@stores/store'
+          import {ModalStore} from '@st-stores/store'
           const {modalIsOpen, modalIsBusy, modalProps, onModalSubmit, setModalState} = DeviceStore;
 
           <p>
@@ -155,9 +155,9 @@
 					modalProps: {$modalProps}
 				</p>
 
-				<CodeBlock					
+				<CodeBlock
 					show
-          title='Show/hide modal'
+					title="Show/hide modal"
 					snippet={`
           setModalState(true) // open
           setModalState(false) // close
@@ -169,7 +169,6 @@
 </Section>
 
 <style lang="scss">
-
 	section {
 		padding: 50px 0;
 		max-width: 900px;

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { getContext } from 'svelte';
-	import { DeviceStore } from '@stores/index';
+	import { DeviceStore } from '@st-stores/index';
 
 	export let size: number = 150;
 	export let gap: number = 10;
@@ -21,7 +21,7 @@
 <ul class="grid-layout" style={style()}>
 	{#each items as { component, row, column, props }, index}
 		<li
-      class:desktop={$isDesktop}
+			class:desktop={$isDesktop}
 			class={`grid-item ${theme}-theme`}
 			class:clickable={!!onClick}
 			class:exactfit
@@ -84,7 +84,7 @@
 			width: initial;
 			min-width: initial;
 
-			&.desktop{
+			&.desktop {
 				&.column-two {
 					grid-column: span 2;
 				}

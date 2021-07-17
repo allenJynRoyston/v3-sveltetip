@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { DeviceStore } from '@stores/index';
+	import { DeviceStore } from '@st-stores/index';
 
 	import Section from '@layout/Section.svelte';
 	import CodeBlock from '@utility/CodeBlock.svelte';
@@ -24,8 +24,5 @@
 	];
 </script>
 
-
-
 <style lang="scss">
-
 </style>

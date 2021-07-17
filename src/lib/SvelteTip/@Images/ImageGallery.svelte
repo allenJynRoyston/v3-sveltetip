@@ -1,9 +1,9 @@
 <script lang="ts">
 	import { getContext, tick } from 'svelte';
-	import { ModalStore } from '@stores/index';
+	import { ModalStore } from '@st-stores/index';
 	import SmartImage from '@images/SmartImage.svelte';
 	import Channels from '@base/Channels.svelte';
-	import { createChannel } from '@js/index';
+	import { createChannel } from '@st-js/index';
 	import SVG from '@base/SVG.svelte';
 
 	export let images = [];

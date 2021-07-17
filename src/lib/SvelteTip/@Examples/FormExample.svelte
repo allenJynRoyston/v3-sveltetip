@@ -197,7 +197,7 @@
 </script>
 
 <script lang="ts">
-	import { ModalStore } from '@stores/index';
+	import { ModalStore } from '@st-stores/index';
 	import Form from '@form/FormBuilder.svelte';
 
 	const { onModalSubmit } = ModalStore;

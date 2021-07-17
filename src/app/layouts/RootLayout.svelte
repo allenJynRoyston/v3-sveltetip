@@ -2,7 +2,7 @@
 	//--------------------------- IMPORTS
 	import { page } from '$app/stores';
 	import { browser } from '$app/env';
-	import { SiteStore } from '@stores/index';
+	import { SiteStore } from '@st-stores/index';
 
 	import SvelteTip from '@required/SvelteTipApp.svelte';
 

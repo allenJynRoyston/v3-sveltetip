@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { getContext } from 'svelte';
-	import { DeviceStore } from '@stores/index';
+	import { DeviceStore } from '@st-stores/index';
 
 	import ColorBlock from '@base/ColorBlock.svelte';
 	import GridLayout from '@layout/GridLayout.svelte';
@@ -27,7 +27,7 @@
 </script>
 
 <Section>
-	<section class:tabletAndBelow={isTabletAndBelow} >
+	<section class:tabletAndBelow={isTabletAndBelow}>
 		{#each Object.entries(colorBlocks) as [key]}
 			<Panel open rounded shadowOnHover>
 				<h3 slot="title" class="color-title">{key}</h3>
@@ -52,7 +52,7 @@
 		max-width: 900px;
 		margin: auto;
 
-		&.tabletAndBelow{
+		&.tabletAndBelow {
 			padding: 20px 0;
 		}
 	}

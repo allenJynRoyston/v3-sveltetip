@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { getContext } from 'svelte';
-	import { DeviceStore } from '@stores/index';
+	import { DeviceStore } from '@st-stores/index';
 
 	import Button from '@button/Button.svelte';
 
@@ -9,7 +9,7 @@
 	export let buttonOne = null;
 	export let buttonTwo = null;
 
-  export let onTitleClick = null;
+	export let onTitleClick = null;
 
 	const { isTabletAndBelow, isDesktop } = DeviceStore;
 
@@ -17,7 +17,14 @@
 </script>
 
 <div class={`hero-banner ${theme}-theme`} class:desktop={$isDesktop}>
-	<h5 class="title" class:desktop={$isDesktop} class:pointer={!!onTitleClick} on:click={() => {onTitleClick && onTitleClick()}}>
+	<h5
+		class="title"
+		class:desktop={$isDesktop}
+		class:pointer={!!onTitleClick}
+		on:click={() => {
+			onTitleClick && onTitleClick();
+		}}
+	>
 		{title}
 	</h5>
 	<div class="buttons">
@@ -41,7 +48,7 @@
 		background: transparent;
 		color: var(--white-0-text);
 
-		&.desktop{
+		&.desktop {
 			padding: 50px 0;
 		}
 
@@ -56,10 +63,10 @@
 		.title {
 			font-size: 32px;
 			margin-bottom: 5px;
-      &.pointer{
-        cursor: pointer;
-      }
-			&.desktop{
+			&.pointer {
+				cursor: pointer;
+			}
+			&.desktop {
 				font-size: 72px;
 			}
 			// &.lowHeight {

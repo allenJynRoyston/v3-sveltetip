@@ -3,8 +3,8 @@
 	import LibrarySnippet from '@component/base/LibrarySnippet.svelte';
 
 	import IDB from '@core/IndexDBSetup.svelte';
-	import { createDB } from '@js/index';
-	import { IndexDBStore } from '@js/index';
+	import { createDB } from '@st-js/index';
+	import { IndexDBStore } from '@st-js/index';
 
 	let propstr = '';
 	let selectstr = '';

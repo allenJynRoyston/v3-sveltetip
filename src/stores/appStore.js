@@ -39,7 +39,7 @@ function siteInit() {
 	};
 }
 
-export const ComponentStore = siteInit();
+export const AppStore = siteInit();
 //-------------------------------
 
 //-------------------------------

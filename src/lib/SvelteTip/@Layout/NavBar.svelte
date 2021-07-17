@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { getContext } from 'svelte';
 	import { page } from '$app/stores';
-	import { DeviceStore } from '@stores/index';
+	import { DeviceStore } from '@st-stores/index';
 
 	import Link from '@link/Link.svelte';
 	import SVG from '@base/SVG.svelte';
@@ -64,7 +64,7 @@
 			transform: translateY(5px);
 		}
 
-		&.tabletAndAbove{
+		&.tabletAndAbove {
 			.links {
 				display: flex;
 				gap: 10px;

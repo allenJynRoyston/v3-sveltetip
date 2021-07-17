@@ -1,7 +1,7 @@
 <script lang="ts">
 	//--------------------------- IMPORTS
 	import { onMount, getContext } from 'svelte';
-	import { validateSelectMulti } from '@js';
+	import { validateSelectMulti } from '@st-js';
 
 	//--------------------------- COMPONENT PROPS
 	export let value = null;

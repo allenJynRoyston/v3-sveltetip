@@ -3,8 +3,8 @@
 	import { browser, dev } from '$app/env';
 	import { page } from '$app/stores';
 
-	import { SiteStore, DeviceStore } from '@stores/index';
-	import { debounce } from '@js/index';
+	import { SiteStore, DeviceStore } from '@st-stores/index';
+	import { debounce } from '@st-js/index';
 
 	import ProgressBar from '@base/ProgressBar.svelte';
 

@@ -4,8 +4,8 @@
 	import { browser, dev } from '$app/env';
 	import { navigating } from '$app/stores';
 
-	import { assignFonts, assignColorsVars } from '@js/index';
-	import { DeviceStore, SiteStore } from '@stores/index';
+	import { assignFonts, assignColorsVars } from '@st-js/index';
+	import { DeviceStore, SiteStore } from '@st-stores/index';
 
 	import { colorScheme } from '../config/colorscheme';
 

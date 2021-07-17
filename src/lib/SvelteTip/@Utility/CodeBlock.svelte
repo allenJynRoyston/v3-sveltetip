@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { getContext } from 'svelte';
-	import { copyToClipboard } from '@js';
+	import { copyToClipboard } from '@st-js';
 
 	import Panel from '@panel/Panel.svelte';
 	import Button from '@button/Button.svelte';

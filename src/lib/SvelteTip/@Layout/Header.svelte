@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { getContext } from 'svelte';
-	import { SiteStore, DeviceStore } from '@stores/index';
+	import { SiteStore, DeviceStore } from '@st-stores/index';
 
 	import ThreeSlot from '@base/ThreeSlot.svelte';
 	import Link from '@link/Link.svelte';
@@ -64,7 +64,7 @@
 </script>
 
 <nav class={`nav-header ${theme}-theme`} style={!!bgSrc ? imageStyle : null}>
-	<ThemeWrapper >
+	<ThemeWrapper>
 		<section class="top-section">
 			<ThreeSlot nopadding>
 				<section class="left-section" slot="left">
@@ -183,7 +183,7 @@
 				color: var(--white-0);
 			}
 
-			&.desktop{
+			&.desktop {
 				font-size: 12px;
 			}
 		}

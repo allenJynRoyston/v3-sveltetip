@@ -1,6 +1,7 @@
 <script lang="ts">
-	import { onMount, getContext, tick } from 'svelte';	
-	import { DeviceStore, ComponentStore } from '@stores/index';
+	import { onMount, getContext, tick } from 'svelte';
+	import { DeviceStore } from '@st-stores/index';
+	import { AppStore } from '@store/appStore';
 
 	import Panel from '@panel/Panel.svelte';
 	import Stack from '@layout/Stack.svelte';
@@ -39,7 +40,7 @@
 	const theme: string = getContext('theme');
 	const colors: any = getContext('colors');
 
-	const { showImport, showProperties, showCode, showExample, showActions } = ComponentStore;
+	const { showImport, showProperties, showCode, showExample, showActions } = AppStore;
 	const { isDesktop } = DeviceStore;
 
 	let opencontent = true;
@@ -263,7 +264,7 @@
 										{/each}
 									</div>
 								{/if}
-                
+
 								{#if listofdropdowns().length > 0}
 									<hr />
 									<div class="dropdowns">
@@ -444,7 +445,7 @@
 		&.opencontent {
 			min-height: auto;
 			// @include desktop-and-up {
-				min-height: 400px;
+			min-height: 400px;
 			// }
 		}
 	}

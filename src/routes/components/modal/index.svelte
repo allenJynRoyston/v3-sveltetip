@@ -1,11 +1,11 @@
 <script lang="ts">
-	import { ModalStore } from '@stores/index';
+	import { ModalStore } from '@st-stores/index';
 	import Button from '@button/Button.svelte';
-  import LoremBlock from '@utility/LoremBlock.svelte';
+	import LoremBlock from '@utility/LoremBlock.svelte';
 
-  import LibrarySnippet from '@component/base/LibrarySnippet.svelte';
+	import LibrarySnippet from '@component/base/LibrarySnippet.svelte';
 	import ExampleBlock from '@component/base/ExampleBlock.svelte';
-	
+
 	const { setModalState, modalIsBusy, modalProps } = ModalStore;
 
 	let propstr = '';
@@ -56,7 +56,7 @@
 	};
 
 	$: livecode = `    
-      import {ModalStore} from '@stores/indexstore'
+      import {ModalStore} from '@st-stores/indexstore'
       const {setModalState, modalIsBusy, modalProps} = ModalStore
 
       const openExampleBasic = () => {

@@ -4,7 +4,7 @@
 
 	import SVG from '@base/SVG.svelte';
 	import Button from '@button/Button.svelte';
-	import { validateInputFile } from '@js';
+	import { validateInputFile } from '@st-js';
 
 	//--------------------------- COMPONENT PROPS
 	export let onChange = null;

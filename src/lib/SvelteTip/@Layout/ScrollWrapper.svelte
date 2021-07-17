@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount, onDestroy, getContext } from 'svelte';
-	import { SiteStore } from '@stores/index';
-	import { debounce } from '@js/index';
+	import { SiteStore } from '@st-stores/index';
+	import { debounce } from '@st-js/index';
 	import { browser } from '$app/env';
 
 	export let height = '100vh';

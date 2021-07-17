@@ -1,5 +1,5 @@
 <script>
-	import { DeviceStore } from '@stores/index';
+	import { DeviceStore } from '@st-stores/index';
 
 	export let className = null;
 	export let style = null;
@@ -9,12 +9,11 @@
 	export let outline = false;
 
 	const { isDesktop } = DeviceStore;
-
 </script>
 
 <div
 	class={`section ${!!className ? className : ''}`}
-  class:desktop={$isDesktop}
+	class:desktop={$isDesktop}
 	class:nopadding
 	class:nomargin
 	class:outline
@@ -42,7 +41,7 @@
 			border: 3px dotted var(--black-1);
 		}
 
-		&.desktop{
+		&.desktop {
 			width: calc(100% - 40px);
 			height: calc(100% - 40px);
 			padding: 20px;

@@ -21,8 +21,10 @@ const config = {
 					'@app': path.resolve('./src/app'),
 					'@routes': path.resolve('./src/routes'),
 					'@lib': path.resolve('./src/lib'),
-					// SVELTETIP ALIASES
 					'@component': path.resolve('./src/lib/AppComponents'),
+					'@store': path.resolve('./src/stores'),
+					'@js': path.resolve('./src/js'),
+					// SVELTETIP ALIASES
 					'@chart': path.resolve('./src/lib/SvelteTip/@Charts'),
 					'@required': path.resolve('./src/lib/SvelteTip/@Required'),
 					'@base': path.resolve('./src/lib/SvelteTip/@Base'),
@@ -39,9 +41,9 @@ const config = {
 					'@images': path.resolve('./src/lib/SvelteTip/@Images'),
 					'@utility': path.resolve('./src/lib/SvelteTip/@Utility'),
 					'@unsorted': path.resolve('./src/lib/SvelteTip/@Unsorted'),
-					// SUPPORTING FILES
-					'@stores': path.resolve('./src/lib/SvelteTip/stores'),
-					'@js': path.resolve('./src/lib/SvelteTip/js')
+					// SVELTETIP SUPPORTING FILES
+					'@st-stores': path.resolve('./src/lib/SvelteTip/stores'),
+					'@st-js': path.resolve('./src/lib/SvelteTip/js')
 				}
 			}
 		}),
