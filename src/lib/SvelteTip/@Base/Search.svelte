@@ -52,10 +52,14 @@
 			: colors.white[0].color
 		: 'black';
 
-	$: onKeypress = debounce((val) => {
-		currentvalue = val.length === 0 ? null : val;
-		onUpdate && onUpdate(val.length === 0 ? null : val);
-	}, debounceTime);
+	$: onKeypress = debounce(
+		(val) => {
+			currentvalue = val.length === 0 ? null : val;
+			onUpdate && onUpdate(val.length === 0 ? null : val);
+		},
+		debounceTime,
+		null
+	);
 </script>
 
 <div class={`search ${theme}-theme`} class:rounded {style} bind:this={ele}>
