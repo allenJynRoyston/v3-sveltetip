@@ -161,6 +161,7 @@
 		}
 
 		input {
+			border: inherit;
 			height: calc(30px - 2px);
 			width: calc(100% - 20px);
 			padding: 0 10px;

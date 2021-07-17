@@ -99,3 +99,15 @@
 		<slot />
 	</main>
 </SvelteTip>
+
+<style lang="scss">
+	:global(body) {
+		margin: 0;
+		padding: 0;
+		text-rendering: optimizeLegibility;
+		margin: 0;
+		font-size: 14px;
+		line-height: 1.5;
+		-webkit-font-smoothing: antialiased;
+	}
+</style>

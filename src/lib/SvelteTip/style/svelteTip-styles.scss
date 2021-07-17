@@ -1,53 +1,9 @@
-@charset "utf-8";
-@function str-replace($string, $search, $replace: '') {
-	$index: str-index($string, $search);
-	@if $index {
-		@return str-slice($string, 1, $index - 1) + $replace +
-			str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
-	}
-	@return $string;
-}
-
-$fontOneString: str-replace($fontOne, ' ', '+');
-$fontTwoString: str-replace($fontTwo, ' ', '+');
-
-$importPath: 'https://fonts.googleapis.com/css2?family=' + $fontOneString +
-	':wght@400;600;700&family=' + $fontTwoString + ':wght@400;600;700&display=swap';
-
-@import url($importPath);
-
-$font-one: $fontOne, 'Segoe UI Light', 'Segoe', Tahoma, Helvetica, Arial, sans-serif;
-$font-two: $fontTwo, 'Segoe UI Light', 'Segoe', Tahoma, Helvetica, Arial, sans-serif;
-$font-system: 'Segoe UI Light', 'Segoe', Tahoma, Helvetica, Arial, sans-serif;
-
-:global(.font-one) {
-	font-family: $font-one;
-	text-rendering: optimizeLegibility;
-}
-
-:global(.font-two) {
-	font-family: $font-two;
-	text-rendering: optimizeLegibility;
-}
-
-:global(body) {
-	font-family: $font-two;
-	margin: 0;
-	padding: 0;
-	text-rendering: optimizeLegibility;
-	margin: 0;
-	font-size: 14px;
-	line-height: 1.5;
-	-webkit-font-smoothing: antialiased;
-}
-
 :global(h1) {
-	font-family: $fontOne;
+	font-family: var(--st-font-one);
 	font-size: 2em;
 	margin: 0;
 	padding: 0;
 	letter-spacing: 1px;
-	// text-shadow : 3px 3px 3px rgba(0, 0, 0, 0.3);
 	text-rendering: optimizeLegibility;
 	@supports (-webkit-touch-callout: none) {
 		-webkit-text-stroke: 0.5px;
@@ -55,12 +11,11 @@ $font-system: 'Segoe UI Light', 'Segoe', Tahoma, Helvetica, Arial, sans-serif;
 }
 
 :global(h2) {
-	font-family: $fontOne;
+	font-family: var(--st-font-one);
 	font-size: 1.8em;
 	margin: 0;
 	padding: 0;
 	letter-spacing: 1px;
-	// text-shadow : 3px 3px 3px rgba(0, 0, 0, 0.3);
 	text-rendering: optimizeLegibility;
 	@supports (-webkit-touch-callout: none) {
 		-webkit-text-stroke: 0.5px;
@@ -68,12 +23,11 @@ $font-system: 'Segoe UI Light', 'Segoe', Tahoma, Helvetica, Arial, sans-serif;
 }
 
 :global(h3) {
-	font-family: $fontOne;
+	font-family: var(--st-font-one);
 	font-size: 1.6em;
 	margin: 0;
 	padding: 0;
 	letter-spacing: 1px;
-	// text-shadow : 3px 3px 3px rgba(0, 0, 0, 0.3);
 	text-rendering: optimizeLegibility;
 	@supports (-webkit-touch-callout: none) {
 		-webkit-text-stroke: 0.5px;
@@ -81,12 +35,11 @@ $font-system: 'Segoe UI Light', 'Segoe', Tahoma, Helvetica, Arial, sans-serif;
 }
 
 :global(h3) {
-	font-family: $fontOne;
+	font-family: var(--st-font-one);
 	font-size: 1.4em;
 	margin: 0;
 	padding: 0;
 	letter-spacing: 1px;
-	// text-shadow : 3px 3px 3px rgba(0, 0, 0, 0.3);
 	text-rendering: optimizeLegibility;
 	@supports (-webkit-touch-callout: none) {
 		-webkit-text-stroke: 0.5px;
@@ -94,12 +47,11 @@ $font-system: 'Segoe UI Light', 'Segoe', Tahoma, Helvetica, Arial, sans-serif;
 }
 
 :global(h4) {
-	font-family: $fontOne;
+	font-family: var(--st-font-one);
 	font-size: 1.2em;
 	margin: 0;
 	padding: 0;
 	letter-spacing: 1px;
-	// text-shadow : 3px 3px 3px rgba(0, 0, 0, 0.3);
 	text-rendering: optimizeLegibility;
 	@supports (-webkit-touch-callout: none) {
 		-webkit-text-stroke: 0.5px;
@@ -107,12 +59,11 @@ $font-system: 'Segoe UI Light', 'Segoe', Tahoma, Helvetica, Arial, sans-serif;
 }
 
 :global(h5) {
-	font-family: $fontOne;
+	font-family: var(--st-font-one);
 	font-size: 1em;
 	margin: 0;
 	padding: 0;
 	letter-spacing: 1px;
-	// text-shadow : 3px 3px 3px rgba(0, 0, 0, 0.3);
 	text-rendering: optimizeLegibility;
 	@supports (-webkit-touch-callout: none) {
 		-webkit-text-stroke: 0.5px;
@@ -120,23 +71,22 @@ $font-system: 'Segoe UI Light', 'Segoe', Tahoma, Helvetica, Arial, sans-serif;
 }
 
 :global(button) {
-	font-family: $font-one;
+	font-family: var(--st-font-one);
 }
 
 :global(textarea) {
-	font-family: $font-two;
 	color: inherit;
 	border: inherit;
 	text-rendering: optimizeLegibility;
 }
 
 :global(body) {
-	font-family: $font-two;
+	font-family: var(--st-font-two);
 	text-rendering: optimizeLegibility;
 }
 
 :global(p) {
-	font-family: $font-two;
+	font-family: var(--st-font-two);
 	text-rendering: optimizeLegibility;
 }
 
@@ -146,7 +96,7 @@ $font-system: 'Segoe UI Light', 'Segoe', Tahoma, Helvetica, Arial, sans-serif;
 }
 
 :global(a) {
-	font-family: $font-two !important;
+	font-family: var(--st-font-two);
 	text-decoration: none;
 	color: inherit;
 	text-rendering: optimizeLegibility;
@@ -162,7 +112,7 @@ $font-system: 'Segoe UI Light', 'Segoe', Tahoma, Helvetica, Arial, sans-serif;
 
 :global(input) {
 	font-size: 12px;
-	font-family: $font-two;
+	font-family: var(--st-font-two);
 	color: inherit;
 	border: inherit;
 	text-rendering: optimizeLegibility;

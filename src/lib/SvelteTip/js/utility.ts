@@ -156,9 +156,9 @@ export const assignColorsVars = (colors, theme = 'light') => {
 	// COLORS
 	for (const [key] of Object.entries(colors)) {
 		colors[key].forEach((colorData, index) => {
-			const { colorName, textName, color, textFriendlyColor } = colorData;
-			document.documentElement.style.setProperty(colorName, color);
-			document.documentElement.style.setProperty(textName, textFriendlyColor);
+			const { color, name, textColor, textFriendlyColor } = colorData;
+			document.documentElement.style.setProperty(name, color);
+			document.documentElement.style.setProperty(textColor, textFriendlyColor);
 		});
 	}
 	// HR

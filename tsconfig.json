@@ -26,9 +26,7 @@
 			"@root/*": ["/*"],
 			"@app/*": ["src/app/*"],
 			"@lib/*": ["src/lib/*"],
-			"@js/*": ["src/js/*"],
 			"@scss/*": ["src/scss/*"],
-			"@stores/*": ["src/stores/*"],
 			"@routes/*": ["src/routes/*"],
 			"@component/*": ["src/lib/AppComponents/*"],
 			"@chart/*": ["src/lib/SvelteTip/@Charts/*"],
@@ -46,7 +44,9 @@
 			"@images/*": ["src/lib/SvelteTip/@Images/*"],
 			"@form/*": ["src/lib/SvelteTip/@Form/*"],
 			"@utility/*": ["src/lib/SvelteTip/@Utility/*"],
-			"@unsorted/*": ["src/app/SvelteTip/@Unsorted/*"]
+			"@unsorted/*": ["src/app/SvelteTip/@Unsorted/*"],
+			"@stores/*": ["src/lib/SvelteTip/stores/*"],
+			"@js/*": ["src/lib/SvelteTip/js/*"]
 		}
 	},
 	"include": ["src/**/*.d.ts", "src/**/*.js", "src/**/*.ts", "src/**/*.svelte"]

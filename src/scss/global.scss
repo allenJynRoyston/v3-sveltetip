@@ -1,26 +1,6 @@
-// load vars
-@import './src/font';
-@import './src/breakpoints';
+@import url('https://fonts.googleapis.com/css2?family=Sen:wght@400;600;700&family=Roboto:wght@400;600;700&display=swap');
 
-// load styles
-@import './src/_normalize';
-@import './src/_typography';
-@import './color-pallete.scss';
-
-// GLOBALS
-:global(hr) {
-	border: none;
-	border-bottom: 2px solid var(--hr);
-}
-
-:global(.italic) {
-	font-style: italic;
-}
-
-:global(.bold) {
-	font-weight: 700;
-}
-
-:global(.semi-bold) {
-	font-weight: 600;
+:root {
+	--st-font-one: 'Sen', 'Segoe UI Light', 'Segoe', Tahoma, Helvetica, Arial, sans-serif;
+	--st-font-two: 'Roboto', 'Segoe UI Light', 'Segoe', Tahoma, Helvetica, Arial, sans-serif;
 }

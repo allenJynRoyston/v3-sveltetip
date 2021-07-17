@@ -17,9 +17,7 @@ const config = {
 			resolve: {
 				alias: {
 					'@root': path.resolve('./'),
-					'@js': path.resolve('./src/js'),
 					'@scss': path.resolve('./src/scss'),
-					'@stores': path.resolve('./src/stores'),
 					'@app': path.resolve('./src/app'),
 					'@routes': path.resolve('./src/routes'),
 					'@lib': path.resolve('./src/lib'),
@@ -40,7 +38,10 @@ const config = {
 					'@cards': path.resolve('./src/lib/SvelteTip/@Cards'),
 					'@images': path.resolve('./src/lib/SvelteTip/@Images'),
 					'@utility': path.resolve('./src/lib/SvelteTip/@Utility'),
-					'@unsorted': path.resolve('./src/lib/SvelteTip/@Unsorted')
+					'@unsorted': path.resolve('./src/lib/SvelteTip/@Unsorted'),
+					// SUPPORTING FILES
+					'@stores': path.resolve('./src/lib/SvelteTip/stores'),
+					'@js': path.resolve('./src/lib/SvelteTip/js')
 				}
 			}
 		}),

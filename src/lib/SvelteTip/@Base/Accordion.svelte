@@ -18,10 +18,10 @@
 	export let headerTag = 'h2';
 	export let dataset = [];
 
-  export let onClick = null;
+	export let onClick = null;
 
 	const onHeaderClick = (index) => {
-    onClick && onClick({index})
+		onClick && onClick({ index });
 		set = set.map((x, i) => {
 			x.open = index === i ? !x.open : onlyOneOpened ? false : x.open;
 			return x;
@@ -71,6 +71,7 @@
 	.accordion {
 		width: 100%;
 		overflow: hidden;
+		font-family: var(--font-one);
 
 		&.rounded {
 			border-radius: 10px;

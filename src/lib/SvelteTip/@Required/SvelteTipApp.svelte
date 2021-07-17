@@ -3,12 +3,11 @@
 	import { setContext } from 'svelte';
 	import { browser, dev } from '$app/env';
 	import { navigating } from '$app/stores';
-  
+
 	import { assignFonts, assignColorsVars } from '@js/index';
 	import { DeviceStore, SiteStore } from '@stores/index';
 
-  import {colorScheme} from '../config/colorscheme'
-  import styles from '@scss/src/font.scss';
+	import { colorScheme } from '../config/colorscheme';
 
 	import HashWatch from '@core/HashWatch.svelte';
 	import ProgressBar from '@base/ProgressBar.svelte';
@@ -18,15 +17,6 @@
 	// //--------------------------- STORES
 	const { appWidth, appHeight } = DeviceStore;
 	const { urlHash, urlParams, shrinkHeader } = SiteStore;
-
-	//--------------------------- FONTS
-  const {fontOne, fontTwo} =  JSON.parse(styles.replace(':export', '').replace("fontOne", '"fontOne"').replace("fontTwo", ',"fontTwo"').replace(/\;/g, ''))  
-	const fonts = [fontOne, fontTwo]; // also assign in scss file below
-	if (browser) {
-		assignFonts(fonts);
-	}
-  setContext('fonts', fonts)
-	//---------------------------
 
 	//---------------------------  THEME
 	let defaultTheme = 'dark';
@@ -39,11 +29,11 @@
 	//---------------------------
 
 	//--------------------------- COLORS
-  let ready = false;
+	let ready = false;
 	if (browser) {
-    assignColorsVars(colorScheme, theme)    
+		assignColorsVars(colorScheme, theme);
 		setContext('colors', colorScheme);
-    ready = true
+		ready = true;
 	}
 	//---------------------------
 
@@ -69,7 +59,7 @@
 	});
 	//---------------------------
 
-	//--------------------------- HASHCHANGE	
+	//--------------------------- HASHCHANGE
 	let showLoader = false;
 	let timer = null;
 	let modalOpen: boolean = false;
@@ -114,12 +104,14 @@
 </div>
 
 <style lang="scss">
-  #svelte-tip-app{
-    opacity: 0;
-    &.ready{
-      opacity: 1;
-    }
-  }
+	@import '../style/svelteTip-styles.scss';
+
+	#svelte-tip-app {
+		opacity: 0;
+		&.ready {
+			opacity: 1;
+		}
+	}
 
 	#app-loader {
 		position: absolute;
