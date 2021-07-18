@@ -2,7 +2,7 @@
 	import { setContext } from 'svelte';
 	import LibrarySnippet from '@component/base/LibrarySnippet.svelte';
 
-	import IDB from '@core/IndexDBSetup.svelte';
+	import IDB from '@system/IndexDBSetup.svelte';
 	import { createDB } from '@st-js/index';
 	import { IndexDBStore } from '@st-js/index';
 

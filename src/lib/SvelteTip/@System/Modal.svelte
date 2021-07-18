@@ -3,8 +3,8 @@
 	import { getContext } from 'svelte';
 	import { ModalStore, DeviceStore } from '@st-stores/index';
 
-	import TwoSlot from '@base/TwoSlot.svelte';
-	import SVG from '@base/SVG.svelte';
+	import TwoSlot from '@layout/TwoSlot.svelte';
+	import SVG from '@text/SVG.svelte';
 	import Button from '@button/Button.svelte';
 	import ScrollWrapper from '@layout/ScrollWrapper.svelte';
 

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import LibrarySnippet from '@component/base/LibrarySnippet.svelte';
 
-	import ThreeSlot from '@base/ThreeSlot.svelte';
+	import ThreeSlot from '@layout/ThreeSlot.svelte';
 
 	let propstr = '';
 	let selectstr = '';

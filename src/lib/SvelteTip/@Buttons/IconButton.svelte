@@ -2,7 +2,7 @@
 	import { getContext } from 'svelte';
 
 	import Button from '@button/Button.svelte';
-	import SVG from '@base/SVG.svelte';
+	import SVG from '@text/SVG.svelte';
 	import Link from '@link/Link.svelte';
 
 	export let style = null;

@@ -2,7 +2,7 @@
 	//--------------------------- IMPORTS
 	import { onMount, onDestroy, getContext } from 'svelte';
 	import { validate } from '@st-js/index';
-	import TwoSlot from '@base/TwoSlot.svelte';
+	import TwoSlot from '@layout/TwoSlot.svelte';
 	import Button from '@button/Button.svelte';
 
 	//--------------------------- COMPONENT PROPS

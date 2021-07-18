@@ -2,7 +2,7 @@
 	//--------------------------- IMPORTS
 	import CreatePost from '../../../CreatePost/CreatePost.svelte';
 	import MoodPortrait from '../../../MoodPortrait/MoodPortrait.svelte';
-	import SVG from '@base/SVG.svelte';
+	import SVG from '@text/SVG.svelte';
 
 	//--------------------------- COMPONENT PROPS
 	export let author;

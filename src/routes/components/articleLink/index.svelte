@@ -2,7 +2,7 @@
 	import LibrarySnippet from '@component/base/LibrarySnippet.svelte';
 
 	import ArticleLink from '@link/ArticleLink.svelte';
-	import SVG from '@base/SVG.svelte';
+	import SVG from '@text/SVG.svelte';
 	import LoremBlock from '@utility/LoremBlock.svelte';
 
 	let propstr = '';

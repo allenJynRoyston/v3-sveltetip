@@ -1,11 +1,11 @@
 <script lang="ts">
 	import LibrarySnippet from '@component/base/LibrarySnippet.svelte';
-  import SVGPreview from '@component/base/SVGPreview.svelte';
-	
-  import { svgslist } from '@base/SVG.svelte';
-	import SVG from '@base/SVG.svelte';
+	import SVGPreview from '@component/base/SVGPreview.svelte';
+
+	import { svgslist } from '@text/SVG.svelte';
+	import SVG from '@text/SVG.svelte';
 	import GridLayout from '@layout/GridLayout.svelte';
-	
+
 	let propstr = '';
 	let selectstr = '';
 	let inputstr = '';
@@ -22,7 +22,7 @@
 
 	const snippet = {
 		name: 'SVG',
-		importName: '@base/SVG.svelte',
+		importName: '@text/SVG.svelte',
 		properties: `
     export let size:number = 14; 
     export let fill:string|null = null;

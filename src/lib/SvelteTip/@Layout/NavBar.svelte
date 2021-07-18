@@ -4,7 +4,7 @@
 	import { DeviceStore } from '@st-stores/index';
 
 	import Link from '@link/Link.svelte';
-	import SVG from '@base/SVG.svelte';
+	import SVG from '@text/SVG.svelte';
 
 	export let links = [];
 	export let prefetch = false;

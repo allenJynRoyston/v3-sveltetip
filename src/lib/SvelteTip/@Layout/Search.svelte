@@ -4,7 +4,7 @@
 	import { DeviceStore } from '@st-stores/index';
 	import { browser } from '$app/env';
 
-	import SVG from '@base/SVG.svelte';
+	import SVG from '@text/SVG.svelte';
 	import Input from '@form/Input.svelte';
 	import Button from '@button/Button.svelte';
 

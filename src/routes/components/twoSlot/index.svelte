@@ -1,7 +1,7 @@
 <script lang="ts">
 	import LibrarySnippet from '@component/base/LibrarySnippet.svelte';
 
-	import TwoSlot from '@base/TwoSlot.svelte';
+	import TwoSlot from '@layout/TwoSlot.svelte';
 
 	let propstr = '';
 	let selectstr = '';

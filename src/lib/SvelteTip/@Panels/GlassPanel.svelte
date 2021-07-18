@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import TwoSlot from '@base/TwoSlot.svelte';
+	import TwoSlot from '@layout/TwoSlot.svelte';
 	import ScrollWrapper from '@layout/ScrollWrapper.svelte';
 
 	export let glassEffect = 'light';
@@ -137,7 +137,7 @@
 		.header {
 			z-index: 2;
 			padding: 5px 10px;
-      background: rgba(0, 0, 0, .25);
+			background: rgba(0, 0, 0, 0.25);
 			&.clickable {
 				cursor: pointer;
 			}

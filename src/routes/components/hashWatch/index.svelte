@@ -2,7 +2,7 @@
 	import LibrarySnippet from '@component/base/LibrarySnippet.svelte';
 
 	import Link from '@link/Link.svelte';
-	import HashWatch from '@core/HashWatch.svelte';
+	import HashWatch from '@system/HashWatch.svelte';
 
 	let propstr = '';
 	let selectstr = '';

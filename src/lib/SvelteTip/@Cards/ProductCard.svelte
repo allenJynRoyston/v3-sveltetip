@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { getContext } from 'svelte';
 	import FullImage from '@images/FullImage.svelte';
-	import ColorText from '@base/ColorText.svelte';
+	import ColorText from '@text/ColorText.svelte';
 	import Button from '@button/Button.svelte';
 	import Rating from '@form/Rating.svelte';
 

@@ -14,7 +14,7 @@
 
 	const snippet = {
 		name: 'Snackbar',
-		importName: '@core/Snackbar.svelte',
+		importName: '@system/Snackbar.svelte',
 		props: {
 			closeOnClick: false
 		},
@@ -48,12 +48,12 @@
 	const addSnack: any = getContext('addSnack');
 
 	const snacktime = () => {
-    console.log(props)
+		console.log(props);
 		addSnack({
 			message: 'I am a snackbar!',
 			...props,
 			...selectprops,
-      ...inputprops
+			...inputprops
 		});
 	};
 
@@ -68,7 +68,7 @@
 			},
 			...props,
 			...selectprops,
-      ...inputprops
+			...inputprops
 		});
 	};
 
@@ -85,7 +85,7 @@
 			},
 			...props,
 			...selectprops,
-      ...inputprops
+			...inputprops
 		});
 	};
 

@@ -5,7 +5,7 @@
 	import Container from '@layout/Container.svelte';
 	import Section from '@layout/Section.svelte';
 	import Button from '@button/Button.svelte';
-	import ColorText from '@base/ColorText.svelte';
+	import ColorText from '@text/ColorText.svelte';
 	import ThemeWrapper from '@layout/ThemeWrapper.svelte';
 	import Link from '@link/Link.svelte';
 	import CodeBlock from '@utility/CodeBlock.svelte';

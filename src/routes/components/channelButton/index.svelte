@@ -2,7 +2,7 @@
 	import LibrarySnippet from '@component/base/LibrarySnippet.svelte';
 
 	import ChannelButton from '@button/ChannelButton.svelte';
-	import { svgslist } from '@base/SVG.svelte';
+	import { svgslist } from '@text/SVG.svelte';
 
 	let propstr = '';
 	let selectstr = '';

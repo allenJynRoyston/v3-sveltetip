@@ -1,7 +1,7 @@
 <script lang="ts">
 	import LibrarySnippet from '@component/base/LibrarySnippet.svelte';
 
-	import Spinner from '@base/Spinner.svelte';
+	import Spinner from '@layout/Spinner.svelte';
 
 	let propstr = '';
 	let selectstr = '';

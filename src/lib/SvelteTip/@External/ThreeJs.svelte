@@ -1,6 +1,6 @@
 <script lang="ts">
-  import {tick} from 'svelte';
-	import Spinner from '@base/Spinner.svelte';
+	import { tick } from 'svelte';
+	import Spinner from '@layout/Spinner.svelte';
 	export let threeFile = null;
 	export let resourceFolder = null;
 	export let id = 'instance1';
@@ -15,7 +15,7 @@
 
 	const onScriptLoad = () => {
 		/* @ts-ignore */
-		if (typeof THREE !== 'undefined') {      
+		if (typeof THREE !== 'undefined') {
 			!!threeFile && initLoad(threeFile);
 		}
 	};
@@ -26,15 +26,15 @@
 		try {
 			await loadFile(file);
 			isLoading = false;
-			await tick()
-      /* @ts-ignore */
-      threeInit({
-        canvasele,
-        resourceFolder,
-        fullscreen: true,
-        width: window.innerWidth,
-        height: 400
-      });
+			await tick();
+			/* @ts-ignore */
+			threeInit({
+				canvasele,
+				resourceFolder,
+				fullscreen: true,
+				width: window.innerWidth,
+				height: 400
+			});
 		} catch (_err) {
 			hasError = true;
 			isLoading = false;

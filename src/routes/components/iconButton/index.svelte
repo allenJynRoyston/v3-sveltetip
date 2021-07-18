@@ -1,7 +1,7 @@
 <script lang="ts">
 	import LibrarySnippet from '@component/base/LibrarySnippet.svelte';
 	import IconButton from '@button/IconButton.svelte';
-	import { svgslist } from '@base/SVG.svelte';
+	import { svgslist } from '@text/SVG.svelte';
 
 	let propstr = '';
 	let selectstr = '';
@@ -27,7 +27,7 @@
 			disabled: false,
 			nomargin: false,
 			exactfit: true,
-			fullOnMobile: false,
+			fullOnMobile: false
 		},
 		dropdowns: [
 			{

@@ -3,7 +3,7 @@
 	import { SiteStore, DeviceStore } from '@st-stores/index';
 	import { page } from '$app/stores';
 
-	import Accordion from '@base/Accordion.svelte';
+	import Accordion from '@layout/Accordion.svelte';
 	import Link from '@link/Link.svelte';
 	import ScrollWrapper from '@layout/ScrollWrapper.svelte';
 	import Container from '@layout/Container.svelte';

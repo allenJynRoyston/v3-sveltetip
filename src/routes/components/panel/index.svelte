@@ -3,7 +3,7 @@
 
 	import Panel from '@panel/Panel.svelte';
 	import LoremBlock from '@utility/LoremBlock.svelte';
-	import SVG from '@base/SVG.svelte';
+	import SVG from '@text/SVG.svelte';
 
 	let propstr = '';
 	let selectstr = '';
@@ -65,7 +65,7 @@
 
 	$: livecode = `    
     import LoremBlock from '@base/LoremBlock.svelte';
-    import SVG from '@base/SVG.svelte';
+    import SVG from '@text/SVG.svelte';
 
     <Panel${propstr}${selectstr}${inputstr}>
       <div slot="title">

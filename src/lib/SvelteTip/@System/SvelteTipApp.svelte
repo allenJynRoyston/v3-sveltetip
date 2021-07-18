@@ -4,15 +4,16 @@
 	import { browser, dev } from '$app/env';
 	import { navigating } from '$app/stores';
 
-	import { assignFonts, assignColorsVars } from '@st-js/index';
+	import { assignColorsVars } from '@st-js/index';
 	import { DeviceStore, SiteStore } from '@st-stores/index';
 
 	import { colorScheme } from '../config/colorscheme';
 
-	import HashWatch from '@core/HashWatch.svelte';
-	import ProgressBar from '@base/ProgressBar.svelte';
-	import SnackBar from '@core/Snackbar.svelte';
-	import Modal from '@core/Modal.svelte';
+	import HashWatch from '@system/HashWatch.svelte';
+	import SnackBar from '@system/Snackbar.svelte';
+	import Modal from '@system/Modal.svelte';
+
+	import ProgressBar from '@layout/ProgressBar.svelte';
 
 	// //--------------------------- STORES
 	const { appWidth, appHeight } = DeviceStore;

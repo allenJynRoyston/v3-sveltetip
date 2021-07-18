@@ -17,7 +17,7 @@
 
 	const snippet = {
 		name: 'Modal',
-		importName: '@core/Modal.svelte',
+		importName: '@system/Modal.svelte',
 		properties: `
         Must pass props through $modalProps:
       `,

@@ -2,7 +2,7 @@
 	//--------------------------- IMPORTS
 	import { onMount, getContext } from 'svelte';
 
-	import SVG from '@base/SVG.svelte';
+	import SVG from '@text/SVG.svelte';
 	import Button from '@button/Button.svelte';
 	import { validateInputFile } from '@st-js';
 

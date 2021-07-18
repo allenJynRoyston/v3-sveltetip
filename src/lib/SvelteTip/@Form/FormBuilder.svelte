@@ -4,7 +4,7 @@
 	import { DeviceStore } from '@st-stores/index';
 
 	import Button from '@button/Button.svelte';
-	import SVG from '@base/SVG.svelte';
+	import SVG from '@text/SVG.svelte';
 	import Container from '@layout/Container.svelte';
 
 	import Input from '@form/Input.svelte';

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Accordion from '@base/Accordion.svelte';
+	import Accordion from '@layout/Accordion.svelte';
 	export let title = null;
 	export let flex = false;
 </script>

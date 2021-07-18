@@ -1,5 +1,5 @@
 <script lang="ts">
-	import ThemeSwitch from '@unsorted/ThemeSwitch.svelte';
+	import ThemeSwitch from '@utility/ThemeSwitch.svelte';
 	import { DeviceStore } from '@st-stores/index';
 	const { isTabletAndBelow } = DeviceStore;
 </script>

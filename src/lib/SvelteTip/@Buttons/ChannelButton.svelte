@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { getContext } from 'svelte';
-	import SVG from '@base/SVG.svelte';
+	import SVG from '@text/SVG.svelte';
 
 	export let onClick = null;
 	export let useGradiant = false;
@@ -50,9 +50,9 @@
 	</div>
 	<div class="content" type="button">
 		<slot>
-      <span>
-			  {content || 'Button'}
-      </span>
+			<span>
+				{content || 'Button'}
+			</span>
 		</slot>
 	</div>
 	<div class="icon">
@@ -71,7 +71,7 @@
 		outline: none;
 		margin: 2px;
 		border: none;
-    font-weight: 600;
+		font-weight: 600;
 
 		&.tiny {
 			font-size: 9px;

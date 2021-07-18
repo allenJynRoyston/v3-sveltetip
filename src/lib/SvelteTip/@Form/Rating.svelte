@@ -2,7 +2,7 @@
 	//--------------------------- IMPORTS
 	import { getContext, onMount } from 'svelte';
 	import { validateRating } from '@st-js/index';
-	import SVG from '@base/SVG.svelte';
+	import SVG from '@text/SVG.svelte';
 
 	//--------------------------- COMPONENT PROPS
 	export let onChange = null;
@@ -29,7 +29,13 @@
 	let ratings = [];
 
 	$: fill = () => {
-		return !!applyTheme ? colors[applyTheme][0].color : null;
+		return !!applyTheme
+			? applyTheme === 'none'
+				? theme === 'dark'
+					? colors.white[0].color
+					: colors.black[0].color
+				: colors[applyTheme][0].color
+			: null;
 	};
 
 	//--------------------------- ONMOUNT

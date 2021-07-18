@@ -1,7 +1,7 @@
 <script lang="ts">
 	import LibrarySnippet from '@component/base/LibrarySnippet.svelte';
 
-	import ProgressBar from '@base/ProgressBar.svelte';
+	import ProgressBar from '@layout/ProgressBar.svelte';
 
 	let propstr = '';
 	let selectstr = '';

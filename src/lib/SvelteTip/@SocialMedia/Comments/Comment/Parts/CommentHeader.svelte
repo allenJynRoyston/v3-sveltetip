@@ -1,8 +1,8 @@
 <script lang="ts">
 	//--------------------------- IMPORTS
-	import ThreeSlot from '@base/ThreeSlot.svelte';
+	import ThreeSlot from '@layout/ThreeSlot.svelte';
 	import Button from '@button/Button.svelte';
-	import SVG from '@base/SVG.svelte';
+	import SVG from '@text/SVG.svelte';
 	import MoodSelector from '../../../MoodSelector/MoodSelector.svelte';
 	import UserPortrait from '../../../UserPortrait/UserPortrait.svelte';
 

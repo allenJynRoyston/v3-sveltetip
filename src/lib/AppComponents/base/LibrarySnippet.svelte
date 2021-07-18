@@ -11,7 +11,7 @@
 	import InputTime from '@form/InputTime.svelte';
 	import Select from '@form/Select.svelte';
 	import CodeBlock from '@utility/CodeBlock.svelte';
-	import TwoSlot from '@base/TwoSlot.svelte';
+	import TwoSlot from '@layout/TwoSlot.svelte';
 	import Button from '@button/Button.svelte';
 	import Pill from '@button/Pill.svelte';
 

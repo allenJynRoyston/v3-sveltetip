@@ -6,7 +6,7 @@
 	import { SiteStore, DeviceStore } from '@st-stores/index';
 	import { debounce } from '@st-js/index';
 
-	import ProgressBar from '@base/ProgressBar.svelte';
+	import ProgressBar from '@layout/ProgressBar.svelte';
 
 	import { tweened } from 'svelte/motion';
 	import * as easings from 'svelte/easing';

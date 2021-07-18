@@ -2,7 +2,7 @@
 	import LibrarySnippet from '@component/base/LibrarySnippet.svelte';
 	import ExampleBlock from '@component/base/ExampleBlock.svelte';
 
-	import Channels from '@base/Channels.svelte';
+	import Channels from '@layout/Channels.svelte';
 	import Container from '@layout/Container.svelte';
 	import { createChannel } from '@st-js/index';
 

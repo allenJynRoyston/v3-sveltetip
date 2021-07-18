@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { getContext, onMount } from 'svelte';
-	import TwoSlot from '@base/TwoSlot.svelte';
+	import TwoSlot from '@layout/TwoSlot.svelte';
 	import ScrollWrapper from '@layout/ScrollWrapper.svelte';
 
 	export let applyTheme = 'default';

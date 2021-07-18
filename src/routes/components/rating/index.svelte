@@ -2,7 +2,7 @@
 	import LibrarySnippet from '@component/base/LibrarySnippet.svelte';
 
 	import Rating from '@form/Rating.svelte';
-	import { svgslist } from '@base/SVG.svelte';
+	import { svgslist } from '@text/SVG.svelte';
 
 	let propstr = '';
 	let selectstr = '';
@@ -34,7 +34,8 @@
 			{
 				label: 'applyTheme',
 				options: [
-					null,
+					'none',
+					'default',
 					'primary',
 					'secondary',
 					'magic',

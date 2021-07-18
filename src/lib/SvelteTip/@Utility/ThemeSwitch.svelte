@@ -2,8 +2,6 @@
 	import { getContext } from 'svelte';
 	import Pill from '@button/Pill.svelte';
 
-	export let links = ['dark', 'light'];
-
 	const theme: string = getContext('theme');
 
 	const setTheme = (theme) => {

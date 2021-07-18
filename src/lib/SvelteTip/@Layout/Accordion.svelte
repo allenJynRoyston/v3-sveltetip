@@ -1,10 +1,7 @@
 <script lang="ts">
-	import { getContext } from 'svelte';
-	import { browser } from '$app/env';
-
 	import Panel from '@panel/Panel.svelte';
-	import SVG from '@base/SVG.svelte';
-	import HTag from '@base/HTag.svelte';
+	import SVG from '@text/SVG.svelte';
+	import HTag from '@text/HTag.svelte';
 
 	export let applyTheme = 'default';
 	export let nomargin = false;

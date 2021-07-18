@@ -2,9 +2,9 @@
 	import { getContext } from 'svelte';
 	import { SiteStore, DeviceStore } from '@st-stores/index';
 
-	import ThreeSlot from '@base/ThreeSlot.svelte';
+	import ThreeSlot from '@layout/ThreeSlot.svelte';
 	import Link from '@link/Link.svelte';
-	import SVG from '@base/SVG.svelte';
+	import SVG from '@text/SVG.svelte';
 	import ThemeWrapper from '@layout/ThemeWrapper.svelte';
 
 	export let title = null;

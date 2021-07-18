@@ -4,13 +4,13 @@
 	import { browser } from '$app/env';
 	import { SiteStore } from '@st-stores/index';
 
-	import SvelteTip from '@required/SvelteTipApp.svelte';
+	import SvelteTipApp from '@system/SvelteTipApp.svelte';
 
-	import Search from '@base/Search.svelte';
+	import Search from '@layout/Search.svelte';
 	import Header from '@layout/Header.svelte';
 	import HeroBanner from '@layout/HeroBanner.svelte';
 	import NavBar from '@layout/NavBar.svelte';
-	import ThemeSwitch from '@unsorted/ThemeSwitch.svelte';
+	import ThemeSwitch from '@utility/ThemeSwitch.svelte';
 
 	let theme = browser ? localStorage.getItem('theme') : 'dark';
 
@@ -85,7 +85,7 @@
 	//---------------------------
 </script>
 
-<SvelteTip>
+<SvelteTipApp>
 	<Header
 		{...headerprops}
 		notchEle={notchEle()}
@@ -98,7 +98,9 @@
 	<main>
 		<slot />
 	</main>
-</SvelteTip>
+</SvelteTipApp>
+
+<h1>Hello World!</h1>
 
 <style lang="scss">
 	:global(body) {

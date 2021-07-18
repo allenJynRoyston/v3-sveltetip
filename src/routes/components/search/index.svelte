@@ -1,7 +1,7 @@
 <script lang="ts">
 	import LibrarySnippet from '@component/base/LibrarySnippet.svelte';
 
-	import Search from '@base/Search.svelte';
+	import Search from '@layout/Search.svelte';
 
 	let propstr = '';
 	let selectstr = '';

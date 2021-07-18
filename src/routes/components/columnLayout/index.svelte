@@ -13,7 +13,7 @@
 
 	const snippet = {
 		name: 'ColumnLayout',
-		importName: '@supports/ColumnLayout/ColumnLayout.svelte',
+		importName: '@layout/ColumnLayout.svelte',
 		dropdowns: [
 			{
 				label: 'activeTheme',
@@ -79,7 +79,7 @@
 	bind:inputprops
 >
 	<div slot="liveexample">
-		<ColumnLayout {links} {...props} {...selectprops} {...inputprops} >
+		<ColumnLayout {links} {...props} {...selectprops} {...inputprops}>
 			<div style="padding: 0 10px">
 				<LoremBlock />
 			</div>

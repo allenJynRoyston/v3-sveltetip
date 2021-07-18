@@ -1,7 +1,7 @@
 <script lang="ts">
 	//--------------------------- IMPORTS
 	import CreatePost from '../../../CreatePost/CreatePost.svelte';
-	import SVG from '@base/SVG.svelte';
+	import SVG from '@text/SVG.svelte';
 	import MoodPortrait from '../../../MoodPortrait/MoodPortrait.svelte';
 
 	//--------------------------- COMPONENT PROPS

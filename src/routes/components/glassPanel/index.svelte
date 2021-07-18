@@ -4,7 +4,7 @@
 
 	import GlassPanel from '@panel/GlassPanel.svelte';
 	import LoremBlock from '@utility/LoremBlock.svelte';
-	import SVG from '@base/SVG.svelte';
+	import SVG from '@text/SVG.svelte';
 	import FullImage from '@images/FullImage.svelte';
 
 	const theme: string = getContext('theme');
@@ -69,7 +69,7 @@
 	$: livecode = `    
     import FullImage from '@images/FullImage.svelte'
     import LoremBlock from '@base/LoremBlock.svelte';
-    import SVG from '@base/SVG.svelte';
+    import SVG from '@text/SVG.svelte';
 
     <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%">
       <FullImage src="https://picsum.photos/id/1011/400/800" />

@@ -1,7 +1,7 @@
 <script lang="ts">
 	//--------------------------- IMPORTS
 	import { getContext } from 'svelte';
-	import SVG from '@base/SVG.svelte';
+	import SVG from '@text/SVG.svelte';
 	export let items = [];
 
 	export let onClick = null;

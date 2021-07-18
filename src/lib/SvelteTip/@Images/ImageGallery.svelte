@@ -2,9 +2,9 @@
 	import { getContext, tick } from 'svelte';
 	import { ModalStore } from '@st-stores/index';
 	import SmartImage from '@images/SmartImage.svelte';
-	import Channels from '@base/Channels.svelte';
+	import Channels from '@layout/Channels.svelte';
 	import { createChannel } from '@st-js/index';
-	import SVG from '@base/SVG.svelte';
+	import SVG from '@text/SVG.svelte';
 
 	export let easing = 'cubicOut';
 	export let duration = 300;

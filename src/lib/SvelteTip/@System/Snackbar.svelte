@@ -3,8 +3,8 @@
 	import { getContext, onDestroy } from 'svelte';
 	import { DeviceStore } from '@st-stores/index';
 
-	import SVG from '@base/SVG.svelte';
-	import ProgressBar from '@base/ProgressBar.svelte';
+	import SVG from '@text/SVG.svelte';
+	import ProgressBar from '@layout/ProgressBar.svelte';
 
 	export let snack = null;
 	export let onComplete = () => {};

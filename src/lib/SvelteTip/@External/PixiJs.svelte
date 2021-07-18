@@ -1,6 +1,6 @@
 <script lang="ts">
-  import {tick} from 'svelte'
-	import Spinner from '@base/Spinner.svelte';
+	import { tick } from 'svelte';
+	import Spinner from '@layout/Spinner.svelte';
 	export let pixifile = null;
 	export let resourceFolder = null;
 	export let id = 'instance1';
@@ -27,14 +27,14 @@
 			await loadFile(file);
 			isLoading = false;
 			await tick();
-      /* @ts-ignore */
-      pixiInit({
-        canvasele,
-        resourceFolder,
-        fullscreen: true,
-        width: window.innerWidth,
-        height: 300
-      });
+			/* @ts-ignore */
+			pixiInit({
+				canvasele,
+				resourceFolder,
+				fullscreen: true,
+				width: window.innerWidth,
+				height: 300
+			});
 		} catch (_err) {
 			hasError = true;
 			isLoading = false;
@@ -68,7 +68,7 @@
 </script>
 
 <svelte:head>
-	<script src={defaultSrc} on:load={onScriptLoad} />
+	<script src={defaultSrc} on:load={onScriptLoad}></script>
 </svelte:head>
 
 <div class="pixijs-container">

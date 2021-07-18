@@ -3,7 +3,7 @@
 	import { onMount, getContext } from 'svelte';
 	import { validateTime } from '@st-js/index';
 
-	import TwoSlot from '@base/TwoSlot.svelte';
+	import TwoSlot from '@layout/TwoSlot.svelte';
 	import Button from '@button/Button.svelte';
 
 	//--------------------------- COMPONENT PROPS

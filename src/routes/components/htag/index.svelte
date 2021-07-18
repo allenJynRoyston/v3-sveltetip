@@ -1,7 +1,7 @@
 <script lang="ts">
 	import LibrarySnippet from '@component/base/LibrarySnippet.svelte';
 
-	import HTag from '@base/HTag.svelte';
+	import HTag from '@text/HTag.svelte';
 
 	let propstr = '';
 	let selectstr = '';

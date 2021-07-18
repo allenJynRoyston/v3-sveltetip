@@ -5,12 +5,6 @@
 	const root = '/components';
 
 	let links = [
-		// CORE
-		{ title: 'hashWatch', section: 'Core', href: `${root}/hashWatch` },
-		{ title: 'indexDB', section: 'Core', href: `${root}/indexDB` },
-		{ title: 'modal', section: 'Core', href: `${root}/modal` },
-		{ title: 'snackbar', section: 'Core', href: `${root}/snackbar` },
-
 		// LINKS
 		{ title: 'link', section: 'Links', href: `${root}/link` },
 		{ title: 'articleLink', section: 'Links', href: `${root}/articleLink` },
@@ -34,17 +28,9 @@
 		{ title: 'selectMulti', section: 'Forms', href: `${root}/selectMulti` },
 
 		// BASE
-		{ title: 'accordion', section: 'Base', href: `${root}/accordion` },
-		{ title: 'channels', section: 'Base', href: `${root}/channels` },
-		{ title: 'colorText', section: 'Base', href: `${root}/colorText` },
-		{ title: 'htag', section: 'Base', href: `${root}/htag` },
-		{ title: 'link', section: 'Base', href: `${root}/link` },
-		{ title: 'progressBar', section: 'Base', href: `${root}/progressBar` },
-		{ title: 'spinner', section: 'Base', href: `${root}/spinner` },
-		{ title: 'search', section: 'Base', href: `${root}/search` },
-		{ title: 'svg', section: 'Base', href: `${root}/svg` },
-		{ title: 'twoSlot', section: 'Base', href: `${root}/twoSlot` },
-		{ title: 'threeSlot', section: 'Base', href: `${root}/threeSlot` },
+		{ title: 'colorText', section: 'Text', href: `${root}/colorText` },
+		{ title: 'htag', section: 'Text', href: `${root}/htag` },
+		{ title: 'svg', section: 'Text', href: `${root}/svg` },
 
 		// EXAMPLES
 		// { title: 'formExample', section: 'Examples', href: `${root}/formExample` },
@@ -52,6 +38,8 @@
 		// { title: 'draggableExample', section: 'Examples', href: `${root}/draggableExample` },
 
 		// LAYOUT
+		{ title: 'accordion', section: 'Layout', href: `${root}/accordion` },
+		{ title: 'channels', section: 'Layout', href: `${root}/channels` },
 		{ title: 'header', section: 'Layout', href: `${root}/header` },
 		{ title: 'footer', section: 'Layout', href: `${root}/footer` },
 		{ title: 'gridLayout', section: 'Layout', href: `${root}/gridLayout` },
@@ -65,6 +53,11 @@
 		{ title: 'box', section: 'Layout', href: `${root}/box` },
 		{ title: 'scrollWrapper', section: 'Layout', href: `${root}/scrollWrapper` },
 		{ title: 'tabs', section: 'Layout', href: `${root}/tabs` },
+		{ title: 'twoSlot', section: 'Layout', href: `${root}/twoSlot` },
+		{ title: 'threeSlot', section: 'Layout', href: `${root}/threeSlot` },
+		{ title: 'search', section: 'Layout', href: `${root}/search` },
+		{ title: 'progressBar', section: 'Layout', href: `${root}/progressBar` },
+		{ title: 'spinner', section: 'Layout', href: `${root}/spinner` },
 
 		// PANELS
 		{ title: 'panel', section: 'Panels', href: `${root}/panel` },
@@ -91,24 +84,29 @@
 		{ title: 'fadeIn', section: 'Utility', href: `${root}/fadein` },
 		{ title: 'inViewport', section: 'Utility', href: `${root}/inViewport` },
 
-    // CHARTS
-    { title: 'linechart', section: 'Charts', href: `${root}/linechart` },
-    { title: 'barchart', section: 'Charts', href: `${root}/barchart` },
-    // { title: 'radarchart', section: 'Charts', href: `${root}/radarchart` },
-
+		// CHARTS
+		{ title: 'linechart', section: 'Charts', href: `${root}/linechart` },
+		{ title: 'barchart', section: 'Charts', href: `${root}/barchart` },
+		// { title: 'radarchart', section: 'Charts', href: `${root}/radarchart` },
 
 		// EXTERNAL
 		{ title: 'pixijs', section: 'External', href: `${root}/pixijs` },
 		{ title: 'threeJs', section: 'External', href: `${root}/threeJs` },
 		// { title: 'chartjs', section: 'External', href: `${root}/chartjs` },
-		{ title: 'quill', section: 'External', href: `${root}/quill` }
+		{ title: 'quill', section: 'External', href: `${root}/quill` },
+
+		// SYSTEM
+		{ title: 'hashWatch', section: 'System', href: `${root}/hashWatch` },
+		{ title: 'indexDB', section: 'System', href: `${root}/indexDB` },
+		{ title: 'modal', section: 'System', href: `${root}/modal` },
+		{ title: 'snackbar', section: 'System', href: `${root}/snackbar` }
 	];
 
 	links = links.sort((a, b) => a?.title.localeCompare(b?.title));
 </script>
 
 <Container>
-	<ColumnLayout {links} >
+	<ColumnLayout {links}>
 		<div style="padding: 20px;">
 			<main>
 				<slot />

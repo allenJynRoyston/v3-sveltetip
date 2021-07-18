@@ -4,8 +4,8 @@
 	import Header from '@layout/Header.svelte';
 	import NavBar from '@layout/NavBar.svelte';
 	import HeroBanner from '@layout/HeroBanner.svelte';
-	import ThemeSwitch from '@unsorted/ThemeSwitch.svelte';
-	import Search from '@base/Search.svelte';
+	import ThemeSwitch from '@utility/ThemeSwitch.svelte';
+	import Search from '@layout/Search.svelte';
 
 	let propstr = '';
 	let selectstr = '';
@@ -102,7 +102,7 @@
 	$: livecode = ` 
     import NavBar from '@layout/NavBar.svelte'
     import HeroBanner from '@layout/HeroBanner.svelte'
-    import ThemeSwitch from '@unsorted/ThemeSwitch.svelte';
+    import ThemeSwitch from '@utility/ThemeSwitch.svelte';
     import Search from '@base/Search.svelte'
 
     let headerprops = {

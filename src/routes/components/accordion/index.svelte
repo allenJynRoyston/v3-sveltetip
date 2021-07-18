@@ -1,9 +1,9 @@
 <script lang="ts">
 	import LibrarySnippet from '@component/base/LibrarySnippet.svelte';
 
-	import Accordion from '@base/Accordion.svelte';
+	import Accordion from '@layout/Accordion.svelte';
 	import LoremBlock from '@utility/LoremBlock.svelte';
-	import ProgressBar from '@base/ProgressBar.svelte';
+	import ProgressBar from '@layout/ProgressBar.svelte';
 
 	let propstr = '';
 	let selectstr = '';
@@ -21,14 +21,14 @@
 
 	const snippet = {
 		name: 'Accordion',
-		importName: '@base/Accordion.svelte',
+		importName: '@layout/Accordion.svelte',
 		props: {
 			nomargin: false,
 			rounded: false,
 			shadow: false,
 			shadowOnHover: false,
 			skinnybar: false,
-			onlyOneOpened: false,
+			onlyOneOpened: false
 		},
 		dropdowns: [
 			{

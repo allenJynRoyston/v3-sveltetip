@@ -1,7 +1,7 @@
 <script lang="ts">
 	import LibrarySnippet from '@component/base/LibrarySnippet.svelte';
 
-	import ColorText from '@base/ColorText.svelte';
+	import ColorText from '@text/ColorText.svelte';
 	import LoremBlock from '@utility/LoremBlock.svelte';
 
 	let propstr = '';
