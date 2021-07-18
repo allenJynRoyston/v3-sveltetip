@@ -19,7 +19,10 @@
 		$shrinkHeader = val > 0;
 	};
 
-	const links = [{ title: 'About', href: '/home/about', applyTheme: 'magic' }];
+	const links = [
+		{ title: 'About', href: '/home/about', applyTheme: 'magic' },
+		{ title: 'Install Guide', href: '/home/install', applyTheme: 'primary' }
+	];
 </script>
 
 <ScrollWrapper accountForTopPos {onScroll}>

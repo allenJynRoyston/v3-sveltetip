@@ -22,28 +22,12 @@
 				<section class="section-wrap" class:tabletAndBelow={$isTabletAndBelow}>
 					<h2 class="about-title">What is SvelteTip?</h2>
 					<p>
-						<ColorText applyTheme="success">SvelteTip</ColorText> is a rapid development boilerplate
-						project built using the
-						<ColorText applyTheme="warning"
-							><Link target="_blank" href="https://svelte.dev/" inherit>Svelte</Link></ColorText
-						> and
-						<ColorText applyTheme="magic"
-							><Link target="_blank" href="https://www.snowpack.dev/" inherit>SvelteKit</Link
-							></ColorText
-						> framework. <ColorText applyTheme="success">SvelteTip</ColorText> takes advantage of both
-						of these amazing technologies to specialize on ease of use, tiny compile size, and component
-						centric development that makes building large apps just as seamless as small ones. Regardless
-						of the size or complexity of your SPA project, you'll find that using <ColorText
-							applyTheme="success">SvelteTip</ColorText
-						> can save you - the developer - countless little pockets of time.
+						<ColorText applyTheme="success">SvelteTip</ColorText> is a standalone component library that
+						can be integrated with new or existing SvelteKit projects. It's method for doing is a bit
+						unorthodox, but the end result is an easily integrated, customizable, and developer-friendly
+						experience. <ColorText applyTheme="success">SvelteTip</ColorText> was designed to save YOU
+						time and frustration.
 					</p>
-					<!-- <p>
-              Projects can be configured to be SPA (single-page app) or SSR (server-side rendering).
-              Your choice. For convience, anything you develop using the SvelteTip boilerplate can be
-              deployed easily using <ColorText applyTheme="secondary"
-                ><Link target="_blank" href="https://www.fastify.io" inherit>Fastify</Link></ColorText
-              >.
-            </p> -->
 				</section>
 			</Section>
 		</FadeIn>
@@ -55,19 +39,16 @@
 		<FadeIn condition="when-inviewport" fadeDirection="right">
 			<Section nomargin>
 				<section class="section-wrap" class:tabletAndBelow={$isTabletAndBelow}>
-					<h2 class="about-title">Build it Once</h2>
+					<h2 class="about-title">Why is SvelteTip different?</h2>
+					<p>Lets face facts here: most component libraries <b>suck.</b></p>
 					<p>
-						<ColorText applyTheme="success">SvelteTip</ColorText> prides itself on it's growing library
-						of useful pre-made components that have been specifically engineered to work just as well
-						on your phone as it would your desktop. The goal, ultimately, is to move towards a "just
-						build it once" web ecosystem that avoids costly mobile app development. If you know a little
-						bit of <ColorText applyTheme="warning"
-							><Link target="_blank" href="https://svelte.dev/" inherit>Svelte</Link></ColorText
-						>, functionality can be extended with ease.
-					</p>
-					<p>
-						New things will be added to the <ColorText applyTheme="success">SvelteTip</ColorText> library
-						over time, so check back often to see if there's a component you can use for your project!
+						They either have a ton of overhead, are extremely too complicated, and/or are loaded
+						with features that are impossible to decypher. <ColorText applyTheme="success"
+							>SvelteTip</ColorText
+						>
+						are designed to be easy to read, extended, and interpreted. They're not hidden in some obscure
+						node_modules folder either; SvelteTip components are meant to be a part of your app, the
+						source code is there to be read.
 					</p>
 				</section>
 			</Section>
@@ -80,47 +61,7 @@
 		<FadeIn condition="when-inviewport" fadeDirection="right">
 			<Section nomargin>
 				<section class="section-wrap" class:tabletAndBelow={$isTabletAndBelow}>
-					<h2 class="about-title">Optimized for Production</h2>
-					<p>
-						<ColorText applyTheme="success">SvelteTip</ColorText> is built with optimization in mind
-						but without all the hassel that goes into it. Quite simply:
-						<br /><br />
-						Build for production:
-						<br />
-						<br />
-						<CodeBlock
-							hidetitle
-							show
-							snippet={`            
-      npm run build
-              `}
-						/>
-
-						<br />
-						And to serve:
-					</p>
-
-					<p>
-						<CodeBlock
-							hidetitle
-							show
-							snippet={`            
-      npm run start
-            `}
-						/>
-
-						<br />
-						No additional configurations necessary (unless you want it of course).
-						<br /><br />
-						EZ freakin' PZ.
-					</p>
-
-					<!-- <p>
-            And on a personal note, while I love and adore React and Vue for their own merits,
-            developing with <ColorText applyTheme="warning"
-              ><Link target="_blank" href="https://svelte.dev/" inherit>Svelte</Link></ColorText
-            > is just a much better experience.
-          </p> -->
+					<h2 class="about-title">Keeping it Readable</h2>
 				</section>
 			</Section>
 		</FadeIn>
@@ -132,23 +73,7 @@
 		<FadeIn condition="when-inviewport" fadeDirection="right">
 			<Section nomargin>
 				<section class="section-wrap" class:tabletAndBelow={$isTabletAndBelow}>
-					<h2 class="about-title">
-						<ColorText applyTheme="success">SvelteTip</ColorText> is Non-opinionated (kinda)
-					</h2>
-					<p>
-						Do you like Typescript? SCSS or SASS? Less or Stylus? Pug? Awesome - me too; give me all
-						the tools please. Build how you want to bulid. While there is a recommended structure
-						<ColorText applyTheme="success">SvelteTip</ColorText> prefers for it's root app, nothing
-						says you have to use it. Or any of it. It's as non-commital as your last failed relationship
-						(presumably).
-					</p>
-					<p>
-						Everything in <ColorText applyTheme="success">SvelteTip</ColorText> is meant to be easily
-						customizable, including the colors, typography and component styles. In fact, this entire
-						site is built using only the components in the <ColorText applyTheme="success"
-							>SvelteTip</ColorText
-						> library!
-					</p>
+					<h2 class="about-title">Simple Inputs and Outputs</h2>
 				</section>
 			</Section>
 		</FadeIn>
@@ -161,21 +86,6 @@
 			<Section nomargin>
 				<section class="section-wrap" class:tabletAndBelow={$isTabletAndBelow}>
 					<h2 class="about-title">Try it out now</h2>
-					<p>
-						<ColorText applyTheme="success">SvelteTip</ColorText> is working towards a 1.0 release soon,
-						but feel free to check it out now!
-					</p>
-					<br />
-					<div style="max-width: 200px; margin: auto">
-						<Button
-							href="https://github.com/allenRoyston/svelte-component-library"
-							target="_blank"
-							applyTheme={theme === 'light' ? 'magic' : 'primary'}
-							hollow
-							size="large"
-							rounded>Github</Button
-						>
-					</div>
 				</section>
 			</Section>
 		</FadeIn>

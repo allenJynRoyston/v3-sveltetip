@@ -19,9 +19,7 @@
 
 	export let name = null;
 	export let importName = null;
-	export let properties = null;
 	export let inputs = null;
-	export let code = null;
 	export let livecode = null;
 	export let notes = [];
 	export let eventLog = [];
@@ -50,6 +48,10 @@
 		switch (livebg) {
 			case 'none':
 				return 'background: none';
+			case 'light':
+				return `background: ${colors.white[0].color}`;
+			case 'dark':
+				return `background: ${colors.black[0].color}`;
 			case 'blueprint':
 				return 'background: linear-gradient(-120deg, #021B79, #0575E6, #205E9B);';
 		}
@@ -346,6 +348,22 @@
 								onClick={() => {
 									livebg = 'blueprint';
 								}}>Blueprint</Pill
+							>
+							<Pill
+								rounded
+								active={livebg === 'light'}
+								activeTheme="black"
+								onClick={() => {
+									livebg = 'light';
+								}}>Light</Pill
+							>
+							<Pill
+								rounded
+								active={livebg === 'dark'}
+								activeTheme="black"
+								onClick={() => {
+									livebg = 'dark';
+								}}>Dark</Pill
 							>
 							<Pill
 								rounded
