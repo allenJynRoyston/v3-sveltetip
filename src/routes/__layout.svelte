@@ -13,8 +13,6 @@
 </div>
 
 <style lang="scss">
-	@import '../scss/global.scss';
-
 	#app-root {
 		overflow: hidden;
 		height: 100vh;

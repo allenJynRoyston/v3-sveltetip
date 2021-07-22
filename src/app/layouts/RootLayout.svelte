@@ -29,9 +29,15 @@
 			component: NavBar,
 			props: {
 				links: [
-					{ title: 'Home', icon: 'home', href: '/', hrefIncludes: '/home' },
-					{ title: 'Components', icon: 'list', href: '/components', hrefIncludes: '/components' },
-					{ title: 'Docs', icon: 'file-text', href: '/docs', hrefIncludes: '/docs' }
+					{ title: 'Home', icon: 'home', href: '/' },
+					{
+						title: 'Install',
+						icon: 'file-text',
+						href: '/home/install',
+						hrefIncludes: '/home/install'
+					},
+					{ title: 'FAQs', icon: 'file-text', href: '/home/faqs', hrefIncludes: '/home/faqs' },
+					{ title: 'Components', icon: 'list', href: '/components', hrefIncludes: '/components' }
 				]
 			}
 		},
@@ -44,9 +50,9 @@
 			props: {
 				title: 'Welcome!',
 				buttonOne: {
-					text: 'Github',
+					text: 'Install',
 					applyTheme: theme === 'dark' ? 'white' : 'black',
-					href: 'https://github.com/allenRoyston',
+					href: '/home/install',
 					rounded: true,
 					hollow: true
 				},
@@ -93,14 +99,14 @@
 		showFooter={$page.path === '/'}
 		showNotch
 		showBurgerMenuButton={$page.path.includes('/components')}
+		notchCloseIcon="cross"
+		notchOpenIcon="search"
 	/>
 
 	<main>
 		<slot />
 	</main>
 </SvelteTipApp>
-
-<h1>Hello World!</h1>
 
 <style lang="scss">
 	:global(body) {

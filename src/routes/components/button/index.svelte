@@ -66,7 +66,8 @@
 				renderAs: 'input',
 				componentprop: { type: 'text', placeholder: 'border: 1px solid red' }
 			}
-		]
+		],
+		notes: ['"UseGradiant" and "Hollow" props cannot both be active at the same time.']
 	};
 
 	$: livecode = `    

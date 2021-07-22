@@ -21,7 +21,8 @@
 
 	const links = [
 		{ title: 'About', href: '/home/about', applyTheme: 'magic' },
-		{ title: 'Install Guide', href: '/home/install', applyTheme: 'primary' }
+		{ title: 'Install Guide', href: '/home/install', applyTheme: 'primary' },
+		{ title: 'FAQs', href: '/home/faqs', applyTheme: 'secondary' }
 	];
 </script>
 

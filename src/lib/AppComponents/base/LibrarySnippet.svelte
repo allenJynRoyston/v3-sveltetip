@@ -34,6 +34,7 @@
 	export let propstr = '';
 	export let selectstr = '';
 	export let inputstr = '';
+	export let disableBgPanel = false;
 
 	const theme: string = getContext('theme');
 	const colors: any = getContext('colors');
@@ -341,38 +342,40 @@
 						<h5 slot="title">Live example:</h5>
 
 						<section class="panel-live-example" slot="action">
-							<Pill
-								rounded
-								active={livebg === 'blueprint'}
-								activeTheme="black"
-								onClick={() => {
-									livebg = 'blueprint';
-								}}>Blueprint</Pill
-							>
-							<Pill
-								rounded
-								active={livebg === 'light'}
-								activeTheme="black"
-								onClick={() => {
-									livebg = 'light';
-								}}>Light</Pill
-							>
-							<Pill
-								rounded
-								active={livebg === 'dark'}
-								activeTheme="black"
-								onClick={() => {
-									livebg = 'dark';
-								}}>Dark</Pill
-							>
-							<Pill
-								rounded
-								active={livebg === 'none'}
-								activeTheme="black"
-								onClick={() => {
-									livebg = 'none';
-								}}>None</Pill
-							>
+							{#if !disableBgPanel}
+								<Pill
+									rounded
+									active={livebg === 'blueprint'}
+									activeTheme="black"
+									onClick={() => {
+										livebg = 'blueprint';
+									}}>Blueprint</Pill
+								>
+								<Pill
+									rounded
+									active={livebg === 'light'}
+									activeTheme="black"
+									onClick={() => {
+										livebg = 'light';
+									}}>Light</Pill
+								>
+								<Pill
+									rounded
+									active={livebg === 'dark'}
+									activeTheme="black"
+									onClick={() => {
+										livebg = 'dark';
+									}}>Dark</Pill
+								>
+								<Pill
+									rounded
+									active={livebg === 'none'}
+									activeTheme="black"
+									onClick={() => {
+										livebg = 'none';
+									}}>None</Pill
+								>
+							{/if}
 						</section>
 
 						<div slot="content" class="live-example" class:opencontent>

@@ -26,6 +26,7 @@
 	const snippet = {
 		name: 'GlassPanel',
 		importName: '@panel/GlassPanel.svelte',
+		disableBgPanel: true,
 		props: {
 			nopadding: false,
 			nomargin: false,

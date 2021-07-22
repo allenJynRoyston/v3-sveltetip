@@ -7,6 +7,8 @@
 	import ThemeSwitch from '@utility/ThemeSwitch.svelte';
 	import Search from '@layout/Search.svelte';
 
+	import { svgslist } from '@text/SVG.svelte';
+
 	let propstr = '';
 	let selectstr = '';
 	let inputstr = '';
@@ -19,7 +21,7 @@
 		importName: '@layout/Header.svelte',
 		props: {
 			showBurgerMenuButton: true,
-			invertColors: false,
+			invertTheme: false,
 			showHero: true,
 			showFooter: true,
 			showNotch: true,
@@ -27,8 +29,21 @@
 			hideLogo: false,
 			hideNav: false
 		},
+		dropdowns: [
+			{
+				label: 'notchOpenIcon',
+				options: [...svgslist],
+				value: 0
+			},
+			{
+				label: 'notchCloseIcon',
+				options: [...svgslist],
+				value: 7
+			}
+		],
 		inputs: [
-			{ forprop: 'title', renderAs: 'input', componentprop: { type: 'text' }, value: 'Title' },
+			{ forprop: 'title', renderAs: 'input', componentprop: { type: 'text' }, value: 'MySite' },
+			{ forprop: 'version', renderAs: 'input', componentprop: { type: 'text' }, value: '0.1.1' },
 			{
 				forprop: 'logoSrc',
 				renderAs: 'input',
@@ -73,6 +88,7 @@
 		heroEle: {
 			component: HeroBanner,
 			props: {
+				title: 'MySite',
 				buttonOne: {
 					text: 'Info',
 					applyTheme: 'black',
@@ -82,10 +98,10 @@
 				},
 				buttonTwo: {
 					text: 'Purchase',
-					applyTheme: 'white',
+					applyTheme: 'primary',
 					href: '#components?component=header&link=cta2',
 					size: 'large',
-					hollow: true,
+					hollow: false,
 					rounded: true
 				}
 			}

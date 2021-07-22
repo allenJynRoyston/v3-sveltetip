@@ -5,7 +5,6 @@
 	import Button from '@button/Button.svelte';
 
 	export let title = 'Hero Banner Title';
-	export let version = null;
 	export let buttonOne = null;
 	export let buttonTwo = null;
 
@@ -29,10 +28,18 @@
 	</h5>
 	<div class="buttons">
 		{#if buttonOne}
-			<Button style={'min-width: 100px'} size={$isTabletAndBelow ? 'tiny' : null} {...buttonOne} />
+			<Button
+				style={'min-width: 100px'}
+				size={$isTabletAndBelow ? 'tiny' : 'medium'}
+				{...buttonOne}
+			/>
 		{/if}
 		{#if buttonTwo}
-			<Button style={'min-width: 100px'} size={$isTabletAndBelow ? 'tiny' : null} {...buttonTwo} />
+			<Button
+				style={'min-width: 100px'}
+				size={$isTabletAndBelow ? 'tiny' : 'medium'}
+				{...buttonTwo}
+			/>
 		{/if}
 	</div>
 </div>
