@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { getContext } from 'svelte';
+	import { dev } from '$app/env';
 	import { DeviceStore } from '@st-stores/index';
 
 	import Container from '@layout/Container.svelte';
@@ -95,7 +96,7 @@
 
 					<ResponsiveImage
 						preference="width"
-						src="../../../../static/about/installer1.PNG"
+						src={dev ? '../../../../static/about/installer1.PNG' : '/about/installer1.PNG'}
 						alt="image"
 					/>
 				</section>
@@ -116,7 +117,7 @@
 					</p>
 					<ResponsiveImage
 						preference="width"
-						src="../../../../static/about/newproject-2.PNG"
+						src={dev ? '../../../../static/about/newproject-2.PNG' : '/about/newproject-2.PNG'}
 						alt="image"
 					/>
 				</section>
@@ -158,7 +159,7 @@
 					<p>It should look like the following:</p>
 					<ResponsiveImage
 						preference="width"
-						src="../../../../static/about/newproject-3.PNG"
+						src={dev ? '../../../../static/about/newproject-3.PNG' : '/about/newproject-3.PNG'}
 						alt="image"
 					/>
 					<p>Now save your changes and install:</p>
@@ -214,7 +215,7 @@
 
 					<ResponsiveImage
 						preference="width"
-						src="../../../../static/about/newproject-4.PNG"
+						src={dev ? '../../../../static/about/newproject-4.PNG' : '/about/newproject-4.PNG'}
 						alt="image"
 					/>
 
@@ -280,7 +281,7 @@
 					<p>Make sure it looks like the following:</p>
 					<ResponsiveImage
 						preference="width"
-						src="../../../../static/about/newproject-5.PNG"
+						src={dev ? '../../../../static/about/newproject-5.PNG' : '/about/newproject-5.PNG'}
 						alt="image"
 					/>
 
@@ -306,7 +307,7 @@
 					</p>
 					<ResponsiveImage
 						preference="width"
-						src="../../../../static/about/newproject-6.PNG"
+						src={dev ? '../../../../static/about/newproject-6.PNG' : '/about/newproject-6.PNG'}
 						alt="image"
 					/>
 				</section>
@@ -325,7 +326,7 @@
 
 					<ResponsiveImage
 						preference="width"
-						src="../../../../static/about/newproject-7a.PNG"
+						src={dev ? '../../../../static/about/newproject-7a.PNG' : '/about/newproject-7a.PNG'}
 						alt="image"
 					/>
 
@@ -383,7 +384,7 @@
 
 					<ResponsiveImage
 						preference="width"
-						src="../../../../static/about/newproject-8.PNG"
+						src={dev ? '../../../../static/about/newproject-8.PNG' : '/about/newproject-8.PNG'}
 						alt="image"
 					/>
 

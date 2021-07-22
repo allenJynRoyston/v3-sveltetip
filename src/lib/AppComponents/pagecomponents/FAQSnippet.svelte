@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { getContext } from 'svelte';
+	import { dev } from '$app/env';
 	import { DeviceStore } from '@st-stores/index';
 
 	import Container from '@layout/Container.svelte';
@@ -27,7 +28,7 @@
 					</p>
 					<ResponsiveImage
 						preference="width"
-						src="../../../../static/about/colorScheme.PNG"
+						src={dev ? '../../../../static/about/colorScheme.PNG' : '/about/colorScheme.PNG'}
 						alt="image"
 					/>
 				</section>
@@ -49,7 +50,7 @@
 					</p>
 					<ResponsiveImage
 						preference="width"
-						src="../../../../static/about/breakpoints.PNG"
+						src={dev ? '../../../../static/about/breakpoints.PNG' : '/about/breakpoints.PNG'}
 						alt="image"
 					/>
 				</section>
@@ -71,7 +72,7 @@
 					</p>
 					<ResponsiveImage
 						preference="width"
-						src="../../../../static/about/styles.PNG"
+						src={dev ? '../../../../static/about/styles.PNG' : '/about/styles.PNG'}
 						alt="image"
 					/>
 				</section>

@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { getContext } from 'svelte';
+	import { dev } from '$app/env';
 	import { DeviceStore } from '@st-stores/index';
 
 	import Container from '@layout/Container.svelte';
@@ -52,7 +53,7 @@
 					</p>
 					<ResponsiveImage
 						preference="width"
-						src="../../../../static/about/BarPreview.PNG"
+						src={dev ? '../../../../static/about/BarPreview.PNG' : '/about/BarPreview.PNG'}
 						alt="image"
 					/>
 					<hr />
@@ -98,7 +99,7 @@
 
 					<ResponsiveImage
 						preference="width"
-						src="../../../../static/about/ludicrousspeed.jpg"
+						src={dev ? '../../../../static/about/ludicrousspeed.jpg' : '/about/ludicrousspeed.jpg'}
 						alt="image"
 					/>
 				</section>
