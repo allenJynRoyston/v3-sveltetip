@@ -15,6 +15,7 @@
 
 	const { isTabletAndBelow } = DeviceStore;
 	const theme: string = getContext('theme');
+	const version: string = getContext('version');
 </script>
 
 <ThemeWrapper invert>
@@ -112,8 +113,17 @@
 				<section class="section-wrap" class:tabletAndBelow={$isTabletAndBelow}>
 					<h2 class="about-title">Step 2:</h2>
 					<p>
-						Drop the SvelteTip library into your <b>/src/lib</b> folder. You can download the SvelteTip
-						library here or use npm.
+						Drop the SvelteTip library into your <b>/src/lib</b> folder. You can <ColorText
+							applyTheme="magic"
+						>
+							<a
+								download
+								href={dev
+									? `../../../../static/downloads/SvelteTip.${version}.zip`
+									: `/downloads/SvelteTip.${version}.zip`}
+								>download the SvelteTip library here by clicking here</a
+							>
+						</ColorText>.
 					</p>
 					<ResponsiveImage
 						preference="width"

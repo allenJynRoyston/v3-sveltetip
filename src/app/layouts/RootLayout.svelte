@@ -1,8 +1,10 @@
 <script lang="ts">
 	//--------------------------- IMPORTS
+	import { setContext } from 'svelte';
 	import { page } from '$app/stores';
-	import { browser } from '$app/env';
+	import { dev, browser } from '$app/env';
 	import { SiteStore } from '@st-stores/index';
+	import { version } from '../../version';
 
 	import SvelteTipApp from '@system/SvelteTipApp.svelte';
 
@@ -14,13 +16,15 @@
 
 	let theme = browser ? localStorage.getItem('theme') : 'dark';
 
+	setContext('version', version);
+
 	//--------------------------- STORES
 	const { searchValue, openSidebar } = SiteStore;
 
 	//--------------------------- HEADER
 	let headerprops = {
 		title: 'SvelteTip',
-		version: '0.9.1',
+		version,
 		noanimation: true,
 		bgSrc: `../../images/bg/header-${theme}-bg.jpg`,
 		logoSrc: '../../images/logo/logo.png',
@@ -91,7 +95,7 @@
 	//---------------------------
 </script>
 
-<SvelteTipApp>
+<SvelteTipApp {version}>
 	<Header
 		{...headerprops}
 		notchEle={notchEle()}
