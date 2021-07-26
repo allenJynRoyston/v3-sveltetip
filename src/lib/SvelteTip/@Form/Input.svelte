@@ -162,7 +162,7 @@
 
 		input {
 			border: inherit;
-			height: calc(30px - 2px);
+			height: 30px;
 			width: calc(100% - 20px);
 			padding: 0 10px;
 			border-bottom: 2px solid transparent;
