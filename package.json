@@ -3,7 +3,8 @@
 	"version": "1.0.2",
 	"scripts": {
 		"dev": "svelte-kit dev --port 3030 --open",
-		"build": "node zipfiles.mjs && svelte-kit build",
+		"build": "svelte-kit build",
+		"update": "node zipfiles.mjs && svelte-kit build",
 		"preview": "svelte-kit preview",
 		"start": "node server.mjs",
 		"lint": "prettier --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",

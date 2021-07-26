@@ -31,7 +31,7 @@
 					<p>
 						But more so, having the library in your application gives you full control over any
 						adjustments you'd like to make. While you don't have, you can absolutely change any
-						aspect of a component to your liking.
+						aspect of a component to your liking.  
 					</p>
 					<p>
 						Another practical reason for this approach is SvelteKit (as of July 2021) is still in
