@@ -36,7 +36,7 @@
 	export let notchCloseIcon = 'cross';
 
 	const { openSidebar, openNotch, innerContainerAdditionalHeight, shrinkHeader } = SiteStore;
-	const { isTabletAndAbove, isDesktop } = DeviceStore;
+	const { isTabletAndAbove, isTabletAndBelow, isDesktop } = DeviceStore;
 
 	const theme: string = getContext('theme');
 
@@ -106,7 +106,7 @@
 				</section>
 
 				<section class="center-section" slot="center" style={`height: ${navheight}px`}>
-					{#if !!centerEle}
+					{#if !!centerEle && !$isTabletAndBelow}
 						<svelte:component this={centerEle.component} {...centerEle?.props} />
 					{/if}
 				</section>

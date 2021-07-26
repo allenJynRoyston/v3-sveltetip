@@ -15,6 +15,38 @@
 	const theme: string = getContext('theme');
 </script>
 
+<ThemeWrapper invert>
+	<Container>
+		<FadeIn condition="when-inviewport" fadeDirection="right">
+			<Section nomargin>
+				<section class="section-wrap" class:tabletAndBelow={$isTabletAndBelow}>
+					<h2 class="about-title">Why aren't you using NPM?</h2>
+					<p>
+						I think there's some very real benefits to being able to see and alter the code you're
+						using. While <b><i>npm install sveltetip</i></b> has been floated, I find that setup a bit
+						limiting. First off, you're dependent on whoevers running the repo (me in this case) to update,
+						maintain and add features, but the truth is I have a full time job and a life outside of
+						it, so that's just not very feasible.
+					</p>
+					<p>
+						But more so, having the library in your application gives you full control over any
+						adjustments you'd like to make. While you don't have, you can absolutely change any
+						aspect of a component to your liking.
+					</p>
+					<p>
+						Another practical reason for this approach is SvelteKit (as of July 2021) is still in
+						beta. This component library is meant to be resilient to any huge breaking changes since
+						a majority of the code is built with Svelte, with a sprinkling of SvelteKit specific
+						syntax for some edge cases. If, or when, any breaking changes are introduced, it should
+						be relatively simple to update the library. This seperation between Svelte and SvelteKit
+						is intentional.
+					</p>
+				</section>
+			</Section>
+		</FadeIn>
+	</Container>
+</ThemeWrapper>
+
 <ThemeWrapper>
 	<Container>
 		<FadeIn condition="when-inviewport" fadeDirection="right">

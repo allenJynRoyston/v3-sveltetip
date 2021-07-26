@@ -7,6 +7,7 @@
 	import SVG from '@text/SVG.svelte';
 	import Button from '@button/Button.svelte';
 	import ScrollWrapper from '@layout/ScrollWrapper.svelte';
+	import HTag from '@text/HTag.svelte';
 
 	export let show = false;
 	export let onStartModal = null;
@@ -114,7 +115,9 @@
 			>
 				<div class="header" class:busy={$modalIsBusy}>
 					<TwoSlot>
-						<h2 slot="left">{$modalProps?.title || 'Unavailable'}</h2>
+						<HTag slot="left" headerTag="h2">
+							<span>{$modalProps?.title || 'Unavailable'}</span>
+						</HTag>
 						<div slot="right">
 							<SVG
 								onClick={() => {
@@ -223,6 +226,11 @@
 		height: 100%;
 		top: 0;
 		left: 0;
+
+		&.title {
+			margin: 0;
+			padding: 0;
+		}
 
 		&.show {
 			z-index: $modalZindex;
@@ -418,7 +426,7 @@
 				display: flex;
 				min-height: 50px;
 				max-height: 50px;
-				padding: 0 10px;
+				padding: 0;
 				box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.25);
 				&.busy {
 					opacity: 0.5;

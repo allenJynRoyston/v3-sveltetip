@@ -22,6 +22,7 @@
 	const links = [
 		{ title: 'About', href: '/home/about', applyTheme: 'magic' },
 		{ title: 'Install Guide', href: '/home/install', applyTheme: 'primary' },
+		{ title: 'Production Guide', href: '/home/production', applyTheme: 'success' },
 		{ title: 'FAQs', href: '/home/faqs', applyTheme: 'secondary' }
 	];
 </script>
@@ -34,7 +35,7 @@
 				full
 				nomargin
 				size={$isTabletAndBelow ? 'small' : 'large'}
-				useGradiant={href === $page.path ||
+				hollow={href === $page.path ||
 					(index === 0 && $page.path === '/home') ||
 					(index === 0 && $page.path === '/')}
 				{applyTheme}

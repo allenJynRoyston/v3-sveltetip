@@ -1,10 +1,10 @@
 export const breakpoints = {
 	mobile: {
 		min: 0,
-		max: 480
+		max: 550
 	},
 	tablet: {
-		min: 480,
+		min: 550,
 		max: 720
 	},
 	desktop: {

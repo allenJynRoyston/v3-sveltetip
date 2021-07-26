@@ -10,14 +10,15 @@
 
 	export let onTitleClick = null;
 
-	const { isTabletAndBelow, isDesktop } = DeviceStore;
+	const { isTabletAndBelow, isTablet, isDesktop } = DeviceStore;
 
 	const theme: string = getContext('theme');
 </script>
 
 <div class={`hero-banner ${theme}-theme`} class:desktop={$isDesktop}>
-	<h5
+	<h1
 		class="title"
+		class:tablet={$isTablet}
 		class:desktop={$isDesktop}
 		class:pointer={!!onTitleClick}
 		on:click={() => {
@@ -25,7 +26,7 @@
 		}}
 	>
 		{title}
-	</h5>
+	</h1>
 	<div class="buttons">
 		{#if buttonOne}
 			<Button
@@ -73,8 +74,11 @@
 			&.pointer {
 				cursor: pointer;
 			}
+			&.tablet {
+				font-size: 54px !important;
+			}
 			&.desktop {
-				font-size: 72px;
+				font-size: 72px !important;
 			}
 			// &.lowHeight {
 			// 	font-size: 32px !important;

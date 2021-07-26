@@ -5,9 +5,9 @@
 </script>
 
 <footer class={`footer ${theme}-theme`}>
-	<slot>
-		<p>Footer</p>
-	</slot>
+	<p>
+		<slot />
+	</p>
 </footer>
 
 <style lang="scss">

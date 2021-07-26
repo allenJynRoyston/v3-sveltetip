@@ -88,6 +88,24 @@
 		<FadeIn condition="when-inviewport" fadeDirection="right">
 			<Section nomargin>
 				<section class="section-wrap" class:tabletAndBelow={$isTabletAndBelow}>
+					<h2 class="about-title">Built for Mobile and Desktop</h2>
+					<p>
+						This is an ongoing struggle, but the
+						<ColorText applyTheme="success">SvelteTip</ColorText> philosophy is that you should only
+						build a site once and it should work equally well on mobile as it does on a desktop. While
+						this might not work for every component in every scenario, it should work for *most* of them.
+					</p>
+				</section>
+			</Section>
+		</FadeIn>
+	</Container>
+</ThemeWrapper>
+
+<ThemeWrapper>
+	<Container>
+		<FadeIn condition="when-inviewport" fadeDirection="right">
+			<Section nomargin>
+				<section class="section-wrap" class:tabletAndBelow={$isTabletAndBelow}>
 					<h2 class="about-title">It's freaking fast</h2>
 					<p>
 						Because it's Svelte and SvelteKit, developing your project - regardless of size - will

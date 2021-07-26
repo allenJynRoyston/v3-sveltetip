@@ -72,7 +72,10 @@
           },
           onConfirm: () => {
             setModalState(false)
-          }                  
+          },
+          onCancel: () => {
+            setModalState(false)
+          }              
         }
       }    
 
@@ -90,6 +93,9 @@
 				component: props.naked ? LoremBlock : ExampleBlock
 			},
 			onConfirm: () => {
+				setModalState(false);
+			},
+			onCancel: () => {
 				setModalState(false);
 			}
 		};

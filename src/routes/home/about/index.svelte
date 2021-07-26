@@ -1,5 +1,5 @@
 <script lang="ts">
-	import AboutPreview from '@component/pagecomponents/AboutPreview.svelte';
+	import AboutSnippet from '@lib/AppComponents/pagecomponents/AboutSnippet.svelte';
 </script>
 
-<AboutPreview />
+<AboutSnippet />

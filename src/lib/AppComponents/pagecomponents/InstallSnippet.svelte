@@ -25,7 +25,8 @@
 				<section class="section-wrap" class:tabletAndBelow={$isTabletAndBelow}>
 					<h2 class="about-title">TL;DR</h2>
 					<p>
-						A quick start project can be found <ColorText applyTheme="magic"
+						A new SvelteKit project with SvelteTip pre-installed can be found here <ColorText
+							applyTheme="magic"
 							><Link
 								active
 								inherit
@@ -113,17 +114,16 @@
 				<section class="section-wrap" class:tabletAndBelow={$isTabletAndBelow}>
 					<h2 class="about-title">Step 2:</h2>
 					<p>
-						Drop the SvelteTip library into your <b>/src/lib</b> folder. You can <ColorText
-							applyTheme="magic"
-						>
+						Create a folder in your /src/lib folder called <b>SvelteTip</b>. Now
+						<ColorText applyTheme="magic">
 							<a
 								download
 								href={dev
 									? `../../../../static/downloads/SvelteTip.${version}.zip`
-									: `/downloads/SvelteTip.${version}.zip`}
-								>download the SvelteTip library here by clicking here</a
+									: `/downloads/SvelteTip.${version}.zip`}>download the SvelteTip library</a
 							>
-						</ColorText>.
+						</ColorText>
+						and place it's contents in the <b>src/lib/SvelteTip</b> folder.
 					</p>
 					<ResponsiveImage
 						preference="width"
@@ -244,18 +244,12 @@
 					<h2 class="about-title">Step 5:</h2>
 
 					<p>
-						Update your <i>svelte.config.js</i> by adding the <b>vite</b> param. Just copy the following
-						snippet and paste it into your own file.
-					</p>
-					<p>
-						<sub>
-							* Don't forget to place <ColorText applyTheme="success"
-								>import path from 'path'</ColorText
-							> at the top of your file.
-							<br />
-							** If you're adding to an exisiting project and are using a different folder naming convention,
-							just make sure it matches.
-						</sub>
+						Update your <i>svelte.config.js</i> by adding the <b>vite</b> param. Just copy the
+						following snippet and paste it into your own file.
+						<br />
+						<br />
+						* If you're adding to an exisiting project and are using a different folder naming convention,
+						just make sure it matches.
 					</p>
 
 					<CodeBlock
@@ -288,6 +282,19 @@
   }),
             `}
 					/>
+
+					<p>
+						<sub> * Don't forget to import path. </sub>
+					</p>
+
+					<CodeBlock
+						show
+						hidetitle
+						snippet={`
+  import path from 'path'
+            `}
+					/>
+
 					<p>Make sure it looks like the following:</p>
 					<ResponsiveImage
 						preference="width"
@@ -309,12 +316,35 @@
 				<section class="section-wrap" class:tabletAndBelow={$isTabletAndBelow}>
 					<h2 class="about-title">Step 6:</h2>
 					<p>
-						Lastly, you'll just need place the SvelteTipApp at the root of your app. While you can
-						do this - generally speaking - at any level, the best place is in the <b
+						Lastly, you'll just need import and place the SvelteTipApp at the root of your app.
+						While you can do this - generally speaking - at any level, the best place is in the <b
 							>src/routes/__layout.svelte</b
 						> file so SvelteTip components can be used throughout the entire app. In the demo app, it
 						can be found here:
 					</p>
+					<CodeBlock
+						show
+						hidetitle
+						snippet={`
+  <script lang="ts"  >
+    import Header from '$lib/header/Header.svelte';
+    import SvelteTipApp from '@system/SvelteTipApp.svelte';
+    import '../app.css';
+  </script  >
+
+  <SvelteTipApp>
+    <Header />
+
+    <main>
+      <slot />
+    </main>
+
+    <footer>
+      <p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
+    </footer>
+  </SvelteTipApp>
+            `}
+					/>
 					<ResponsiveImage
 						preference="width"
 						src={dev ? '../../../../static/about/newproject-6.PNG' : '/about/newproject-6.PNG'}
@@ -350,26 +380,43 @@
     import ThemeWrapper from '@layout/ThemeWrapper.svelte'
     import Container from '@layout/Container.svelte'
     import Section from '@layout/Section.svelte'
-    import LoremBlock from '@utility/LoremBlock.svelte'
+    import HeroBanner from '@layout/HeroBanner.svelte'
+    import Link from '@link/Link.svelte'
+
+    const heroprops = {
+      title: "SvelteTip!",
+      buttonOne: {
+        text: 'Home',
+        applyTheme: 'secondary',
+        rounded: true,     
+        href: '/'
+      },
+      buttonTwo: {
+        text: 'Components',
+        applyTheme: 'black',
+        rounded: true,  
+        hollow: true,
+        href: 'https://www.sveltetip.com/components',
+        target: "_blank"    
+      }    
+    }   
   </script >
 
-  <ThemeWrapper>
-    <Container>
-        <Section nomargin>
-          <section>
-            <h2>What is SvelteTip?</h2>
-            <LoremBlock ignoreTheme />
-          </section>
-        </Section>
-    </Container>
+  <ThemeWrapper invert>
+    <HeroBanner {...heroprops}  />
   </ThemeWrapper>
+
 
   <ThemeWrapper invert>
     <Container>
         <Section nomargin>
           <section>
-            <h2>What is SvelteTip?</h2>
-            <LoremBlock ignoreTheme />
+            <h2>I can now use SvelteTip components in my application!</h2>
+            <p>
+              Check out <Link active target='_blank' href='https://www.sveltetip.com/components'>the SvelteTip component</Link> page for details on 
+              what components are available and how to use them.            
+            </p>
+            
           </section>
         </Section>
     </Container>

@@ -19,11 +19,10 @@
 
 <script lang="ts">
 	import RootLayout from '@app/layouts/RootLayout.svelte';
-	export let version;
 </script>
 
 <div id="app-root">
-	<RootLayout {version}>
+	<RootLayout>
 		<slot />
 	</RootLayout>
 </div>
