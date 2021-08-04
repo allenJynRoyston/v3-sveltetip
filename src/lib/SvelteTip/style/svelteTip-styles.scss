@@ -15,7 +15,6 @@
 	font-size: 2em;
 	margin: 0;
 	padding: 0;
-	text-rendering: optimizeLegibility;
 }
 
 :global(#svelte-tip-app h2) {
@@ -23,7 +22,6 @@
 	font-size: 1.8em;
 	margin: 0;
 	padding: 0;
-	text-rendering: optimizeLegibility;
 }
 
 :global(#svelte-tip-app h3) {
@@ -31,7 +29,6 @@
 	font-size: 1.6em;
 	margin: 0;
 	padding: 0;
-	text-rendering: optimizeLegibility;
 }
 
 :global(#svelte-tip-app h4) {
@@ -39,7 +36,6 @@
 	font-size: 1.2em;
 	margin: 0;
 	padding: 0;
-	text-rendering: optimizeLegibility;
 }
 
 :global(#svelte-tip-app h5) {
@@ -47,7 +43,6 @@
 	font-size: 1em;
 	margin: 0;
 	padding: 0;
-	text-rendering: optimizeLegibility;
 	color: var(--heading-color);
 }
 
@@ -58,29 +53,32 @@
 :global(#svelte-tip-app textarea) {
 	color: inherit;
 	border: inherit;
-	text-rendering: optimizeLegibility;
 }
 
 :global(#svelte-tip-app body) {
 	font-family: var(--st-font-two);
-	text-rendering: optimizeLegibility;
 }
 
 :global(#svelte-tip-app p) {
 	font-family: var(--st-font-two);
-	text-rendering: optimizeLegibility;
+}
+
+:global(#svelte-tip-app label) {
+	font-family: var(--st-font-two);
+}
+
+:global(#svelte-tip-app li) {
+	font-family: var(--st-font-two);
 }
 
 :global(#svelte-tip-app span) {
 	font-family: inherit;
-	text-rendering: optimizeLegibility;
 }
 
 :global(#svelte-tip-app a) {
 	font-family: var(--st-font-two);
 	text-decoration: none;
 	color: inherit;
-	text-rendering: optimizeLegibility;
 
 	&:visited {
 		color: inherit;
@@ -91,12 +89,15 @@
 	color: inherit;
 }
 
+:global(#svelte-tip-app div) {
+	font-family: var(--st-font-two);
+}
+
 :global(#svelte-tip-app input) {
 	font-size: var(--st-medium-font);
 	font-family: var(--st-font-two);
 	color: inherit;
 	border: inherit;
-	text-rendering: optimizeLegibility;
 	/*** iPhone and iOS Form Input Zoom Fixes ***/
 	/* Fix Input Zoom on devices older than iPhone 5: */
 	@media screen and (device-aspect-ratio: 2/3) {
