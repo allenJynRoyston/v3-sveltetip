@@ -1,6 +1,6 @@
 {
 	"name": "v3-sveltetip",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"scripts": {
 		"dev": "svelte-kit dev --port 3030 --open",
 		"build": "svelte-kit build",
