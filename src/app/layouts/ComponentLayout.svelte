@@ -58,7 +58,7 @@
 		{ title: 'search', section: 'Layout', href: `${root}/search` },
 		{ title: 'progressBar', section: 'Layout', href: `${root}/progressBar` },
 		{ title: 'spinner', section: 'Layout', href: `${root}/spinner` },
-		{ title: 'summary', section: 'Layout', href: `${root}/summary` },
+		// { title: 'summary', section: 'Layout', href: `${root}/summary` },
 
 		// PANELS
 		{ title: 'panel', section: 'Panels', href: `${root}/panel` },

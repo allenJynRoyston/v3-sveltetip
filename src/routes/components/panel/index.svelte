@@ -64,7 +64,7 @@
 	};
 
 	$: livecode = `    
-    import LoremBlock from '@base/LoremBlock.svelte';
+    import LoremBlock from '@utility/LoremBlock.svelte';
     import SVG from '@text/SVG.svelte';
 
     <Panel${propstr}${selectstr}${inputstr}>
