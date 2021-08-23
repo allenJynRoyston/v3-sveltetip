@@ -7,7 +7,6 @@
 
 	export let icon = null;
 	export let title = null;
-	export let index = null;
 
 	const addSnack: any = getContext('addSnack');
 

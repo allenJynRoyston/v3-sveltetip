@@ -95,7 +95,7 @@
 	//---------------------------
 </script>
 
-<SvelteTipApp {version}>
+<SvelteTipApp>
 	<Header
 		{...headerprops}
 		notchEle={notchEle()}

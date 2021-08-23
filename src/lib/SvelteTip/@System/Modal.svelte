@@ -115,9 +115,11 @@
 			>
 				<div class="header" class:busy={$modalIsBusy}>
 					<TwoSlot>
-						<HTag slot="left" headerTag="h2">
-							<span>{$modalProps?.title || 'Unavailable'}</span>
-						</HTag>
+						<div slot="left">
+							<HTag headerTag="h2">
+								<span>{$modalProps?.title || 'Unavailable'}</span>
+							</HTag>
+						</div>
 						<div slot="right">
 							<SVG
 								onClick={() => {
