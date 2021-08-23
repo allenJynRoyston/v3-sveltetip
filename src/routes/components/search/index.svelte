@@ -19,7 +19,7 @@
 
 	const snippet = {
 		name: 'Search',
-		importName: '@base/Search.svelte',
+		importName: '@layout/Search.svelte',
 		props: {
 			rounded: false,
 			hideSearchIcon: false,

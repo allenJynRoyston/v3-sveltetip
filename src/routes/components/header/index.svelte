@@ -119,7 +119,7 @@
     import NavBar from '@layout/NavBar.svelte'
     import HeroBanner from '@layout/HeroBanner.svelte'
     import ThemeSwitch from '@utility/ThemeSwitch.svelte';
-    import Search from '@base/Search.svelte'
+    import Search from '@layout/Search.svelte'
 
     let headerprops = {
       navEle: {
