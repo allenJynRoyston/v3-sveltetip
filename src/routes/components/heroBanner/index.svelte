@@ -28,8 +28,7 @@
 				renderAs: 'input',
 				componentprop: { type: 'text' },
 				value: 'HeroBanner title!'
-			},
-			{ forprop: 'version', renderAs: 'input', componentprop: { type: 'text' }, value: '0.9' }
+			}
 		]
 	};
 
