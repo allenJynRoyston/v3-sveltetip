@@ -69,7 +69,7 @@
 
 	$: livecode = `    
     import FullImage from '@images/FullImage.svelte'
-    import LoremBlock from '@base/LoremBlock.svelte';
+    import LoremBlock from '@utility/LoremBlock.svelte';
     import SVG from '@text/SVG.svelte';
 
     <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%">

@@ -13,7 +13,7 @@
 
 	const snippet = {
 		name: 'LoremBlock',
-		importName: '@base/LoremBlock.svelte',
+		importName: '@utility/LoremBlock.svelte',
 		props: {
 			ignoreTheme: false,
 			nopadding: false
